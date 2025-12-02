@@ -5,55 +5,15 @@ public class userIO {
     public int inputKey;
     public String output;
 
-    public userIO(int inputKey){
-        inputKey = 1;
+    public userIO(){
     }
 
     // method for reading user input 
     public String readInput(){
         Scanner mainScanner = new Scanner(System.in);
         String userInput = mainScanner.nextLine();
-        return userInput;
-        
-        // String case1 = "hi";
-        // String case2 = "bye";
-        // String case3 = "help";
-
-        // if (userInput.equals(case1)){
-        //     return 1;
-        // }
-        // if (userInput.equals(case2)){
-        //     return 2;
-        // }
-        // if (userInput.equals(case3)){
-        //     return 3;
-        // } else {
-        //     return 0;
-        // }
-    }
-
-    
-
-    // public String setOutput(int inputKey){
-    //     if (inputKey == 1){
-    //         return "hello";
-    //     }
-    //     if (inputKey == 2){
-    //         return "goodbye";
-    //     }
-    //     if (inputKey == 3){
-    //         return "ok";
-    //     } else {
-    //         return "i don't understand";
-    //     }
-    // }
-
-    public static void main(String[] args) {
-        // userIO userIO = new userIO(1);
-        // System.out.println("hi, start game");
-        // int input = userIO.readInput();
-        // String output = userIO.setOutput(input);
-        // System.out.println(output);
+        String fixeduserInput = userInput.toUpperCase();
+        return fixeduserInput;
     }
 
 }
