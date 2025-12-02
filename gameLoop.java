@@ -8,15 +8,15 @@ public class gameLoop{
         int input;
         String output;
 
-        System.out.println("wake up!! wake up!!");
+        System.out.println(" wake up!! wake up!!");
         
-        IOtest openingScene = new IOtest();
-        input = openingScene.scene1input();
-        output = openingScene.scene1output(input);
+        alleyway alleyway = new alleyway();
+        input = alleyway.openingInput();
+        output = alleyway.openingOutput(input);
         System.out.println(output);
 
-        input = openingScene.scene2input();
-        output = openingScene.scene2output(input);
+        input = alleyway.zeroZero();
+        output = alleyway.zeroZero(input);
         System.out.println(output);
 
 
