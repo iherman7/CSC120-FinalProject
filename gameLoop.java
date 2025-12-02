@@ -13,9 +13,11 @@ public class gameLoop{
         IOtest openingScene = new IOtest();
         input = openingScene.scene1input();
         output = openingScene.scene1output(input);
+        System.out.println(output);
 
         input = openingScene.scene2input();
         output = openingScene.scene2output(input);
+        System.out.println(output);
 
 
 
