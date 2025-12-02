@@ -12,7 +12,9 @@ public class userIO {
     public String readInput(){
         Scanner mainScanner = new Scanner(System.in);
         String userInput = mainScanner.nextLine();
+
         String fixeduserInput = userInput.toUpperCase();
+
         return fixeduserInput;
     }
 

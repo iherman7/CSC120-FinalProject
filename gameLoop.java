@@ -7,7 +7,6 @@ public class gameLoop{
     public void runGame(){
         int input;
         String output;
-        userIO userIO = new userIO();
 
         System.out.println("wake up!! wake up!!");
         
@@ -33,4 +32,9 @@ public class gameLoop{
         // System.out.println(output);
     }
 
+    public static void main(String[] args) {
+        gameLoop game = new gameLoop();
+        game.runGame();
+
+    }
 }
