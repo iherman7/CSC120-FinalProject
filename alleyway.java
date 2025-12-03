@@ -1,19 +1,6 @@
-import java.util.ArrayList;
-
 public class alleyway{
 
-    // coordPair zeroZero = new coordPair(0, 0);
-    // coordPair nOneZero = new coordPair(-1, 0);
-    // coordPair nTwoZero = new coordPair(-2, 0);
-    // coordPair oneZero = new coordPair(1, 0);
-
-    // ArrayList<coordPair> alleywayCoords = new ArrayList<coordPair>();
-
     public alleyway(){
-        // alleywayCoords.add(zeroZero);
-        // alleywayCoords.add(nOneZero);
-        // alleywayCoords.add(nTwoZero);
-        // alleywayCoords.add(oneZero);
     }
 
     public int openingInput(){
@@ -39,7 +26,7 @@ public class alleyway{
         }
     }
 
-    public int zeroZero(){
+    public int zeroZeroInput(){
 
         userIO userIO = new userIO();
         String userInput = userIO.readInput();
@@ -60,7 +47,7 @@ public class alleyway{
     }
 
 
-    public String zeroZero(int inputKey){
+    public String zeroZeroOutput(int inputKey){
         if (inputKey == 1){
             //set coordinates
             return " the alleyway continues ahead. \n it is littered with fish bones and discarded old cardboard boxes.";
@@ -78,26 +65,11 @@ public class alleyway{
         int x = current.getX();
         int y = current.getY();
 
-        // ArrayList<Integer> alleywayXCoords = new ArrayList<>();
-
-        // alleywayXCoords.add(-2);
-        // alleywayXCoords.add(-1);
-        // alleywayXCoords.add(0);
-        // alleywayXCoords.add(1);
-
-        // for (int i = 0; i <= 3; i++){
-
-        //     int check = alleywayXCoords.get(i);
-
-        //     if (check == x){
-        //         if (check == y){
-        //             return true
-        //         }
-        //     }
-        // }
-        if (x >= -2 && x <= 1){
-            if (y == 0){
-                return true;
+        if (x >= -2){
+            if (x <= 1){
+                if (y == 0){
+            return true;
+                }
             }
         }
         return false;
@@ -112,15 +84,15 @@ public class alleyway{
         System.out.println(alleyway.isInAlleyway());
 
         //false
-        location.setLocation(0, 1);
+        location.setLocation(-4, 1);
         System.out.println(alleyway.isInAlleyway());
 
         //true
         location.setLocation(-2, 0);
         System.out.println(alleyway.isInAlleyway());
 
-        //true
-        location.setLocation(1, 0);
+        //false
+        location.setLocation(2, 0);
         System.out.println(alleyway.isInAlleyway());
     }
 

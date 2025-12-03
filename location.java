@@ -1,6 +1,6 @@
 public class location {
     
-    coordPair currentLocation = new coordPair(0, 0);
+    public coordPair currentLocation = new coordPair(0, 0);
     int x;
     int y;
 
@@ -22,11 +22,26 @@ public class location {
         currentLocation.setY(y);
     }
 
-    // public static void main(String[] args) {
-    //     location location = new location();
-    //     location.setLocation(1, 1);
-    //     System.out.println(location.getX());
-    //     System.out.println(location.getY());
-    // }
+    public static void main(String[] args) {
+        location location = new location();
+        
+        // 0
+        int test1 = location.getX();
+        System.out.println(test1);
 
+        // 0
+        int test2 = location.getY();
+        System.out.println(test2);
+
+        //1
+        location.setLocation(0, 1);
+        int test3 = location.getY();
+        System.out.println(test3);
+
+
+        //3
+        location.setLocation(3, 5);
+        int test4 = location.getX();
+        System.out.println(test4);
+    }
 }

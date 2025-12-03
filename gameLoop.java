@@ -15,8 +15,8 @@ public class gameLoop{
         output = alleyway.openingOutput(input);
         System.out.println(output);
 
-        input = alleyway.zeroZero();
-        output = alleyway.zeroZero(input);
+        input = alleyway.zeroZeroInput();
+        output = alleyway.zeroZeroOutput(input);
         System.out.println(output);
 
 
