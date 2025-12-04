@@ -50,13 +50,13 @@ public class alleyway {
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 1){
             //set coordinates
-            return " the alleyway continues ahead. \n it is littered with fish bones and discarded old cardboard boxes.";
+            return "the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         }
         if (inputKey == 2){
             //set coordinates
-            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+            return "the alleyway is littered with discarded old cardboard boxes.\n there is a large gate infront of you.";
         } else {
-            return " i don't understand";
+            return "you can't walk that way silly.";
         }
     }
 
