@@ -36,6 +36,7 @@ public class gameLoop{
 
     public static void main(String[] args) {
         gameLoop game = new gameLoop();
+        skeem player = new skeem();
         game.runGame();
 
     }

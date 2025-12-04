@@ -1,21 +1,27 @@
 public class gate extends location {
+    
+    private skeem player; 
 
-    public gate(){
-        
+    public gate(skeem player){
+        this.player = player;
     }
+        
 
     public int openingInput(){
 
         userIO userIO = new userIO();
         String userInput = userIO.readInput();
 
-        String case1 = "WAKE UP";
+        if (super.getX() == 1 && super.getY() == 0){
+            if (player.hasKey() == false){ // need this condition; figure how to write it
 
-        if (userInput.equals(case1)){
-            return 1;
-        } else {
-            return 0;
+                String case1 = "WEST";
+                String case2 = "GO WEST";
+                if (userInput.equals(case1)|| userInput.equals(case2)){
+                    return 1;
+            }
         }
+
     }
 
 
@@ -24,4 +30,5 @@ public class gate extends location {
     //if boolean hasKey is true and they have said something along the lines of use key, open gate
     //then the rest of the game can continue
     
+}
 }
