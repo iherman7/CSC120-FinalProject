@@ -10,21 +10,28 @@ public class skeem {
         this.hasKey = false;
     }
 
-    public skeem(skeem player) {
-        this.hasBone = player.hasBone;
-        this.hasKey = player.hasKey;
-        this.sharpenClaws = player.sharpenClaws;
-    }
 
     public boolean hasKey(){ 
         return hasKey;
+    }
+
+    public void setKey(boolean k){
+        hasKey = k;
     }
 
     public boolean hasBone(){ 
         return hasBone;
     }
 
+    public void setBone(boolean b){
+        hasKey = b;
+    }
+
     public boolean sharpenClaws(){ 
         return sharpenClaws;
+    }
+
+    public void setClaw(boolean c){
+        sharpenClaws = c;
     }
 }
