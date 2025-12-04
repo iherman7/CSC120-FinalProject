@@ -1,4 +1,4 @@
-public class alleyway{
+public class alleyway {
 
     public alleyway(){
     }
@@ -60,15 +60,14 @@ public class alleyway{
         }
     }
 
-    public Boolean isInAlleyway(){
-        location current = new location();
-        int x = current.getX();
-        int y = current.getY();
+    public Boolean isInAlleyway(location loc){
+        int x = loc.getX();
+        int y = loc.getY();
 
         if (x >= -2){
             if (x <= 1){
                 if (y == 0){
-            return true;
+                    return true;
                 }
             }
         }
@@ -81,19 +80,19 @@ public class alleyway{
 
         //true
         location.setLocation(0, 0);
-        System.out.println(alleyway.isInAlleyway());
+        System.out.println(alleyway.isInAlleyway(location));
 
         //false
         location.setLocation(-4, 1);
-        System.out.println(alleyway.isInAlleyway());
+        System.out.println(alleyway.isInAlleyway(location));
 
         //true
         location.setLocation(-2, 0);
-        System.out.println(alleyway.isInAlleyway());
+        System.out.println(alleyway.isInAlleyway(location));
 
         //false
         location.setLocation(2, 0);
-        System.out.println(alleyway.isInAlleyway());
+        System.out.println(alleyway.isInAlleyway(location));
     }
 
 }
