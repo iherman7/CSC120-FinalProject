@@ -37,24 +37,8 @@ public class gameLoop{
         // gate
         // check player.hasKey (method within Skeem)
         // send boolean value to gate method that dictates the text response
-
-
-        // IOtest test1 = new IOtest();
-        // input = test1.scenario1();
-        // output = test1.scenario1output(input);
-        // System.out.println(output);
-
-       
-        // System.out.println("there is a street, you can travel north or south");
-        // input = test1.scenario2();
-        // output = test1.scenario2output(input);
-        // System.out.println(output);
+        // hasKey = player.hasKey
+        // oneZeroInput(hasKey)
     }
 
-    // public static void main(String[] args) {
-    //     gameLoop game = new gameLoop();
-    //     skeem player = new skeem();
-    //     game.runGame();
-
-    // }
 }

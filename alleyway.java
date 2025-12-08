@@ -83,6 +83,23 @@ public class alleyway extends location {
         return false;
     }
 
+
+    public Boolean isInAlleywayB(location loc){
+        int x = loc.getX();
+        int y = loc.getY();
+
+        if (x >= -2){
+            if (x <= 1){
+                if (y == 0){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+
     // public static void main(String[] args) {
     //     alleyway alleyway = new alleyway();
     //     location location = new location();
