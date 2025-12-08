@@ -83,7 +83,8 @@ public class alleyway {
         }
     }
 
-    // public int nextMoveInput(){
+    public int negOneZero(){
+    // runs on the game loop if location = (-1,0) from going west
     //     while (true){
     //         change = 0;
     //         userIO userIO = new userIO();
@@ -97,6 +98,7 @@ public class alleyway {
     //         String case6 = "NORTH";
     //         String case7 = "SOUTH";
     //         String case8 = "GO SOUTH";
+    //         String case9 = "JUMP"
 
     //         if (userInput.equals(case1)|| userInput.equals(case2)){
     //             change = 1;

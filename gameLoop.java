@@ -36,6 +36,9 @@ public class gameLoop{
              System.out.println(outputString);
             // run (1, 0)
         }
+        if (x == -1 && y == 0){
+            inputKey = alleyway.negOneZero();
+        }
 
         // if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
         //     // run gate
