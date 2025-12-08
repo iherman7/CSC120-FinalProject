@@ -1,27 +1,35 @@
 public class alleyway extends location {
 
     private skeem player; 
+    public int change = 0;
         
     public alleyway(skeem player){
         this.player = player;
     }
 
     public int openingInput(){
+        while (true){
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
 
-        userIO userIO = new userIO();
-        String userInput = userIO.readInput();
-
-        String case1 = "WAKE UP";
-
-        if (userInput.equals(case1)){
-            return 1;
-        } else {
-            return 0;
+            String case1 = "WAKE UP";
+            
+            if (userInput.equals(case1)){
+                change = 1;
+                return change;
+            } else {
+                System.out.println("i don't understand");
+            }
         }
     }
 
 
     public String openingOutput(int inputKey){
+        // if (change == 1){
+        //     return " oh good! looks like you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat. \n skeem, you must have had something weird to eat last night...you're far from home! \n you're in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
+        // } else {
+        //     return " i don't understand";
+        // }
         if (inputKey == 1){
             return " oh good! looks like you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat. \n skeem, you must have had something weird to eat last night...you're far from home! \n you're in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
         } else {
