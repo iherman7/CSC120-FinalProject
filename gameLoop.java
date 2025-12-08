@@ -1,8 +1,8 @@
 public class gameLoop{
 
     public void runGame(){
-        int input;
-        String output;
+        int inputKey;
+        String outputString;
 
         skeem player = new skeem();
         location playerLocation = new location();
@@ -11,13 +11,13 @@ public class gameLoop{
         
         alleyway alleyway = new alleyway();
 
-        input = alleyway.openingInput();
-        output = alleyway.openingOutput(input);
-        System.out.println(output);
+        inputKey = alleyway.openingInput();
+        outputString = alleyway.openingOutput(inputKey);
+        System.out.println(outputString);
         
-        input = alleyway.zeroZeroInput();
-        output = alleyway.zeroZeroOutput(input);
-        System.out.println(output);
+        inputKey = alleyway.zeroZeroInput();
+        outputString = alleyway.zeroZeroOutput(inputKey);
+        System.out.println(outputString);
 
         if (playerLocation.getX() == -1 && playerLocation.getY() == 0){
             // run (-1, 0)

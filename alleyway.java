@@ -7,6 +7,7 @@ public class alleyway extends location {
 
     public int openingInput(){
         while (true){
+            change = 0;
             userIO userIO = new userIO();
             String userInput = userIO.readInput();
 
@@ -16,7 +17,7 @@ public class alleyway extends location {
                 change = 1;
                 return change;
             } else {
-                System.out.println("i don't understand");
+                System.out.println(" i don't understand");
             }
         }
     }
@@ -31,24 +32,28 @@ public class alleyway extends location {
     }
 
     public int zeroZeroInput(){
+        while (true){
+            change = 0;
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
 
-        userIO userIO = new userIO();
-        String userInput = userIO.readInput();
-
-        String case1 = "GO EAST";
-        String case2 = "EAST";
-        String case3 = "GO WEST";
-        String case4 = "WEST";
-
-        if (userInput.equals(case1)|| userInput.equals(case2)){
-            return 1;
+            String case1 = "GO EAST";
+            String case2 = "EAST";
+            String case3 = "GO WEST";
+            String case4 = "WEST";
+            
+                if (userInput.equals(case1)|| userInput.equals(case2)){
+                    change = 1;
+                    return change;
+                }
+                if (userInput.equals(case3) || userInput.equals(case4)){
+                    change = 2;
+                    return change;
+                } else {
+                    System.out.println(" you can't walk that way, silly");
+                }
+            }
         }
-        if (userInput.equals(case3) || userInput.equals(case4)){
-            return 2;
-        } else {
-            return 0;
-        }
-    }
 
 
     public String zeroZeroOutput(int inputKey){
