@@ -1,15 +1,21 @@
 public class gameLoop{
 
+    int inputKey;
+    String outputString;
+
+    private skeem player;
+    private location playerLocation;
+
+    public gameLoop(){
+        this.player = new skeem();
+        this.playerLocation = new location();
+    }
+
     public void runGame(){
-        int inputKey;
-        String outputString;
-
-        skeem player = new skeem();
-        location playerLocation = new location();
-
+        
         System.out.println(" Wake up!! Wake up!!");
         
-        alleyway alleyway = new alleyway();
+        alleyway alleyway = new alleyway(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -19,18 +25,25 @@ public class gameLoop{
         outputString = alleyway.zeroZeroOutput(inputKey);
         System.out.println(outputString);
 
-        if (playerLocation.getX() == -1 && playerLocation.getY() == 0){
-            // run (-1, 0)
-            System.out.println("went west");
+        int x = playerLocation.getX();
+        int y = playerLocation.getY();
+
+        if (x == 1 && y == 0){
+            gate gate = new gate(player, playerLocation);
+
+             inputKey = gate.oneZeroInput();
+             outputString = gate.oneZeroOutput(inputKey);
+             System.out.println(outputString);
+            // run (1, 0)
         }
 
-        if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
-            // run gate
-        }
+        // if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
+        //     // run gate
+        // }
 
-        if (playerLocation.getX() == -2 && playerLocation.getY() == 0){
-            // run gate
-        }
+        // if (playerLocation.getX() == -2 && playerLocation.getY() == 0){
+        //     // run gate
+        // }
 
         // the other stuff
 

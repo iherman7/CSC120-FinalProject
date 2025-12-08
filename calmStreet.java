@@ -1,4 +1,4 @@
-public class calmStreet extends location{
+public class calmStreet {
 
     public calmStreet(){
     }

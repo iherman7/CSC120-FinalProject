@@ -1,8 +1,12 @@
-public class alleyway extends location {
+public class alleyway {
 
     public int change = 0;
+    private skeem player;
+    private location loc;
         
-    public alleyway(){
+    public alleyway(skeem player, location loc){
+        this.player = player;
+        this.loc = loc;
     }
 
     public int openingInput(){
@@ -41,33 +45,82 @@ public class alleyway extends location {
             String case2 = "EAST";
             String case3 = "GO WEST";
             String case4 = "WEST";
+            String case5 = "GO NORTH";
+            String case6 = "NORTH";
+            String case7 = "SOUTH";
+            String case8 = "GO SOUTH";
             
-                if (userInput.equals(case1)|| userInput.equals(case2)){
-                    change = 1;
-                    return change;
-                }
-                if (userInput.equals(case3) || userInput.equals(case4)){
-                    change = 2;
-                    return change;
-                } else {
-                    System.out.println(" you can't walk that way, silly");
-                }
+            if (userInput.equals(case1)|| userInput.equals(case2)){
+                change = 1;
+                return change;
+            }
+            if (userInput.equals(case3) || userInput.equals(case4)){
+                change = 2;
+                return change;
+            } 
+            if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
+                System.out.println(" you can't walk that way silly");
+            }
+            else {
+                System.out.println(" i dont understand");
             }
         }
+    }
 
 
     public String zeroZeroOutput(int inputKey){
-        if (inputKey == 1){
-            super.setLocation(-1, 0);
-            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
-        }
         if (inputKey == 2){
-            super.setLocation(1, 0);
+            loc.setLocation(-1, 0);
+            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+
+        }
+        if (inputKey == 1){
+            loc.setLocation(1, 0);
             return " the alleyway is littered with discarded old cardboard boxes.\n there is a large gate infront of you.";
-        } else {
-            return "you can't walk that way, silly.";
+        }
+        else {
+            return " i dont understand";
         }
     }
+
+    // public int nextMoveInput(){
+    //     while (true){
+    //         change = 0;
+    //         userIO userIO = new userIO();
+    //         String userInput = userIO.readInput();
+
+    //         String case1 = "GO EAST";
+    //         String case2 = "EAST";
+    //         String case3 = "GO WEST";
+    //         String case4 = "WEST";
+    //         String case5 = "GO NORTH";
+    //         String case6 = "NORTH";
+    //         String case7 = "SOUTH";
+    //         String case8 = "GO SOUTH";
+
+    //         if (userInput.equals(case1)|| userInput.equals(case2)){
+    //             change = 1;
+    //             return change;
+    //         }
+    //         if (userInput.equals(case3) || userInput.equals(case4)){
+    //             change = 2;
+    //             return change;
+    //         } 
+    //         if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
+    //             System.out.println(" you can't walk that way silly");
+    //         }
+    //         else {
+    //             System.out.println(" i dont understand");
+    //         }
+    //     }
+
+    // }
+
+    // public String nextMoveOutput(int inputKey){
+    //     if (inputKey == 1){
+    //         loc.setLocation(inputKey, inputKey);
+    //     }
+    // }
 
     public Boolean isInAlleyway(location loc){
         int x = loc.getX();

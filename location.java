@@ -1,10 +1,11 @@
 public class location {
     
-    public coordPair currentLocation = new coordPair(0, 0);
+   private coordPair currentLocation;
     int x;
     int y;
 
     public location(){
+        this.currentLocation = new coordPair(0, 0);
     }
 
     public int getX(){

@@ -1,38 +1,43 @@
-public class gate extends location {
+public class gate {
     
-    private skeem player; 
     public int change = 0;
+    private skeem player;
+    private location loc;
 
-    public gate(skeem player){
+    public gate(skeem player, location loc){
         this.player = player;
+        this.loc = loc;
     }
         
 
-    public int oneZeroInput(hasKey){
+    public int oneZeroInput(){
         while (true){
             change = 0;
             userIO userIO = new userIO();
             String userInput = userIO.readInput();
 
-            String case1 = "WEST";
-            String case2 = "GO WEST"; // check logic later, have to check first for case then key
+            String case1 = "EAST";
+            String case2 = "GO EAST"; // check logic later, have to check first for case then key
             String case3 = "NORTH";
             String case4 = "GO NORTH";
             String case5 = "SOUTH";
             String case6 = "GO SOUTH";
 
-            if (userInput.equals(case1)|| userInput.equals(case2){ // will look differnt call from game loop
-                if (hasKey == false){ // need this condition; figure how to write it
+            if (userInput.equals(case1)|| userInput.equals(case2)){ // will look differnt call from game loop
+                if (player.hasKey() == false){ // need this condition; figure how to write it
                     if (userInput.equals(case1)|| userInput.equals(case2)){
                         change = 1;
                         return change;
                     }
             }
-            if (hasKey == true){
+            if (player.hasKey() == true){
                 if (userInput.equals(case1)|| userInput.equals(case2)){
                     change = 2;
                     return change;
                 }
+            }
+            if (userInput.equals(case3)|| userInput.equals(case4)|| userInput.equals(case5)|| userInput.equals(case6)){
+                change = 3;
             }
             else {
             System.out.println("i don't understand");
@@ -44,7 +49,7 @@ public class gate extends location {
 
 
 
-    }
+
 
     // set location
     //say you cannot do anything if boolean hasKey is false
@@ -58,9 +63,12 @@ public String oneZeroOutput(int inputKey){
     if (inputKey == 2){
             return " you use your cat mouth to put the key into the gate and it swings open! \n the gate was so tall the light coming in blinds you \n you wonder what is beyond the gate.";
         } 
+    if (inputKey == 3){
+        return " you can't go that way silly";
+    }
     else {
         return " i don't understand";
     }
     }
 }
-}
+
