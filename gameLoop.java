@@ -1,23 +1,23 @@
 public class gameLoop{
 
     public void runGame(){
-        int input;
-        String output;
+        int inputKey;
+        String outputString;
 
         skeem player = new skeem();
         location playerLocation = new location();
 
         System.out.println(" Wake up!! Wake up!!");
         
-        alleyway alleyway = new alleyway(player);
+        alleyway alleyway = new alleyway();
 
-        input = alleyway.openingInput();
-        output = alleyway.openingOutput(input);
-        System.out.println(output);
+        inputKey = alleyway.openingInput();
+        outputString = alleyway.openingOutput(inputKey);
+        System.out.println(outputString);
         
-        input = alleyway.zeroZeroInput();
-        output = alleyway.zeroZeroOutput(input);
-        System.out.println(output);
+        inputKey = alleyway.zeroZeroInput();
+        outputString = alleyway.zeroZeroOutput(inputKey);
+        System.out.println(outputString);
 
         if (playerLocation.getX() == -1 && playerLocation.getY() == 0){
             // run (-1, 0)
@@ -37,24 +37,8 @@ public class gameLoop{
         // gate
         // check player.hasKey (method within Skeem)
         // send boolean value to gate method that dictates the text response
-
-
-        // IOtest test1 = new IOtest();
-        // input = test1.scenario1();
-        // output = test1.scenario1output(input);
-        // System.out.println(output);
-
-       
-        // System.out.println("there is a street, you can travel north or south");
-        // input = test1.scenario2();
-        // output = test1.scenario2output(input);
-        // System.out.println(output);
+        // hasKey = player.hasKey
+        // oneZeroInput(hasKey)
     }
 
-    // public static void main(String[] args) {
-    //     gameLoop game = new gameLoop();
-    //     skeem player = new skeem();
-    //     game.runGame();
-
-    // }
 }
