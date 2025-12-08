@@ -53,13 +53,13 @@ public class alleyway extends location {
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 1){
             super.setLocation(-1, 0);
-            return "the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         }
         if (inputKey == 2){
             super.setLocation(1, 0);
-            return "the alleyway is littered with discarded old cardboard boxes.\n there is a large gate infront of you.";
+            return " the alleyway is littered with discarded old cardboard boxes.\n there is a large gate infront of you.";
         } else {
-            return "you can't walk that way silly.";
+            return "you can't walk that way, silly.";
         }
     }
 
@@ -77,25 +77,25 @@ public class alleyway extends location {
         return false;
     }
 
-    public static void main(String[] args) {
-        alleyway alleyway = new alleyway();
-        location location = new location();
+    // public static void main(String[] args) {
+    //     alleyway alleyway = new alleyway();
+    //     location location = new location();
 
-        //true
-        location.setLocation(0, 0);
-        System.out.println(alleyway.isInAlleyway(location));
+    //     //true
+    //     location.setLocation(0, 0);
+    //     System.out.println(alleyway.isInAlleyway(location));
 
-        //false
-        location.setLocation(-4, 1);
-        System.out.println(alleyway.isInAlleyway(location));
+    //     //false
+    //     location.setLocation(-4, 1);
+    //     System.out.println(alleyway.isInAlleyway(location));
 
-        //true
-        location.setLocation(-2, 0);
-        System.out.println(alleyway.isInAlleyway(location));
+    //     //true
+    //     location.setLocation(-2, 0);
+    //     System.out.println(alleyway.isInAlleyway(location));
 
-        //false
-        location.setLocation(2, 0);
-        System.out.println(alleyway.isInAlleyway(location));
-    }
+    //     //false
+    //     location.setLocation(2, 0);
+    //     System.out.println(alleyway.isInAlleyway(location));
+    // }
 
 }

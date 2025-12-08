@@ -1,12 +1,10 @@
 public class gameLoop{
 
-
-    // method for start game dialogue
-
-
     public void runGame(){
         int input;
         String output;
+
+        skeem player = new skeem();
 
         System.out.println(" Wake up!! Wake up!!");
         
@@ -34,10 +32,10 @@ public class gameLoop{
         // System.out.println(output);
     }
 
-    public static void main(String[] args) {
-        gameLoop game = new gameLoop();
-        skeem player = new skeem();
-        game.runGame();
+    // public static void main(String[] args) {
+    //     gameLoop game = new gameLoop();
+    //     skeem player = new skeem();
+    //     game.runGame();
 
-    }
+    // }
 }
