@@ -1,10 +1,8 @@
 public class alleyway extends location {
 
-    private skeem player; 
     public int change = 0;
         
-    public alleyway(skeem player){
-        this.player = player;
+    public alleyway(){
     }
 
     public int openingInput(){
@@ -25,11 +23,6 @@ public class alleyway extends location {
 
 
     public String openingOutput(int inputKey){
-        // if (change == 1){
-        //     return " oh good! looks like you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat. \n skeem, you must have had something weird to eat last night...you're far from home! \n you're in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
-        // } else {
-        //     return " i don't understand";
-        // }
         if (inputKey == 1){
             return " oh good! looks like you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat. \n skeem, you must have had something weird to eat last night...you're far from home! \n you're in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
         } else {

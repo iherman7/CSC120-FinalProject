@@ -9,7 +9,7 @@ public class gameLoop{
 
         System.out.println(" Wake up!! Wake up!!");
         
-        alleyway alleyway = new alleyway(player);
+        alleyway alleyway = new alleyway();
 
         input = alleyway.openingInput();
         output = alleyway.openingOutput(input);
