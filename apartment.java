@@ -9,7 +9,6 @@ public class apartment {
         this.player = player;
         this.loc = loc;
     }
-        
 
     public int negOneOneInput(){
         while (true){

@@ -3,6 +3,8 @@ public class alleyway {
     public int change = 0;
     private skeem player;
     private location loc;
+    private int x;
+    private int y;
         
     public alleyway(skeem player, location loc){
         this.player = player;
@@ -70,16 +72,29 @@ public class alleyway {
 
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 2){
-            loc.setLocation(-1, 0);
+            setAlleywayLocA(inputKey);
             return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
 
         }
         if (inputKey == 1){
-            loc.setLocation(1, 0);
+            setAlleywayLocA(inputKey);
             return " the alleyway is littered with discarded old cardboard boxes.\n there is a large gate in front of you.";
         }
         else {
             return " i don't understand";
+        }
+    }
+
+    public void setAlleywayLocA(int inputKey){
+        if (inputKey == 2){
+            loc.setLocation(-1, 0);
+            x = loc.getX();
+            y = loc.getY();
+        }
+        if (inputKey == 1){
+            loc.setLocation(1, 0);
+            x = loc.getX();
+            y = loc.getY();
         }
     }
 
@@ -125,17 +140,17 @@ public class alleyway {
     public String negOneZeroOutput(int inputKey){
         // going east 
         if (inputKey == 1){
-            loc.setLocation(0, 0);
+            setAlleywayLocB(inputKey);
             return " go east";
         }
         // going west 
         if (inputKey == 2){
-            loc.setLocation(-2, 0);
+            setAlleywayLocB(inputKey);
             return " you leave the alleyway and find yourself on a calm street. \n you have come to a crossroads...the only way to walk is north or south.";
         }
         // going into the apartment 
         if (inputKey == 3){
-            loc.setLocation(-1, 2);
+            setAlleywayLocB(inputKey);
             return " you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n there's no one around, but there's a bowl of cat food sitting a few steps in front of you. \n your stomach grumbles... ";
         }
         else {
@@ -144,11 +159,31 @@ public class alleyway {
     }
 
 
-    // public String nextMoveOutput(int inputKey){
-    //     if (inputKey == 1){
-    //         loc.setLocation(inputKey, inputKey);
-    //     }
-    // }
+    public void setAlleywayLocB(int inputKey){
+        if (inputKey == 1){
+            loc.setLocation(0, 0);
+            x = loc.getX();
+            y = loc.getY();
+        }
+        if (inputKey == 2){
+            loc.setLocation(-2, 0);
+            x = loc.getX();
+            y = loc.getY();
+        }
+        if (inputKey == 3){
+            loc.setLocation(-1, 2);
+            x = loc.getX();
+            y = loc.getY();
+        }
+    }
+
+    public int getAlleywayX(){
+        return x;
+    }
+
+    public int getAlleywayY(){
+        return y;
+    }
 
     public Boolean isInAlleyway(location loc){
         int x = loc.getX();
