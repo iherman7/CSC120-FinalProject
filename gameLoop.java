@@ -36,11 +36,11 @@ public class gameLoop{
 
             }
 
-            int a = playerLocation.getX();
-            int b = playerLocation.getY();
+            // int a = playerLocation.getX();
+            // int b = playerLocation.getY();
 
             // (1, 0) in front of gate
-            if (a == 1 && b == 0){
+            if (x == 1 && y == 0){
                 inputKey = gate.oneZeroInput();
                 outputString = gate.oneZeroOutput(inputKey);
                 System.out.println(outputString);

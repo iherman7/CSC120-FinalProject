@@ -39,9 +39,11 @@ public class gate {
 
             if (userInput.equals(case3)|| userInput.equals(case4)|| userInput.equals(case5)|| userInput.equals(case6)){
                 change = 3;
+                return change;
             }
             if (userInput.equals(case7) || userInput.equals(case8)){
                 change = 4;
+                return change;
             }
             else {
             System.out.println(" i don't understand");
