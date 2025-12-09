@@ -59,10 +59,10 @@ public class alleyway {
                 return change;
             } 
             if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
-                System.out.println(" you can't walk that way silly");
+                System.out.println(" you can't walk that way, silly");
             }
             else {
-                System.out.println(" i dont understand");
+                System.out.println(" i don't understand");
             }
         }
     }
@@ -76,47 +76,73 @@ public class alleyway {
         }
         if (inputKey == 1){
             loc.setLocation(1, 0);
-            return " the alleyway is littered with discarded old cardboard boxes.\n there is a large gate infront of you.";
+            return " the alleyway is littered with discarded old cardboard boxes.\n there is a large gate in front of you.";
         }
         else {
-            return " i dont understand";
+            return " i don't understand";
         }
     }
 
-    public int negOneZero(){
+    public int negOneZeroInput(){
     // runs on the game loop if location = (-1,0) from going west
-    //     while (true){
-    //         change = 0;
-    //         userIO userIO = new userIO();
-    //         String userInput = userIO.readInput();
+        while (true){
+            change = 0;
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
 
-    //         String case1 = "GO EAST";
-    //         String case2 = "EAST";
-    //         String case3 = "GO WEST";
-    //         String case4 = "WEST";
-    //         String case5 = "GO NORTH";
-    //         String case6 = "NORTH";
-    //         String case7 = "SOUTH";
-    //         String case8 = "GO SOUTH";
-    //         String case9 = "JUMP"
+            String case1 = "GO EAST";
+            String case2 = "EAST";
+            String case3 = "GO WEST";
+            String case4 = "WEST";
+            String case5 = "GO NORTH";
+            String case6 = "NORTH";
+            String case7 = "SOUTH";
+            String case8 = "GO SOUTH";
+            String case9 = "JUMP";
 
-    //         if (userInput.equals(case1)|| userInput.equals(case2)){
-    //             change = 1;
-    //             return change;
-    //         }
-    //         if (userInput.equals(case3) || userInput.equals(case4)){
-    //             change = 2;
-    //             return change;
-    //         } 
-    //         if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
-    //             System.out.println(" you can't walk that way silly");
-    //         }
-    //         else {
-    //             System.out.println(" i dont understand");
-    //         }
-    //     }
+            if (userInput.equals(case1)|| userInput.equals(case2)){
+                change = 1;
+                return change;
+            }
+            if (userInput.equals(case3) || userInput.equals(case4)){
+                change = 2;
+                return change;
+            } 
+            if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
+                System.out.println(" you can't walk that way, silly");
+            }
+            if (userInput.equals(case9)){
+                change = 3;
+                return change;
+            }
+            else {
+                System.out.println(" i don't understand");
+            }
+        }
 
-    // }
+    }
+    
+    public String negOneZeroOutput(int inputKey){
+        // going east 
+        if (inputKey == 1){
+            loc.setLocation(0, 0);
+            return " go east";
+        }
+        // going west 
+        if (inputKey == 2){
+            loc.setLocation(-2, 0);
+            return " you leave the alleyway and find yourself on a calm street. \n you have come to a crossroads...the only way to walk is north or south.";
+        }
+        // going into the apartment 
+        if (inputKey == 3){
+            loc.setLocation(-1, 2);
+            return " you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n there's no one around, but there's a bowl of cat food sitting a few steps in front of you. \n your stomach grumbles... ";
+        }
+        else {
+            return " i don't understand";
+        }
+    }
+
 
     // public String nextMoveOutput(int inputKey){
     //     if (inputKey == 1){

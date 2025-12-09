@@ -22,30 +22,34 @@ public class gate {
             String case4 = "GO NORTH";
             String case5 = "SOUTH";
             String case6 = "GO SOUTH";
+            String case7 = "WEST";
+            String case8 = "GO WEST";
 
             if (userInput.equals(case1)|| userInput.equals(case2)){ // will look differnt call from game loop
+                
                 if (player.hasKey() == false){ // need this condition; figure how to write it
-                    if (userInput.equals(case1)|| userInput.equals(case2)){
                         change = 1;
                         return change;
                     }
-            }
-            if (player.hasKey() == true){
-                if (userInput.equals(case1)|| userInput.equals(case2)){
+                if (player.hasKey() == true){
                     change = 2;
                     return change;
                 }
             }
+
             if (userInput.equals(case3)|| userInput.equals(case4)|| userInput.equals(case5)|| userInput.equals(case6)){
                 change = 3;
             }
-            else {
-            System.out.println("i don't understand");
+            if (userInput.equals(case7) || userInput.equals(case8)){
+                change = 4;
             }
-        }
+            else {
+            System.out.println(" i don't understand");
+            }
+        
         }
 
-        }
+    }
 
 
 
@@ -57,14 +61,23 @@ public class gate {
     //then the rest of the game can continue
 
 public String oneZeroOutput(int inputKey){
-     if (inputKey == 1){
-            return " the gate is locked. i think you might need a key to open it ";
+    // went east with no key
+    if (inputKey == 1){
+        return " the gate is locked. i think you might need a key to open it ";
         } 
+    // unlock gate
     if (inputKey == 2){
-            return " you use your cat mouth to put the key into the gate and it swings open! \n the gate was so tall the light coming in blinds you \n you wonder what is beyond the gate.";
+        loc.setLocation(2, 0);
+        return " you use your cat mouth to put the key into the gate and it swings open! \n the gate was so tall the light coming in blinds you \n you wonder what is beyond the gate.";
         } 
+    // tried to go north/south
     if (inputKey == 3){
-        return " you can't go that way silly";
+        return " you can't go that way, silly";
+    }
+    // go back west
+    if (inputKey == 4){
+        loc.setLocation(0, 0);
+        return " you're in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
     }
     else {
         return " i don't understand";
