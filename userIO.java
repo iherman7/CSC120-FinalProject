@@ -14,8 +14,8 @@ public class userIO {
         String userInput = mainScanner.nextLine();
 
         String fixeduserInput = userInput.toUpperCase();
-
         return fixeduserInput;
+        
     }
 
 }
