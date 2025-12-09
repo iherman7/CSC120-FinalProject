@@ -73,8 +73,7 @@ public class alleyway {
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 2){
             loc.setLocation(-1, 0);
-            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
-
+            return " jkjkthe alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         }
         if (inputKey == 1){
             loc.setLocation(1, 0);
@@ -107,34 +106,37 @@ public class alleyway {
 
             String case1 = "GO EAST";
             String case2 = "EAST";
+
             String case3 = "GO WEST";
             String case4 = "WEST";
+
             String case5 = "GO NORTH";
             String case6 = "NORTH";
-            String case7 = "SOUTH";
-            String case8 = "GO SOUTH";
+
+            String case7 = "GO SOUTH";
+            String case8 = "SOUTH";
+
             String case9 = "JUMP";
 
-            if (userInput.equals(case1)|| userInput.equals(case2)){
+            if (userInput.equals(case1)|| userInput.equals(case2)){ // east
                 change = 1;
                 return change;
             }
-            if (userInput.equals(case3) || userInput.equals(case4)){
+            if (userInput.equals(case3) || userInput.equals(case4)){ // west
                 change = 2;
                 return change;
             } 
-            if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
-                System.out.println(" you can't walk that way, silly");
-            }
-            if (userInput.equals(case9)){
+            if (userInput.equals(case9)){ // jump into apt
                 change = 3;
                 return change;
+            }
+            if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){ //north or south
+                System.out.println(" you can't walk that way, silly");
             }
             else {
                 System.out.println(" i don't understand");
             }
         }
-
     }
     
     public String negOneZeroOutput(int inputKey){
