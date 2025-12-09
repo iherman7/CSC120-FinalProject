@@ -33,33 +33,38 @@ public class gameLoop{
                 inputKey = alleyway.zeroZeroInput();
                 outputString = alleyway.zeroZeroOutput(inputKey);
                 System.out.println(outputString);
-                x = alleyway.getAlleywayX();
-                y = alleyway.getAlleywayY();
 
             }
 
+            int a = playerLocation.getX();
+            int b = playerLocation.getY();
+
             // (1, 0) in front of gate
-            if (x == 1 && y == 0){
+            if (a == 1 && b == 0){
                 inputKey = gate.oneZeroInput();
                 outputString = gate.oneZeroOutput(inputKey);
                 System.out.println(outputString);
             }
 
+            int c = playerLocation.getX();
+            int d = playerLocation.getY();
+
             // (-1, 0) alleyway in front of apt
-            if (x == -1 && y == 0){
+            if (c == -1 && d == 0){
                 inputKey = apartment.negOneOneInput();
                 outputString = apartment.negOneOneOutput(inputKey);
                 System.out.println(outputString);
-                x = alleyway.getAlleywayX();
-                y = alleyway.getAlleywayY();
             }
 
+            int e = playerLocation.getX();
+            int f = playerLocation.getY();
+
             // apt entrance
-            if (x == -1 && y == 1){
+            if (e == -1 && f == 1){
                 inputKey = apartment.negOneOneInput();
                 outputString = apartment.negOneOneOutput(inputKey);
                 System.out.println(outputString);
-            } 
+            }
 
             }
             // if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
