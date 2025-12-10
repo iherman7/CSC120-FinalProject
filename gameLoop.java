@@ -81,9 +81,12 @@ public class gameLoop{
             }
 
             //to park on calm street B
-            // if (x==-2 && y == -2){
+            if (x==-2 && y == -2){
+                inputKey = calmStreet.negTwoNegTwoInput();
+                outputString = calmStreet.negTwoNegTwoOutput(inputKey);
+                System.out.println(outputString);
 
-            // }
+            }
 
             }
 
