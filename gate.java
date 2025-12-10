@@ -79,7 +79,7 @@ public String oneZeroOutput(int inputKey){
     // go back west
     if (inputKey == 4){
         loc.setLocation(0, 0);
-        return " you're in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
+        return " you're where you woke up in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
     }
     else {
         return " i don't understand";

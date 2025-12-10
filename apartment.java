@@ -21,7 +21,7 @@ public class apartment {
             String case3 = "JUMP UP";
 
             String case4 = "FORWARD";
-            String case5 = "GO FORWARD";
+            String case5 = "GO FORWARD"; // closer, get closer
             String case6 = "GO TO FOOD";
 
             String case7 = "EAT FOOD";
@@ -60,7 +60,7 @@ public String negOneOneOutput(int inputKey){
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 2);
-        return " 'meowwwww!' a housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' \n ... \n 'you look hungry...'";
+        return " 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat cat hisses at you, but softens with pity \n 'but i do say you look hungry, are you?'";
         } 
     // tried to eat food
     if (inputKey == 3){
@@ -114,7 +114,7 @@ public String negOneOneOutput(int inputKey){
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 2);
-        return " 'it's weird, i haven't seen you around here before,' the housecat replies. \n 'ok, i'll let you have some of my food...but only if you answer my three riddles.' \n 'want to hear the first one?'";
+        return " ' i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home' \n 'because i am so kinda and generous, i'll let you have some of my food...but only if you answer my three riddles.' \n 'do want to hear the first one?'"; 
         } 
     else {
         return " i don't understand";

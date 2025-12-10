@@ -73,7 +73,7 @@ public class alleyway {
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 2){
             loc.setLocation(-1, 0);
-            return " jkjkthe alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         }
         if (inputKey == 1){
             loc.setLocation(1, 0);
@@ -143,7 +143,7 @@ public class alleyway {
         // going east 
         if (inputKey == 1){
             loc.setLocation(0, 0);
-            return " go east";
+            return " you're where you woke up in the back alleyway between some rows of apartments. \nlooks like you can only go east or west...";
         }
         // going west 
         if (inputKey == 2){
