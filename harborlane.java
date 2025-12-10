@@ -76,7 +76,7 @@ public class harborlane {
                 return " you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that skeem";
             }
             if (player.eatFood() == true){
-                return " you have reached the crosswalk of the busy street. now that you are no longer hungry you can see that the building in the distance is your home! \n but oh no! it looks the walk light for the cross walk is broken </3 \n how ever will you get home skeem!";
+                return " you have reached the crosswalk of the busy street. now that you are no longer hungry you can see that the building in the distance is your home! \n but oh no! it looks the light for the cross walk is broken </3 \n are you courageous enough to try and get home anyways skeem?";
             }
             else {
                 return " this shouldn't happen check food boolean";
