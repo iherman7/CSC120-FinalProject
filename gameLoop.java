@@ -19,6 +19,7 @@ public class gameLoop{
         gate gate = new gate(player, playerLocation);
         apartment apartment = new apartment(player, playerLocation);
         harborlane harborlane = new harborlane(player, playerLocation);
+        calmStreet calmStreet = new calmStreet(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -64,7 +65,29 @@ public class gameLoop{
                 System.out.println(outputString);
             }
 
+            //crossroads
+            if (x == -2 && y == 0){
+                inputKey = calmStreet.negTwoZeroInput();
+                outputString = calmStreet.negTwoZeroOutput(inputKey);
+                System.out.println(outputString);
             }
+
+            //to park on calm street A
+            if (x==-2 && y==-1){
+                inputKey = calmStreet.negTwoNegOneInput();
+                outputString = calmStreet.negTwoNegOneOutput(inputKey);
+                System.out.println(outputString);
+            }
+
+            //to park on calm street B
+            // if (x==-2 && y == -2){
+
+            // }
+
+            }
+
+            
+
             // if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
             //     // run gate
             // }

@@ -148,7 +148,7 @@ public class alleyway {
         // going west 
         if (inputKey == 2){
             loc.setLocation(-2, 0);
-            return " you leave the alleyway and find yourself on a calm street. \n you have come to a crossroads...the only way to walk is north or south.";
+            return " you leave the alleyway and find yourself on a calm street. \n you have come to a crossroads...the only way forward is to walk is north or south.";
         }
         // going into the apartment 
         if (inputKey == 3){

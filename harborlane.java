@@ -9,6 +9,7 @@ public class harborlane {
         this.loc = loc;
     }
 
+    //just walking through the gate
     public int zeroTwoInput(){
         while (true){
             change = 0;
@@ -29,19 +30,19 @@ public class harborlane {
 
             if (userInput.equals(case1)|| userInput.equals(case2)){
                 change = 1;
-                return change;
+                return change; //east
             }
              if (userInput.equals(case3)|| userInput.equals(case4)){
                 change = 2;
-                return change;
+                return change;//north
             }
              if (userInput.equals(case5)|| userInput.equals(case6)){
                 change = 3;
-                return change;
+                return change; //south
             }
              if (userInput.equals(case7)|| userInput.equals(case8)){
                 change = 4;
-                return change;
+                return change; //west
             }
             else{
                 System.out.println(" why would you type that, i don't understand");
@@ -65,6 +66,7 @@ public class harborlane {
         if (inputKey == 3){
             loc.setLocation(2,-1);
             return " you hear a loud honk from a car that just swerved to avoid a collison, its really crazy over there \n you might get a better vantage point of things if you walk forward";
+            // here you can only go north and south. there is no cross walk here and the buldings to the east have no place for you to go
         }
         //go east
         if (inputKey == 1){

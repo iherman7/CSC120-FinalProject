@@ -100,7 +100,6 @@ public class gate {
         }
     }
 
-//System.out.println(" don't know what you wanna do here buddy");
    
 
    
