@@ -10,6 +10,8 @@ public class park {
     }
 
     //park is at loc (-2,-3) & (-1,-3) & (-2,-4) & (-1,-4)
-
+    public int negTwoNegThreeInput(){
+        
+    }
 
 }

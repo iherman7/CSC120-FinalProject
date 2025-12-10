@@ -197,7 +197,7 @@ public class calmStreet {
     //go south
     if (inputKey == 3){
         loc.setLocation(-2, -3);
-        return " you have entered the park! \n the greenery sourounds you to the south and to the east, but you are intimidated by a scary and somber looking dog that is watching your every move";
+        return " you have entered the park! \n the greenery sourounds you to the south and to the east, \n but you are intimidated by a scary and somber looking dog that is watching your every move";
     }
     //go west
     if (inputKey == 4){
