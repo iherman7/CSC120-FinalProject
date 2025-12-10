@@ -57,6 +57,13 @@ public class gameLoop{
                 System.out.println(outputString);
             }
 
+            //harbor lane entrance 
+            if (x == 0 && y==2){
+                inputKey = harborlane.zeroTwoInput();
+                outputString = harborlane.zeroTwoOutput(inputKey);
+                System.out.println(outputString);
+            }
+
             }
             // if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
             //     // run gate

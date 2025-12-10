@@ -24,15 +24,18 @@ public class gate {
             String case6 = "GO SOUTH";
             String case7 = "WEST";
             String case8 = "GO WEST"; 
+
+            String case9 = "USE KEY";
+            String case10 = "OPEN GATE";
             // add in a case where we specifically have to use language to unlock gate, then from there step east
 
             if (userInput.equals(case1)|| userInput.equals(case2)){ // will look differnt call from game loop
                 
-                if (player.hasKey() == false){ // need this condition; figure how to write it
+                if (player.hasKey() == false){ //locked no key
                         change = 1;
                         return change;
                     }
-                if (player.hasKey() == true){
+                if (player.hasKey() == true){ //locked with key
                     change = 2;
                     return change;
                 }
@@ -45,6 +48,16 @@ public class gate {
             if (userInput.equals(case7) || userInput.equals(case8)){
                 change = 4;
                 return change;
+            }
+            if (userInput.equals(case9) || userInput.equals(case10)){
+                if (player.hasKey()==true){
+                    change = 5;
+                    return change;
+                }
+                else {
+                    System.out.println(" you don't have a key");
+                    continue;
+                }
             }
             else {
                 System.out.println(" i don't understand");
@@ -59,28 +72,37 @@ public class gate {
     //if boolean hasKey is true and they have said something along the lines of use key, open gate
     //then the rest of the game can continue
 
-public String oneZeroOutput(int inputKey){
-    // went east with no key
-    if (inputKey == 1){
-        return " the gate is locked. i think you might need a key to open it ";
-        } 
-    // unlock gate -- the next scene after this would take place at harbor lane
-    if (inputKey == 2){
-        loc.setLocation(0, 2);
-        return " you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!";
-        } 
-    // tried to go north/south
-    if (inputKey == 3){
-        return " you can't go that way, silly";
-    }
-    // go back west
-    if (inputKey == 4){
-        loc.setLocation(0, 0);
-        return " you're where you woke up in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
-    }
-    else {
-        return " i don't understand";
-    }
-    }
-}
+    public String oneZeroOutput(int inputKey){
+        // went east with no key
+        if (inputKey == 1){
+            return " the gate is locked. you might need a key to open it ";
+            } 
+        // unlock gate -- the next scene after this would take place at harbor lane
+        if (inputKey == 2){
+            return " the gate is locked but it looks like you have a key right there in you mouth. maybe give it a try or go west.";
+            }
+        // tried to go north/south
+        if (inputKey == 3){
+            return " you can't go that way, silly";
+        }
+        // go back west
+        if (inputKey == 4){
+            loc.setLocation(0, 0);
+            return " you're where you woke up in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
+        }
+        if (inputKey == 5){
+            loc.setLocation(0, 2);
+            return " you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!";
 
+        }
+        else {
+            return " i don't understand";
+        }
+    }
+
+//System.out.println(" don't know what you wanna do here buddy");
+   
+
+   
+
+}
