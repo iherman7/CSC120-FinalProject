@@ -60,7 +60,7 @@ public String negOneOneOutput(int inputKey){
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 2);
-        return " 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat cat hisses at you, but softens with pity \n 'but i do say you look hungry, are you?'";
+        return " 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity \n 'but i do say you look hungry, are you?'";
         } 
     // tried to eat food
     if (inputKey == 3){

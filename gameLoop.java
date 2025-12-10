@@ -25,6 +25,7 @@ public class gameLoop{
         outputString = alleyway.openingOutput(inputKey);
         System.out.println(outputString);
 
+        // will eventually have to change loop to say while not quit or game won?
         while (true){
 
             int x = playerLocation.getX();
