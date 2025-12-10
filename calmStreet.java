@@ -64,7 +64,7 @@ public class calmStreet {
         //go south
         if (inputKey == 3){
             loc.setLocation(-2, -1);
-            return " something...you see green up ahead";
+            return " you continue south, the trees lining the street seem to lead to an even greener place up ahead";
         }
         //go west
         if (inputKey == 4){
@@ -139,6 +139,74 @@ public class calmStreet {
         }
     }
 
+    public int negTwoNegTwoInput(){
+        while (true){
+        change = 0;
+        userIO userIO = new userIO();
+        String userInput = userIO.readInput();
+
+        String case1 = "EAST";
+        String case2 = "GO EAST"; 
+
+        String case3 = "NORTH";
+        String case4 = "GO NORTH";
+
+        String case5 = "SOUTH";
+        String case6 = "GO SOUTH";
+
+        String case7 = "WEST";
+        String case8 = "GO WEST";
+
+        String case9 = "ENTER PARK";
+        String case10 = "GO TO PARK";
+        String case11 = "GO FORWARD";
+        String case12 = "FORWARD";
+
+        if (userInput.equals(case1)|| userInput.equals(case2)){
+            change = 1;
+            return change; //east
+        }
+            if (userInput.equals(case3)|| userInput.equals(case4)){
+            change = 2;
+            return change;//north
+        }
+            if (userInput.equals(case5)|| userInput.equals(case6)||userInput.equals(case9)|| userInput.equals(case10)||userInput.equals(case11)|| userInput.equals(case12)){
+            change = 3;
+            return change; //south
+        }
+            if (userInput.equals(case7)|| userInput.equals(case8)){
+            change = 4;
+            return change; //west
+        }
+        else{
+            System.out.println(" why would you type that, i don't understand");
+        }
+        }
+    } 
+
+    public String negTwoNegTwoOutput(int inputKey){
+    //go east
+    if (inputKey == 1){
+        return " the street doesn't have any turns here, maybe try north or south";
+    }
+    //go north
+    if (inputKey == 2){
+        loc.setLocation(-2, -1);
+        return " you walk back up the calm, street...it really is calm here";
+    //go south
+    if (inputKey == 3){
+        loc.setLocation(-2, -3);
+        return " you have entered the park! \n the greenery sourounds you to the south and to the east, but you are intimidated by a scary and somber looking dog that is watching your every move";
+    }
+    //go west
+    if (inputKey == 4){
+        return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+    }
+    else{
+        return " why would you type that, i dont understand";
+    }
+    }
+
+}  
 
 
-}
