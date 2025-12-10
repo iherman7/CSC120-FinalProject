@@ -18,6 +18,7 @@ public class gameLoop{
         alleyway alleyway = new alleyway(player, playerLocation);
         gate gate = new gate(player, playerLocation);
         apartment apartment = new apartment(player, playerLocation);
+        harborlane harborlane = new harborlane(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);

@@ -23,7 +23,8 @@ public class gate {
             String case5 = "SOUTH";
             String case6 = "GO SOUTH";
             String case7 = "WEST";
-            String case8 = "GO WEST";
+            String case8 = "GO WEST"; 
+            // add in a case where we specifically have to use language to unlock gate, then from there step east
 
             if (userInput.equals(case1)|| userInput.equals(case2)){ // will look differnt call from game loop
                 
@@ -46,16 +47,12 @@ public class gate {
                 return change;
             }
             else {
-            System.out.println(" i don't understand");
+                System.out.println(" i don't understand");
             }
         
         }
 
     }
-
-
-
-
 
     // set location
     //say you cannot do anything if boolean hasKey is false
@@ -67,10 +64,10 @@ public String oneZeroOutput(int inputKey){
     if (inputKey == 1){
         return " the gate is locked. i think you might need a key to open it ";
         } 
-    // unlock gate
+    // unlock gate -- the next scene after this would take place at harbor lane
     if (inputKey == 2){
-        loc.setLocation(2, 0);
-        return " you use your cat mouth to put the key into the gate and it swings open! \n the gate was so tall the light coming in blinds you \n you wonder what is beyond the gate.";
+        loc.setLocation(0, 2);
+        return " you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!";
         } 
     // tried to go north/south
     if (inputKey == 3){
