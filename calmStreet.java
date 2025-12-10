@@ -193,6 +193,7 @@ public class calmStreet {
     if (inputKey == 2){
         loc.setLocation(-2, -1);
         return " you walk back up the calm, street...it really is calm here";
+    }
     //go south
     if (inputKey == 3){
         loc.setLocation(-2, -3);
@@ -208,5 +209,6 @@ public class calmStreet {
     }
 
 }  
+
 
 
