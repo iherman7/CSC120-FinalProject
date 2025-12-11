@@ -4,12 +4,14 @@ public class skeem {
     private boolean sharpenClaws;
     private boolean hasKey;
     private boolean eatFood;
+    private boolean dogHasBone;
 
     public skeem(){
         this.hasBone = false;
         this.sharpenClaws = false;
         this.hasKey = false;
         this.eatFood = false;
+        this.dogHasBone = false;
     }
 
 
@@ -39,5 +41,12 @@ public class skeem {
     }
     public void setFull(boolean f){
         eatFood = f;
+    }
+
+     public boolean dogHasBone(){
+        return eatFood;
+    }
+    public void setDogHasBone(boolean d){
+        eatFood = d;
     }
 }

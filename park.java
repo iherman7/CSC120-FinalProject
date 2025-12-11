@@ -9,7 +9,7 @@ public class park {
         this.loc = loc;
     }
 
-    //park is at loc (-2,-3) & (-1,-3) & (-2,-4) & (-1,-4)
+    //park is at loc (-2,-3) & (-1,-3) & (-2,-4) & (-1,-4)--tree clibimg
     public int negTwoNegThreeInput(){
         while (true){
             change = 0;
@@ -82,16 +82,17 @@ public class park {
     public String negTwoNegThreeOutput(int inputKey){
         //east
         if (inputKey == 1){
-        return " the dog approaches you 'you cats think you can just walk and around anywhere, well i used to run around when my owner would throw a bone in my prime days. this is still MY park stay out! \n he barks you off \n if only there were a way to distract him";
+        return " the dog approaches you 'you cats think you can just walk and around anywhere, well i used to run around when my owner would throw a bone in my prime days. this is still MY park stay out! \n if only there were a way to distract him. \n he barks you off.";
         }
         //go north
         if (inputKey == 2){
-            loc.setLocation(-2, -1);
+            loc.setLocation(-2, -2);
             return " you are now on the calm street infront of leaning tree park...to go north or south...what to do...";
         }
         //go south
         if (inputKey == 3){
-            return " the dog approaches you bearing it's canines, a growl ready to release \n 'this is MY park you can't enter.' the dog looks at you serverly. \n 'after my owner stopped playing with me to spend more time with his new cat,' he snarls \n 'you especially aren't welcomed here.' \n he barks you off \n if only there was a way to distract him";
+            loc.setLocation(-2, -2);
+            return " the dog approaches you bearing it's canines, a growl ready to release \n 'this is MY park you can't enter.' the dog looks at you serverly. \n 'after my owner stopped playing with me to spend more time with his new cat,' he snarls \n 'you especially aren't welcomed here.' \n if only there was a way to distract him \n he barks you off";
         }
         //go west
         if (inputKey == 4){
@@ -99,6 +100,7 @@ public class park {
         }
         //go east if have fish bone
         if (inputKey == 5){
+            loc.setLocation(-2, -2);
             return " the dog approaches you again and blocks your path 'didn't i tell you to stay away from my--' he is suddenly distracted by the bone you have in your mouth. \n he seems to be enammored by it...";
         }
         //go south if fish bone
@@ -107,13 +109,245 @@ public class park {
         }
         //throw bone
         if (inputKey == 7){
-            return " the dog chases after the bone with exuberant joy 'oh man i haven't felt such thrill like this in seven years' \n the park that continues east or south is now free to roam!";
+            player.setDogHasBone(true);
+            return " the dog chases after the bone with exuberant joy 'oh man i haven't felt such thrill like this in seven years' \n the leaning tree park is now free to roam to the east or south!";
         }
         else{
             return " why would you type that, i dont understand";
         }
     }
 
-    public int nextmove 
+    public int nextMoveInput(){
+        while (true){
+            change = 0;
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
 
+            String case1 = "EAST";
+            String case2 = "GO EAST"; 
+
+            String case3 = "NORTH";
+            String case4 = "GO NORTH";
+
+            String case5 = "SOUTH";
+            String case6 = "GO SOUTH";
+
+            String case7 = "WEST";
+            String case8 = "GO WEST";
+
+            if (userInput.equals(case1)|| userInput.equals(case2)){
+                change = 1;
+                return change; //east
+            }
+             if (userInput.equals(case3)|| userInput.equals(case4)){
+                change = 2;
+                return change; //north
+            }
+             if (userInput.equals(case5)|| userInput.equals(case6)){
+                change = 3;
+                return change; //south
+            }
+             if (userInput.equals(case7)|| userInput.equals(case8)){
+                change = 4;
+                return change; //west
+            }
+            else{
+                System.out.println(" why would you type that, i don't understand");
+            }
+        }
+    } 
+
+    public String nextMoveOutput(int inputKey){
+        //go east
+        if (inputKey == 1){
+            loc.setLocation(-1,-3);
+            return " beautiful calm senerenity, you see the leaning tree to your south";
+        }
+        //go north
+        if (inputKey == 2){
+            loc.setLocation(-2, -2);
+            return " you are now on the calm street infront of leaning tree park...to go north or south...what to do...";
+        }
+        //go south
+        if (inputKey == 3){
+            loc.setLocation(-2, -4); 
+            return " sigh, what a nice park, you see the centerpice, the leaning tree to your east ";
+        }
+        //go west
+        if (inputKey == 4){
+            return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+        }
+        else{
+            return " why would you type that, i dont understand";
+        }
+    }
+
+    public int negTwoNegFourInput(){
+            while (true){
+            change = 0;
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
+
+            String case1 = "EAST";
+            String case2 = "GO EAST"; 
+
+            String case3 = "NORTH";
+            String case4 = "GO NORTH";
+
+            String case5 = "SOUTH";
+            String case6 = "GO SOUTH";
+
+            String case7 = "WEST";
+            String case8 = "GO WEST";
+
+            String case9 = "CLIMB";
+            String case10 = "CLIMB TREE";
+
+            //string case for climb tree
+
+            if (userInput.equals(case1)|| userInput.equals(case2)){
+                change = 1;
+                return change; //east
+            }
+             if (userInput.equals(case3)|| userInput.equals(case4)){
+                change = 2;
+                return change; //north
+            }
+             if (userInput.equals(case5)|| userInput.equals(case6)){
+                change = 3;
+                return change; //south
+            }
+             if (userInput.equals(case7)|| userInput.equals(case8)){
+                change = 4;
+                return change; //west
+            }
+            if (userInput.equals(case10)|| userInput.equals(case9)){
+                if (player.sharpenClaws()==false){
+                    change = 5;
+                    return change; //not sharp claw
+                }
+                if (player.sharpenClaws()==true){
+                    change = 6;
+                    return change; //sharpen claws
+                }
+            }
+            else{
+                System.out.println(" why would you type that, i don't understand");
+            }
+        }
+    }
+
+    public String negTwoNegFourOutput(int inputKey){
+        //go east - you cant go east there is the tree that blocks ur path u see somtheting shiny
+        if (inputKey == 1){
+            return " the large leaning tree block your path, you cannot continue east. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.";
+        }
+        //go north
+        if (inputKey == 2){
+            loc.setLocation(-2, -3);
+            return " the scenery of the park has really impressed you, the gate to leave is in front of you if you choose to return to the calm street.";
+        }
+        //go south
+        if (inputKey == 3){
+            return " you have reached the end of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
+        }
+        //go west
+        if (inputKey == 4){
+            return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+        }
+        if (inputKey == 5){
+            return " you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...";
+        }
+        if (inputKey == 6){
+            player.setKey(true);
+            return " with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?";
+        }
+        else{
+            return " why would you type that, i dont understand";
+        }
+    }
+
+    public int negOneNegThreeInput(){
+        while (true){
+        change = 0;
+        userIO userIO = new userIO();
+        String userInput = userIO.readInput();
+
+        String case1 = "EAST";
+        String case2 = "GO EAST"; 
+
+        String case3 = "NORTH";
+        String case4 = "GO NORTH";
+
+        String case5 = "SOUTH";
+        String case6 = "GO SOUTH";
+
+        String case7 = "WEST";
+        String case8 = "GO WEST";
+
+        String case9 = "CLIMB";
+        String case10 = "CLIMB TREE";
+
+        if (userInput.equals(case1)|| userInput.equals(case2)){
+            change = 1;
+            return change; //east
+        }
+            if (userInput.equals(case3)|| userInput.equals(case4)){
+            change = 2;
+            return change; //north
+        }
+            if (userInput.equals(case5)|| userInput.equals(case6)){
+            change = 3;
+            return change; //south
+        }
+            if (userInput.equals(case7)|| userInput.equals(case8)){
+            change = 4;
+            return change; //west
+        }
+        if (userInput.equals(case10)|| userInput.equals(case9)){
+            if (player.sharpenClaws()==false){
+                change = 5;
+                return change; //not sharp claw
+            }
+            if (player.sharpenClaws()==true){
+                change = 6;
+                return change; //sharpen claws
+            }
+        }
+        else{
+            System.out.println(" why would you type that, i don't understand");
+        }
+        }
+    }
+
+    public String negOneNegThreeOutput(int inputKey){
+        //go east - you cant go east end of park
+        if (inputKey == 1){
+            return " you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
+        }
+        //go north -- cant go north, edge of park
+        if (inputKey == 2){
+            return " you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
+        }
+        //go south // cant go south tree block ur path
+        if (inputKey == 3){
+            return " the large leaning tree block your path, you cannot continue south. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.";
+        }
+        //go west // palces u back
+        if (inputKey == 4){
+            loc.setLocation(-2, -3);
+            return " the scenery of the park has really impressed you, the gate to leave is north of you if you choose to return to the calm street.";
+        }
+         if (inputKey == 5){
+            return " you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...";
+        }
+        if (inputKey == 6){
+            player.setKey(true);
+            return " with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?";
+        }
+        else {
+            return " why would you type that, i dont understand";
+        }
+    }
 }
+

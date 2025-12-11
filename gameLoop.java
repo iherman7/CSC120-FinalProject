@@ -20,6 +20,7 @@ public class gameLoop{
         apartment apartment = new apartment(player, playerLocation);
         harborlane harborlane = new harborlane(player, playerLocation);
         calmStreet calmStreet = new calmStreet(player, playerLocation);
+        park park = new park(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -145,12 +146,38 @@ public class gameLoop{
             }
 
             //to park on calm street B
-            if (x==-2 && y == -2){
+            if (x== -2 && y == -2){
                 inputKey = calmStreet.negTwoNegTwoInput();
                 outputString = calmStreet.negTwoNegTwoOutput(inputKey);
                 System.out.println(outputString);
 
             }
+            //at the park before dog has bone
+            if (x== -2 && y== -3){
+                //before dog has bone
+                if (player.dogHasBone()==false){
+                    inputKey = park.negTwoNegThreeInput();
+                    outputString = park.negTwoNegThreeOutput(inputKey); 
+                    System.out.println(outputString);
+                }
+                //at park after dog has bone
+                if (player.dogHasBone()==true){
+                    inputKey = park.nextMoveInput();
+                    outputString = park.nextMoveOutput(inputKey);
+                    System.out.println(outputString);
+                }  
+            }
+            if (x == -2 && y == -4){
+                inputKey = park.negTwoNegFourInput();
+                outputString = park.negTwoNegFourOutput(inputKey);
+                System.out.println(outputString);
+            }
+            if (x == -1 && y == -3){
+                inputKey = park.negTwoNegThreeInput();
+                outputString = park.negTwoNegThreeOutput(inputKey);
+                System.out.println(outputString);
+            }
+
 
             }
 
