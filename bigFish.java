@@ -1,4 +1,4 @@
-public class bigFish extends item{
+public class bigFish extends item{ //we do not need this class could be a thing for skeem
 
     boolean eatFish;
 

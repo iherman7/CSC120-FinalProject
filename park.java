@@ -69,12 +69,12 @@ public class park {
                 return change;
                 }
             else {
-                System.out.println(" what bone?");
+                System.out.println("\n what bone?");
                 continue;
             }
             }
             else{
-                System.out.println(" why would you type that, i don't understand");
+                System.out.println("\n why would you type that, i don't understand");
             }
         }
     }
@@ -82,38 +82,36 @@ public class park {
     public String negTwoNegThreeOutput(int inputKey){
         //east
         if (inputKey == 1){
-        return " the dog approaches you 'you cats think you can just walk and around anywhere, well i used to run around when my owner would throw a bone in my prime days. this is still MY park stay out! \n if only there were a way to distract him. \n he barks you off.";
+        return "\n the dog approaches you 'you cats think you can just walk and around anywhere, well i used to run around when my owner would throw a bone in my prime days. this is still MY park stay out! \n if only there were a way to distract him. \n he barks you off.";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, -2);
-            return " you are now on the calm street infront of leaning tree park...to go north or south...what to do...";
+            return "\n you are now on the calm street infront of leaning tree park...to go north or south...what to do...";
         }
         //go south
         if (inputKey == 3){
-            loc.setLocation(-2, -2);
-            return " the dog approaches you bearing it's canines, a growl ready to release \n 'this is MY park you can't enter.' the dog looks at you serverly. \n 'after my owner stopped playing with me to spend more time with his new cat,' he snarls \n 'you especially aren't welcomed here.' \n if only there was a way to distract him \n he barks you off";
+            return "\n the dog approaches you bearing it's canines, a growl ready to release \n 'this is MY park you can't enter.' the dog looks at you serverly. \n 'after my owner stopped playing with me to spend more time with his new cat,' he snarls \n 'you especially aren't welcomed here.' \n if only there was a way to distract him \n he barks you off";
         }
         //go west
         if (inputKey == 4){
-            return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+            return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
         }
         //go east if have fish bone
         if (inputKey == 5){
-            loc.setLocation(-2, -2);
-            return " the dog approaches you again and blocks your path 'didn't i tell you to stay away from my--' he is suddenly distracted by the bone you have in your mouth. \n he seems to be enammored by it...";
+            return "\n the dog approaches you again and blocks your path 'didn't i tell you to stay away from my--' he is suddenly distracted by the bone you have in your mouth. \n he seems to be enammored by it...";
         }
         //go south if fish bone
         if (inputKey == 6){
-            return " the dog approaches you again and blocks your path 'you cats just don't listen, this is my--' he is lost in lust by the bone you have in your mouth. \n he seems to be enammored by it...";
+            return "\n the dog approaches you again and blocks your path 'you cats just don't listen, this is my--' he is lost in lust by the bone you have in your mouth. \n he seems to be enammored by it...";
         }
         //throw bone
         if (inputKey == 7){
             player.setDogHasBone(true);
-            return " the dog chases after the bone with exuberant joy 'oh man i haven't felt such thrill like this in seven years' \n the leaning tree park is now free to roam to the east or south!";
+            return "\n the dog chases after the bone with exuberant joy 'oh man i haven't felt such thrill like this in seven years' \n the leaning tree park is now free to roam to the east or south!";
         }
         else{
-            return " why would you type that, i dont understand";
+            return "\n why would you type that, i dont understand";
         }
     }
 
@@ -152,7 +150,7 @@ public class park {
                 return change; //west
             }
             else{
-                System.out.println(" why would you type that, i don't understand");
+                System.out.println("\n why would you type that, i don't understand");
             }
         }
     } 
@@ -161,24 +159,24 @@ public class park {
         //go east
         if (inputKey == 1){
             loc.setLocation(-1,-3);
-            return " beautiful calm senerenity, you see the leaning tree to your south";
+            return "\n beautiful calm senerenity, you see the leaning tree to your south";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, -2);
-            return " you are now on the calm street infront of leaning tree park...to go north or south...what to do...";
+            return "\n you are now on the calm street infront of leaning tree park...to go north or south...what to do...";
         }
         //go south
         if (inputKey == 3){
             loc.setLocation(-2, -4); 
-            return " sigh, what a nice park, you see the centerpice, the leaning tree to your east ";
+            return "\n sigh, what a nice park, you see the centerpice, the leaning tree to your east ";
         }
         //go west
         if (inputKey == 4){
-            return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+            return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
         }
         else{
-            return " why would you type that, i dont understand";
+            return "\n why would you type that, i dont understand";
         }
     }
 
@@ -232,7 +230,7 @@ public class park {
                 }
             }
             else{
-                System.out.println(" why would you type that, i don't understand");
+                System.out.println("\n why would you type that, i don't understand");
             }
         }
     }
@@ -240,30 +238,30 @@ public class park {
     public String negTwoNegFourOutput(int inputKey){
         //go east - you cant go east there is the tree that blocks ur path u see somtheting shiny
         if (inputKey == 1){
-            return " the large leaning tree block your path, you cannot continue east. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.";
+            return "\n the large leaning tree block your path, you cannot continue east. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, -3);
-            return " the scenery of the park has really impressed you, the gate to leave is in front of you if you choose to return to the calm street.";
+            return "\n the scenery of the park has really impressed you, the gate to leave is in front of you if you choose to return to the calm street.";
         }
         //go south
         if (inputKey == 3){
-            return " you have reached the end of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
+            return "\n you have reached the end of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
         }
         //go west
         if (inputKey == 4){
-            return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+            return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
         }
         if (inputKey == 5){
-            return " you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...";
+            return "\n you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...";
         }
         if (inputKey == 6){
             player.setKey(true);
-            return " with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?";
+            return "\n with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?";
         }
         else{
-            return " why would you type that, i dont understand";
+            return "\n why would you type that, i dont understand";
         }
     }
 
@@ -315,7 +313,7 @@ public class park {
             }
         }
         else{
-            System.out.println(" why would you type that, i don't understand");
+            System.out.println("\n why would you type that, i don't understand");
         }
         }
     }
@@ -323,30 +321,30 @@ public class park {
     public String negOneNegThreeOutput(int inputKey){
         //go east - you cant go east end of park
         if (inputKey == 1){
-            return " you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
+            return "\n you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
         }
         //go north -- cant go north, edge of park
         if (inputKey == 2){
-            return " you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
+            return "\n you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean";
         }
         //go south // cant go south tree block ur path
         if (inputKey == 3){
-            return " the large leaning tree block your path, you cannot continue south. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.";
+            return "\n the large leaning tree block your path, you cannot continue south. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.";
         }
         //go west // palces u back
         if (inputKey == 4){
             loc.setLocation(-2, -3);
-            return " the scenery of the park has really impressed you, the gate to leave is north of you if you choose to return to the calm street.";
+            return "\n the scenery of the park has really impressed you, the gate to leave is north of you if you choose to return to the calm street.";
         }
          if (inputKey == 5){
-            return " you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...";
+            return "\n you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...";
         }
         if (inputKey == 6){
             player.setKey(true);
-            return " with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?";
+            return "\n with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?";
         }
         else {
-            return " why would you type that, i dont understand";
+            return "\n why would you type that, i dont understand";
         }
     }
 }

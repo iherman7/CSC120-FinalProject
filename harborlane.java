@@ -45,7 +45,7 @@ public class harborlane {
                 return change; //west
             }
             else{
-                System.out.println(" why would you type that, i don't understand");
+                System.out.println("\n why would you type that, i don't understand");
             }
         }
     }
@@ -54,18 +54,18 @@ public class harborlane {
         //go west
         if (inputKey == 4){
             loc.setLocation(0,1);
-            return " you walk through the gate and are once again faced with an alleyway litterd with cardbord boxes. \n you can only go east or west";
+            return "\n you walk through the gate and are once again faced with an alleyway litterd with cardbord boxes. \n you can only go east or west";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(2,1);
-            return " you hear the cars zoom past you on the busy street to the east. \n in front of you see that the side walk leads to the surround ocean";
+            return "\n you hear the cars zoom past you on the busy street to the east. \n in front of you see that the side walk leads to the surround ocean";
             // here you can only go north and south. there is no cross walk here and the buldings to the west have no place for you to go
         }
         //go south
         if (inputKey == 3){
             loc.setLocation(2,-1);
-            return " you hear a loud honk from a car that just swerved to avoid a collison, its really crazy over there \n you might get a better vantage point of things if you walk forward";
+            return "\n you hear a loud honk from a car that just swerved to avoid a collison, its really crazy over there \n you might get a better vantage point of things if you walk forward";
             // here you can only go north and south. there is no cross walk here and the buldings to the east have no place for you to go
         }
         //go east
@@ -73,17 +73,17 @@ public class harborlane {
             loc.setLocation(0, 3);
 
             if (player.eatFood() == false){
-                return " you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that skeem";
+                return "\n you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that skeem";
             }
             if (player.eatFood() == true){
-                return " you have reached the crosswalk of the busy street. now that you are no longer hungry you can see that the building in the distance is your home! \n but oh no! it looks the light for the cross walk is broken </3 \n are you courageous enough to try and get home anyways skeem?";
+                return "\n you have reached the crosswalk of the busy street. now that you are no longer hungry you can see that the building in the distance is your home! \n but oh no! it looks the light for the cross walk is broken </3 \n are you courageous enough to try and get home anyways skeem?";
             }
             else {
-                return " this shouldn't happen check food boolean";
+                return "\n this shouldn't happen check food boolean";
             }
         }
         else {
-            return " i don't understand";
+            return "\n i don't understand";
         }  
     }
 }   

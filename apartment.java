@@ -50,7 +50,7 @@ public class apartment {
                 return change;
             }
             else {
-            System.out.println(" i don't understand");
+            System.out.println("\n i don't understand");
             }
         
         }
@@ -61,19 +61,19 @@ public String negOneOneOutput(int inputKey){
     // left apartment
     if (inputKey == 1){
         loc.setLocation(-1, 0);
-        return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         } 
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 2);
-        return " 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity. \n 'but i do say, you look hungry... are you?'";
+        return "\n 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity. \n 'but i do say, you look hungry... are you?'";
         } 
     // tried to eat food
     if (inputKey == 3){
-        return " you're too far away!";
+        return "\n you're too far away!";
         } 
     else {
-        return " i don't understand";
+        return "\n i don't understand";
     }
     }
 
@@ -102,7 +102,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println(" 'are you hungry?' the housecat says.");
+                System.out.println("\n 'are you hungry?' the housecat says.");
             }
         
         }
@@ -113,15 +113,15 @@ public String negOneOneOutput(int inputKey){
     // went back to window
     if (inputKey == 1){
         loc.setLocation(-1, 1);
-        return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         } 
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 3);
-        return " 'i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home. \n because i am so kind and generous, i'll let you have some of my food...but only if you answer my three riddles. \n do you want to hear the first one?'"; 
+        return "\n 'i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home. \n because i am so kind and generous, i'll let you have some of my food...but only if you answer my three riddles. \n do you want to hear the first one?'"; 
         } 
     else {
-        return " i don't understand";
+        return "\n i don't understand";
     }
     }
 
@@ -147,7 +147,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println(" i don't understand");
+                System.out.println("\n i don't understand");
             }
         
         }
@@ -158,15 +158,15 @@ public String negOneOneOutput(int inputKey){
     // yes
     if (inputKey == 1){
         loc.setLocation(-1, 4);
-        return " 'ok, your first riddle is: \n what is a fishmonger's favorite song?'";
+        return "\n 'okay, your first riddle is: \n what is a fishmonger's favorite song?'";
         } 
     // no
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return " 'ok, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
         } 
     else {
-        return " i don't understand";
+        return "\n i don't understand";
     }
     }
 
@@ -201,7 +201,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println(" 'no, that's not it... \n maybe visit the fish market in town to find out.'");
+                System.out.println("\n 'no, that's not it... \n maybe visit the fish market in town to find out.'");
             }
         
         }
@@ -212,15 +212,15 @@ public String negOneOneOutput(int inputKey){
     // correct
     if (inputKey == 1){
         loc.setLocation(-1, 5);
-        return " 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'";
+        return "\n 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return " 'ok, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
         } 
     else {
-        return " i don't understand";
+        return "\n i don't understand";
     }
     }
 
@@ -256,7 +256,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println(" 'not even close. \n but i wonder where he hangs out these days...'");
+                System.out.println("\n 'not even close. \n but i wonder where he hangs out these days...'");
             }
         
         }
@@ -267,15 +267,15 @@ public String negOneOneOutput(int inputKey){
     // correct
     if (inputKey == 1){
         loc.setLocation(-1, 6);
-        return " 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'";
+        return "\n 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return " 'ok, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
         } 
     else {
-        return " i don't understand";
+        return "\n i don't understand";
     }
     }
 
@@ -308,7 +308,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println(" 'haha, maybe next time. \n there's a lot more to this town than you think.'");
+                System.out.println("\n 'haha, maybe next time. \n there's a lot more to this town than you think.'");
             }
         
         }
@@ -320,15 +320,15 @@ public String negOneOneOutput(int inputKey){
     if (inputKey == 1){
         player.setFull(true);
         loc.setLocation(-1, 0);
-        return " 'congratulations, you've earned it.' \n the housecat steps aside, allowing you to step forward and eat the food. \n it's delicious, and as you leave the apartment and jump back down to the alleyway you immediately feel more energetic and courageous... ";
+        return "\n 'congratulations, you've earned it.' \n the housecat steps aside, allowing you to step forward and eat the food. \n it's delicious, and as you leave the apartment and jump back down to the alleyway you immediately feel more energetic and courageous... ";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return " 'ok, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
         } 
     else {
-        return " i don't understand";
+        return "\n i don't understand";
     }
     }
 }

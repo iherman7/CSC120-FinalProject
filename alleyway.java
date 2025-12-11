@@ -23,7 +23,7 @@ public class alleyway {
                 change = 1;
                 return change;
             } else {
-                System.out.println(" i don't understand");
+                System.out.println(" \n i don't understand");
             }
         }
     }
@@ -31,9 +31,9 @@ public class alleyway {
 
     public String openingOutput(int inputKey){
         if (inputKey == 1){
-            return " oh good! you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat? \n skeem, you must have had something weird to eat last night... \n you're in the back alleyway between some rows of apartments...oh no, you're far from home! \n looks like you can only go east or west...";
+            return "\n oh good! you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat? \n skeem, you must have had something weird to eat last night... \n you're in the back alleyway between some rows of apartments...oh no, you're far from home! \n looks like you can only go east or west...";
         } else {
-            return " i don't understand";
+            return "\n i don't understand";
         }
     }
 
@@ -61,10 +61,10 @@ public class alleyway {
                 return change;
             } 
             if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){
-                System.out.println(" you can't walk that way, silly");
+                System.out.println("\n you can't walk that way, silly");
             }
             else {
-                System.out.println(" i don't understand");
+                System.out.println("\n i don't understand");
             }
         }
     }
@@ -73,14 +73,14 @@ public class alleyway {
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 2){
             loc.setLocation(-1, 0);
-            return " the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+            return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
         }
         if (inputKey == 1){
             loc.setLocation(1, 0);
-            return " the alleyway is littered with discarded old cardboard boxes.\n there is a large gate in front of you.";
+            return "\n the alleyway is littered with discarded old cardboard boxes.\n there is a large gate in front of you.";
         }
         else {
-            return " i don't understand";
+            return "\n i don't understand";
         }
     }
 
@@ -131,10 +131,10 @@ public class alleyway {
                 return change;
             }
             if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)){ //north or south
-                System.out.println(" you can't walk that way, silly");
+                System.out.println("\n you can't walk that way, silly");
             }
             else {
-                System.out.println(" i don't understand");
+                System.out.println("\n i don't understand");
             }
         }
     }
@@ -143,20 +143,20 @@ public class alleyway {
         // going east 
         if (inputKey == 1){
             loc.setLocation(0, 0);
-            return " you're where you woke up in the back alleyway between some rows of apartments. \nlooks like you can only go east or west...";
+            return "\n you're where you woke up in the back alleyway between some rows of apartments. \nlooks like you can only go east or west...";
         }
         // going west 
         if (inputKey == 2){
             loc.setLocation(-2, 0);
-            return " you leave the alleyway and find yourself on a calm street. \n you have come to a crossroads...the only way forward is to walk is north or south.";
+            return "\n you leave the alleyway and find yourself on a calm street. \n you have come to a crossroads...the only way forward is to walk is north or south.";
         }
         // going into the apartment 
         if (inputKey == 3){
             loc.setLocation(-1, 1);
-            return " you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n there's no one around, but there's a bowl of cat food sitting a few steps in front of you. \n your stomach grumbles... ";
+            return "\n you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n there's no one around, but there's a bowl of cat food sitting a few steps in front of you. \n your stomach grumbles... ";
         }
         else {
-            return " i don't understand";
+            return "\n i don't understand";
         }
     }
 

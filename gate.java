@@ -55,12 +55,12 @@ public class gate {
                     return change;
                 }
                 else {
-                    System.out.println(" you don't have a key");
+                    System.out.println("\n you don't have a key");
                     continue;
                 }
             }
             else {
-                System.out.println(" i don't understand");
+                System.out.println("\n i don't understand");
             }
         
         }
@@ -75,28 +75,28 @@ public class gate {
     public String oneZeroOutput(int inputKey){
         // went east with no key
         if (inputKey == 1){
-            return " the gate is locked. you might need a key to open it ";
+            return "\n the gate is locked. you might need a key to open it ";
             } 
         // unlock gate -- the next scene after this would take place at harbor lane
         if (inputKey == 2){
-            return " the gate is locked but it looks like you have a key right there in you mouth. maybe give it a try or go west.";
+            return "\n the gate is locked but it looks like you have a key right there in you mouth. maybe give it a try or go west.";
             }
         // tried to go north/south
         if (inputKey == 3){
-            return " you can't go that way, silly";
+            return "\n you can't go that way, silly";
         }
         // go back west
         if (inputKey == 4){
             loc.setLocation(0, 0);
-            return " you're where you woke up in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
+            return "\n you're where you woke up in the back alleyway between some rows of apartments. \n looks like you can only go east or west...";
         }
         if (inputKey == 5){
             loc.setLocation(0, 2);
-            return " you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!";
+            return "\n you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!";
 
         }
         else {
-            return " i don't understand";
+            return "\n i don't understand";
         }
     }
 
