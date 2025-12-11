@@ -113,15 +113,15 @@ public String negOneOneOutput(int inputKey){
     // went back to window
     if (inputKey == 1){
         loc.setLocation(-1, 1);
-        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...\n";
         } 
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 3);
-        return "\n 'i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home. \n because i am so kind and generous, i'll let you have some of my food...but only if you answer my three riddles. \n do you want to hear the first one?'"; 
+        return "\n 'i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home. \n because i am so kind and generous, i'll let you have some of my food...but only if you answer my three riddles. \n do you want to hear the first one?'\n"; 
         } 
     else {
-        return "\n i don't understand";
+        return "\n i don't understand\n";
     }
     }
 
@@ -147,7 +147,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println("\n i don't understand");
+                System.out.println("\n i don't understand\n");
             }
         
         }
@@ -158,15 +158,15 @@ public String negOneOneOutput(int inputKey){
     // yes
     if (inputKey == 1){
         loc.setLocation(-1, 4);
-        return "\n 'okay, your first riddle is: \n what is a fishmonger's favorite song?'";
+        return "\n 'okay, your first riddle is: \n what is a fishmonger's favorite song?'\n";
         } 
     // no
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
         } 
     else {
-        return "\n i don't understand";
+        return "\n i don't understand\n";
     }
     }
 
@@ -201,7 +201,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println("\n 'no, that's not it... \n maybe visit the fish market in town to find out.'");
+                System.out.println("\n 'no, that's not it... \n maybe visit the fish market in town to find out.'\n");
             }
         
         }
@@ -212,15 +212,15 @@ public String negOneOneOutput(int inputKey){
     // correct
     if (inputKey == 1){
         loc.setLocation(-1, 5);
-        return "\n 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'";
+        return "\n 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
         } 
     else {
-        return "\n i don't understand";
+        return "\n i don't understand\n";
     }
     }
 
@@ -256,7 +256,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println("\n 'not even close. \n but i wonder where he hangs out these days...'");
+                System.out.println("\n 'not even close. \n but i wonder where he hangs out these days...'\n");
             }
         
         }
@@ -267,15 +267,15 @@ public String negOneOneOutput(int inputKey){
     // correct
     if (inputKey == 1){
         loc.setLocation(-1, 6);
-        return "\n 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'";
+        return "\n 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
         } 
     else {
-        return "\n i don't understand";
+        return "\n i don't understand\n";
     }
     }
 
@@ -308,7 +308,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println("\n 'haha, maybe next time. \n there's a lot more to this town than you think.'");
+                System.out.println("\n 'haha, maybe next time. \n there's a lot more to this town than you think.'\n");
             }
         
         }
@@ -320,15 +320,15 @@ public String negOneOneOutput(int inputKey){
     if (inputKey == 1){
         player.setFull(true);
         loc.setLocation(-1, 0);
-        return "\n 'congratulations, you've earned it.' \n the housecat steps aside, allowing you to step forward and eat the food. \n it's delicious, and as you leave the apartment and jump back down to the alleyway you immediately feel more energetic and courageous... ";
+        return "\n 'congratulations, you've earned it.' \n the housecat steps aside, allowing you to step forward and eat the food. \n it's delicious, and as you leave the apartment and jump back down to the alleyway you immediately feel more energetic and courageous...\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment."; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
         } 
     else {
-        return "\n i don't understand";
+        return "\n i don't understand\n";
     }
     }
 }
