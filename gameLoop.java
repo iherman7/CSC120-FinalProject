@@ -19,7 +19,7 @@ public class gameLoop{
         gate gate = new gate(player, playerLocation);
         apartment apartment = new apartment(player, playerLocation);
         harborlane harborlane = new harborlane(player, playerLocation);
-        // calmStreet calmStreet = new calmStreet(player, playerLocation);
+        calmStreet calmStreet = new calmStreet(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -102,27 +102,55 @@ public class gameLoop{
                 System.out.println(outputString);
             }
 
-            // //crossroads
-            // if (x == -2 && y == 0){
-            //     inputKey = calmStreet.negTwoZeroInput();
-            //     outputString = calmStreet.negTwoZeroOutput(inputKey);
-            //     System.out.println(outputString);
-            // }
+            //crossroads
+            if (x == -2 && y == 0){
+                inputKey = calmStreet.negTwoZeroInput();
+                outputString = calmStreet.negTwoZeroOutput(inputKey);
+                System.out.println(outputString);
+            }
 
-            // //to park on calm street A
-            // if (x==-2 && y==-1){
-            //     inputKey = calmStreet.negTwoNegOneInput();
-            //     outputString = calmStreet.negTwoNegOneOutput(inputKey);
-            //     System.out.println(outputString);
-            // }
+            //calm street 1
+            if (x == -2 && y == 1){
+                inputKey = calmStreet.negTwoOneInput();
+                outputString = calmStreet.negTwoOneOutput(inputKey);
+                System.out.println(outputString);
+            }
 
-            // //to park on calm street B
-            // if (x==-2 && y == -2){
-            //     inputKey = calmStreet.negTwoNegTwoInput();
-            //     outputString = calmStreet.negTwoNegTwoOutput(inputKey);
-            //     System.out.println(outputString);
+            //calm street 2
+            if (x == -2 && y == 2){
+                inputKey = calmStreet.negTwoTwoInput();
+                outputString = calmStreet.negTwoTwoOutput(inputKey);
+                System.out.println(outputString);
+            }
 
-            // }
+            //calm street 3
+            if (x == -2 && y == 3){
+                inputKey = calmStreet.negTwoThreeInput();
+                outputString = calmStreet.negTwoThreeOutput(inputKey);
+                System.out.println(outputString);
+            }
+
+            //calm street path to fish market
+            if (x == -1 && y == 3){
+                inputKey = calmStreet.negTwoThreeInput();
+                outputString = calmStreet.negTwoThreeOutput(inputKey);
+                System.out.println(outputString);
+            }
+
+            //to park on calm street A
+            if (x==-2 && y==-1){
+                inputKey = calmStreet.negTwoNegOneInput();
+                outputString = calmStreet.negTwoNegOneOutput(inputKey);
+                System.out.println(outputString);
+            }
+
+            //to park on calm street B
+            if (x==-2 && y == -2){
+                inputKey = calmStreet.negTwoNegTwoInput();
+                outputString = calmStreet.negTwoNegTwoOutput(inputKey);
+                System.out.println(outputString);
+
+            }
 
             }
 

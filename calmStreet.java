@@ -59,7 +59,7 @@ public class calmStreet {
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, 1);
-            return " something something...there's tiny fish";
+            return " you head north on a quiet street without a car in sight. \n you notice small fish littering the ground ahead.";
         }
         //go south
         if (inputKey == 3){
@@ -74,6 +74,208 @@ public class calmStreet {
             return " why would you type that, i dont understand";
         }
     }
+
+    public int negTwoOneInput(){
+        while (true){
+            change = 0;
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
+
+            String case1 = "EAST";
+            String case2 = "GO EAST"; 
+
+            String case3 = "NORTH";
+            String case4 = "GO NORTH";
+
+            String case5 = "SOUTH";
+            String case6 = "GO SOUTH";
+
+            String case7 = "WEST";
+            String case8 = "GO WEST";
+
+
+            if (userInput.equals(case1)|| userInput.equals(case2)){
+                change = 1;
+                return change; //east
+            }
+             if (userInput.equals(case3)|| userInput.equals(case4)){
+                change = 2;
+                return change;//north
+            }
+             if (userInput.equals(case5)|| userInput.equals(case6)){
+                change = 3;
+                return change; //south
+            }
+             if (userInput.equals(case7)|| userInput.equals(case8)){
+                change = 4;
+                return change; //west
+            }
+            else{
+                System.out.println(" why would you type that, i don't understand");
+            }
+        
+        }
+
+    }
+
+    public String negTwoOneOutput(int inputKey){
+            //go east
+            if (inputKey == 1){
+                return " you can't walk that way, silly. the street leads you north or south.";
+            }
+            //go north
+            if (inputKey == 2){
+                loc.setLocation(-2, 2);
+                return " there are more and more fish littering the path. they might lead somewhere...";
+            }
+            //go south
+            if (inputKey == 3){
+                loc.setLocation(-2, 0);
+                return " you have come to a crossroads...head east down the alleyway or walk north or south.";
+            }
+            //go west
+            if (inputKey == 4){
+                return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+            }
+            else{
+                return " why would you type that, i dont understand";
+            }
+        }
+
+    public int negTwoTwoInput(){
+            while (true){
+                change = 0;
+                userIO userIO = new userIO();
+                String userInput = userIO.readInput();
+
+                String case1 = "EAST";
+                String case2 = "GO EAST"; 
+
+                String case3 = "NORTH";
+                String case4 = "GO NORTH";
+
+                String case5 = "SOUTH";
+                String case6 = "GO SOUTH";
+
+                String case7 = "WEST";
+                String case8 = "GO WEST";
+
+
+                if (userInput.equals(case1)|| userInput.equals(case2)){
+                    change = 1;
+                    return change; //east
+                }
+                if (userInput.equals(case3)|| userInput.equals(case4)){
+                    change = 2;
+                    return change;//north
+                }
+                if (userInput.equals(case5)|| userInput.equals(case6)){
+                    change = 3;
+                    return change; //south
+                }
+                if (userInput.equals(case7)|| userInput.equals(case8)){
+                    change = 4;
+                    return change; //west
+                }
+                else{
+                    System.out.println(" why would you type that, i don't understand");
+                }
+            
+            }
+
+        }
+
+    public String negTwoTwoOutput(int inputKey){
+            //go east
+            if (inputKey == 1){
+                return " you can't walk that way, silly. the street leads you north or south.";
+            }
+            //go north
+            if (inputKey == 2){
+                loc.setLocation(-2, 3);
+                return " the serene street comes to a dead end at a dock populated with fishing boats. \n there is a small path to the east, with more fish leading the way.";
+            }
+            //go south
+            if (inputKey == 3){
+                loc.setLocation(-2, 1);
+                return " you continue south on a quiet street. you notice small fish littering the ground.";
+            }
+            //go west
+            if (inputKey == 4){
+                return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+            }
+            else{
+                return " why would you type that, i dont understand";
+            }
+        }
+
+    public int negTwoThreeInput(){
+            while (true){
+                change = 0;
+                userIO userIO = new userIO();
+                String userInput = userIO.readInput();
+
+                String case1 = "EAST";
+                String case2 = "GO EAST"; 
+
+                String case3 = "NORTH";
+                String case4 = "GO NORTH";
+
+                String case5 = "SOUTH";
+                String case6 = "GO SOUTH";
+
+                String case7 = "WEST";
+                String case8 = "GO WEST";
+
+
+                if (userInput.equals(case1)|| userInput.equals(case2)){
+                    change = 1;
+                    return change; //east
+                }
+                if (userInput.equals(case3)|| userInput.equals(case4)){
+                    change = 2;
+                    return change;//north
+                }
+                if (userInput.equals(case5)|| userInput.equals(case6)){
+                    change = 3;
+                    return change; //south
+                }
+                if (userInput.equals(case7)|| userInput.equals(case8)){
+                    change = 4;
+                    return change; //west
+                }
+                else{
+                    System.out.println(" why would you type that, i don't understand");
+                }
+            
+            }
+
+        }
+
+    public String negTwoThreeOutput(int inputKey){
+            //go east
+            if (inputKey == 1){
+                loc.setLocation(-1, 3);
+                return " the path leads you to a small, weathered fish market. \n you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n there is also a small path that seems to lead to the back of the building.";
+            }
+            //go north
+            if (inputKey == 2){
+                return " you can't walk that way. \n there is a dock populated with fishing boats and a small path to the east.";
+            }
+            //go south
+            if (inputKey == 3){
+                loc.setLocation(-2, 2);
+                return " you continue south on a quiet street. you notice small fish littering the ground.";
+            }
+            //go west
+            if (inputKey == 4){
+                return " there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove";
+            }
+            else{
+                return " why would you type that, i dont understand";
+            }
+        }
+
 
     public int negTwoNegOneInput(){
         while (true){
