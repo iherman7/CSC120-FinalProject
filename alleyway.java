@@ -23,7 +23,7 @@ public class alleyway {
                 change = 1;
                 return change;
             } else {
-                System.out.println(" \n i don't understand\n");
+                System.out.println(" \n wake up!! wake up!!\n");
             }
         }
     }

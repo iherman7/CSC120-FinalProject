@@ -13,7 +13,7 @@ public class gameLoop{
 
     public void runGame(){
         
-        System.out.println(" wake up!! wake up!!");
+        System.out.println("\n wake up!! wake up!!\n");
         
         alleyway alleyway = new alleyway(player, playerLocation);
         gate gate = new gate(player, playerLocation);

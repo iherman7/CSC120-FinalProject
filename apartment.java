@@ -50,7 +50,7 @@ public class apartment {
                 return change;
             }
             else {
-            System.out.println("\n i don't understand");
+            System.out.println("\n i don't understand \n");
             }
         
         }
@@ -61,19 +61,19 @@ public String negOneOneOutput(int inputKey){
     // left apartment
     if (inputKey == 1){
         loc.setLocation(-1, 0);
-        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...";
+        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment... \n";
         } 
     // went to food
     if (inputKey == 2){
         loc.setLocation(-1, 2);
-        return "\n 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity. \n 'but i do say, you look hungry... are you?'";
+        return "\n 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity. \n 'but i do say, you look hungry... are you?' \n";
         } 
     // tried to eat food
     if (inputKey == 3){
-        return "\n you're too far away!";
+        return "\n you're too far away! \n";
         } 
     else {
-        return "\n i don't understand";
+        return "\n i don't understand \n";
     }
     }
 
@@ -102,7 +102,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println("\n 'are you hungry?' the housecat says.");
+                System.out.println("\n 'are you hungry?' the housecat says. \n");
             }
         
         }
