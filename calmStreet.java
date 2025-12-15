@@ -256,7 +256,7 @@ public class calmStreet {
             //go east
             if (inputKey == 1){
                 loc.setLocation(-1, 3);
-                return "\n the path leads you to a small, weathered fish market. \n you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n there is also a small path that seems to lead to the back of the building.\n";
+                return "\n the path leads you to a small, weathered fish market. \n you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n there is also a small path to the north that seems to lead to the back of the building.\n";
             }
             //go north
             if (inputKey == 2){
