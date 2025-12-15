@@ -4,9 +4,10 @@ public class apartment {
     public int change = 0;
     private skeem player;
     private location loc;
-    // public boolean riddle1Answered = false;
-    // public boolean riddle2Answered = false;
-    // public boolean riddle3Answered = false;
+    public boolean housecatConvo = false;
+    public boolean riddle1Answered = false;
+    public boolean riddle2Answered = false;
+    public boolean riddle3Answered = false;
 
     public apartment(skeem player, location loc){
         this.player = player;
@@ -117,7 +118,7 @@ public String negOneOneOutput(int inputKey){
         } 
     // went to food
     if (inputKey == 2){
-        loc.setLocation(-1, 3);
+        housecatConvo = true;
         return "\n 'i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home. \n because i am so kind and generous, i'll let you have some of my food...but only if you answer my three riddles. \n do you want to hear the first one?'\n"; 
         } 
     else {
@@ -157,7 +158,6 @@ public String negOneOneOutput(int inputKey){
     public String riddle1Output(int inputKey){
     // yes
     if (inputKey == 1){
-        loc.setLocation(-1, 4);
         return "\n 'okay, your first riddle is: \n what is a fishmonger's favorite song?'\n";
         } 
     // no
@@ -211,7 +211,7 @@ public String negOneOneOutput(int inputKey){
     public String riddle2Output(int inputKey){
     // correct
     if (inputKey == 1){
-        loc.setLocation(-1, 5);
+        riddle1Answered = true;
         return "\n 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'\n";
         } 
     // give up
@@ -266,7 +266,7 @@ public String negOneOneOutput(int inputKey){
     public String riddle3Output(int inputKey){
     // correct
     if (inputKey == 1){
-        loc.setLocation(-1, 6);
+        riddle2Answered = true;
         return "\n 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'\n";
         } 
     // give up
@@ -319,7 +319,7 @@ public String negOneOneOutput(int inputKey){
     // correct and eat food
     if (inputKey == 1){
         player.setFull(true);
-        loc.setLocation(-1, 0);
+        riddle3Answered = true;
         return "\n 'congratulations, you've earned it.' \n the housecat steps aside, allowing you to step forward and eat the food. \n it's delicious, and as you leave the apartment and jump back down to the alleyway you immediately feel more energetic and courageous...\n";
         } 
     // give up

@@ -21,6 +21,7 @@ public class gameLoop{
         harborlane harborlane = new harborlane(player, playerLocation);
         calmStreet calmStreet = new calmStreet(player, playerLocation);
         park park = new park(player, playerLocation);
+        fishmarket fishmarket = new fishmarket(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -75,27 +76,27 @@ public class gameLoop{
             } 
 
             // riddles
-            if (x == -1 && y == 3){
-                inputKey = apartment.riddle1Input();
-                outputString = apartment.riddle1Output(inputKey);
-                System.out.println(outputString);
-            } 
-            if (x == -1 && y == 4){
-                inputKey = apartment.riddle2Input();
-                outputString = apartment.riddle2Output(inputKey);
-                System.out.println(outputString);
+            if (apartment.housecatConvo = true){
+                    inputKey = apartment.riddle1Input();
+                    outputString = apartment.riddle1Output(inputKey);
+                    System.out.println(outputString);
+                        if (apartment.riddle1Answered = true){
+                            inputKey = apartment.riddle2Input();
+                            outputString = apartment.riddle2Output(inputKey);
+                            System.out.println(outputString);
+                        }
+                            if (apartment.riddle2Answered = true){
+                                inputKey = apartment.riddle3Input();
+                                outputString = apartment.riddle3Output(inputKey);
+                                System.out.println(outputString);
+                            }
+                                if (apartment.riddle3Answered = true){
+                                    inputKey = apartment.finalHousecatInput();
+                                    outputString = apartment.finalHousecatOutput(inputKey);
+                                    System.out.println(outputString);
+                                }
             }
-            if (x == -1 && y == 5){
-                inputKey = apartment.riddle3Input();
-                outputString = apartment.riddle3Output(inputKey);
-                System.out.println(outputString);
-            }
-            if (x == -1 && y == 6){
-                inputKey = apartment.finalHousecatInput();
-                outputString = apartment.finalHousecatOutput(inputKey);
-                System.out.println(outputString);
-            }
-
+            
             //harbor lane entrance 
             if (x == 0 && y==2){
                 inputKey = harborlane.zeroTwoInput();
@@ -175,6 +176,13 @@ public class gameLoop{
             if (x == -1 && y == -3){
                 inputKey = park.negTwoNegThreeInput();
                 outputString = park.negTwoNegThreeOutput(inputKey);
+                System.out.println(outputString);
+            }
+
+            // fish market
+            if (x == -1 && y == 3){
+                inputKey = fishmarket.negOneThreeInput();
+                outputString = fishmarket.negOneThreeOutput(inputKey);
                 System.out.println(outputString);
             }
 

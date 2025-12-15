@@ -66,15 +66,15 @@ public class fishmarket {
             //go east, enter fish market
             if (inputKey == 1){
                 loc.setLocation(0, 3);
-                return "\n enter fish market, hear song playing, see knife, cannot advance? or does the fishmonger chase you out?\n";
+                return "\n as you enter the small, rustic shop, you spot the fishmonger. \n he is distracted at the counter, chopping fish with a big, shiny knife and singing along happily to a song. \n 'seabird, seabird, fly home...' the fishmonger sings. \n 'like a lonely seabird, you've been away from land far too long..' \n";
             }
             //go north, follow path
             if (inputKey == 2){
-                return "\n you walk down a small, overgrown path that leads right to the back door of the fish market. I forgot the plot tbh.\n";
+                loc.setLocation(-1, 4);
+                return "\n you walk down a small, overgrown path that leads you to the back door of the fish market. \n the door is slightly ajar, and you smell the scent of freshly caught fish. \n";
             }
             //go south
             if (inputKey == 3){
-                loc.setLocation(-2, 2);
                 return "\n you can't walk that way.\n";
             }
             //go west
