@@ -73,28 +73,27 @@ public class gameLoop{
                 inputKey = apartment.negOneTwoInput();
                 outputString = apartment.negOneTwoOutput(inputKey);
                 System.out.println(outputString);
-            } 
-
-            // riddles
-            if (apartment.housecatConvo = true){
-                    inputKey = apartment.riddle1Input();
-                    outputString = apartment.riddle1Output(inputKey);
-                    System.out.println(outputString);
-                        if (apartment.riddle1Answered = true){
-                            inputKey = apartment.riddle2Input();
-                            outputString = apartment.riddle2Output(inputKey);
-                            System.out.println(outputString);
-                        }
-                            if (apartment.riddle2Answered = true){
-                                inputKey = apartment.riddle3Input();
-                                outputString = apartment.riddle3Output(inputKey);
+                // riddles
+                if (apartment.housecatConvo = true){
+                        inputKey = apartment.riddle1Input();
+                        outputString = apartment.riddle1Output(inputKey);
+                        System.out.println(outputString);
+                            if (apartment.riddle1Answered = true){
+                                inputKey = apartment.riddle2Input();
+                                outputString = apartment.riddle2Output(inputKey);
                                 System.out.println(outputString);
                             }
-                                if (apartment.riddle3Answered = true){
-                                    inputKey = apartment.finalHousecatInput();
-                                    outputString = apartment.finalHousecatOutput(inputKey);
+                                if (apartment.riddle2Answered = true){
+                                    inputKey = apartment.riddle3Input();
+                                    outputString = apartment.riddle3Output(inputKey);
                                     System.out.println(outputString);
                                 }
+                                    if (apartment.riddle3Answered = true){
+                                        inputKey = apartment.finalHousecatInput();
+                                        outputString = apartment.finalHousecatOutput(inputKey);
+                                        System.out.println(outputString);
+                                    }
+                }
             }
             
             //harbor lane entrance 
