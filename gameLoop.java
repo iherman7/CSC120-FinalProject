@@ -21,7 +21,7 @@ public class gameLoop{
         harborlane harborlane = new harborlane(player, playerLocation);
         calmStreet calmStreet = new calmStreet(player, playerLocation);
         park park = new park(player, playerLocation);
-        fishmarket fishmarket = new fishmarket(player, playerLocation);
+        fishmarketA fishmarketA = new fishmarketA(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -180,13 +180,14 @@ public class gameLoop{
 
             // fish market
             if (x == -1 && y == 3){
-                inputKey = fishmarket.negOneThreeInput();
-                outputString = fishmarket.negOneThreeOutput(inputKey);
+                if (player.hasBone() == false){
+                inputKey = fishmarketA.negOneThreeInput();
+                outputString = fishmarketA.negOneThreeOutput(inputKey);
                 System.out.println(outputString);
+                }
             }
 
-
-            }
+        }
 
             
 
