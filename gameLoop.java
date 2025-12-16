@@ -131,12 +131,12 @@ public class gameLoop{
                 System.out.println(outputString);
             }
 
-            //calm street path to fish market
-            if (x == -1 && y == 3){
-                inputKey = calmStreet.negTwoThreeInput();
-                outputString = calmStreet.negTwoThreeOutput(inputKey);
-                System.out.println(outputString);
-            }
+            // //calm street path to fish market
+            // if (x == -1 && y == 3){
+            //     inputKey = calmStreet.negTwoThreeInput();
+            //     outputString = calmStreet.negTwoThreeOutput(inputKey);
+            //     System.out.println(outputString);
+            // }
 
             //to park on calm street A
             if (x==-2 && y==-1){
@@ -179,57 +179,37 @@ public class gameLoop{
             }
 
             // fishmarket A
-            if (player.dogHasBone() == false){
-                if (x == -1 && y == 3){
-                    inputKey = fishmarketA.negOneThreeInput();
-                    outputString = fishmarketA.negOneThreeOutput(inputKey);
-                    System.out.println(outputString);
+            if (x == -1 && y == 3){
+                if (player.dogHasBone() == false){
+                inputKey = fishmarketA.negOneThreeInput();
+                outputString = fishmarketA.negOneThreeOutput(inputKey);
+                System.out.println(outputString);
                 }
-                if (x == 0 && y == 3){
-                    inputKey = fishmarketA.zeroThreeInput();
-                    outputString = fishmarketA.zeroThreeOutput(inputKey);
-                    System.out.println(outputString);
+            }
+            if (x == 0 && y == 3){
+                if (player.dogHasBone() == false){
+                inputKey = fishmarketA.zeroThreeInput();
+                outputString = fishmarketA.zeroThreeOutput(inputKey);
+                System.out.println(outputString);
                 }
-                if (x == -1 && y == 4){
-                    inputKey = fishmarketA.zeroThreeInput();
-                    outputString = fishmarketA.zeroThreeOutput(inputKey);
-                    System.out.println(outputString);
+            }
+            if (x == -1 && y == 4){
+                if (player.dogHasBone() == false){
+                inputKey = fishmarketA.negOneFourInput();
+                outputString = fishmarketA.negOneFourOutput(inputKey);
+                System.out.println(outputString);
                 }
-                if (x == 0 && y == 4){
-                    inputKey = fishmarketA.zeroFourInput();
-                    outputString = fishmarketA.zeroFourOutput(inputKey);
-                    System.out.println(outputString);
-                    if (x == 0 && y == 4){
-                        inputKey = fishmarketA.fishInput();
-                        outputString = fishmarketA.fishOutput(inputKey);
-                        System.out.println(outputString);
-                    }
-
+            }
+            if (x == 0 && y == 4){
+                if (player.dogHasBone() == false){
+                inputKey = fishmarketA.zeroFourInput();
+                outputString = fishmarketA.zeroFourOutput(inputKey);
+                System.out.println(outputString);
                 }
-                
-        }
+            }       
             
+        
 
         }
-
-            
-
-            // if (playerLocation.getX() == 0 && playerLocation.getY() == 1){
-            //     // run gate
-            // }
-
-            // if (playerLocation.getX() == -2 && playerLocation.getY() == 0){
-            //     // run gate
-            // }
-
-            // the other stuff
-
-            // gate
-            // check player.hasKey (method within Skeem)
-            // send boolean value to gate method that dictates the text response
-            // hasKey = player.hasKey
-            // oneZeroInput(hasKey)
-
     }
-
 }

@@ -80,7 +80,7 @@ public class fishmarketA {
             //go west
             if (inputKey == 4){
                 loc.setLocation(-2 ,3);
-                return "\n you return to the dead end at a dock populated with fishing boats. \n there is a small path to the east, with more fish leading the way.\n";
+                return "\n you return to the dead end of the calm street at a dock populated with fishing boats. \n there is a small path to the east, with more fish leading the way.\n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
@@ -113,7 +113,7 @@ public class fishmarketA {
                 String case10 = "SOUTH"; // can't go this way
                 String case11 = "GO SOUTH";
 
-                String case12 = "WEST"; // go back to front entrance
+                String case12 = "WEST"; // go back outside
                 String case13 = "GO WEST";
 
 
@@ -122,15 +122,15 @@ public class fishmarketA {
                     return change; //east or action
                 }
                 if (userInput.equals(case8)|| userInput.equals(case9)){
-                    change = 3;
+                    change = 2;
                     return change; //north
                 }
                 if (userInput.equals(case10)|| userInput.equals(case11)){
-                    change = 4;
+                    change = 3;
                     return change; //south
                 }
                 if (userInput.equals(case12)|| userInput.equals(case13)){
-                    change = 5;
+                    change = 4;
                     return change; //west
                 }
                 else{
@@ -145,7 +145,7 @@ public class fishmarketA {
             // go east, get chased away
             if (inputKey == 1){
                 loc.setLocation(-1, 3);
-                return "\n as you take another step into the shop, the fishmonger looks up and notices you. \n he abruptly stops singing and his smile turns into a frown. \n 'get out, you can't have any fish!' he shouts, waving his knife at you. \n frightened, you run back out to the entrance. there's still that path to the north...\n";
+                return "\n as you take another step into the shop, the fishmonger looks up and notices you. \n he abruptly stops singing and his smile turns into a frown. \n 'get out, you stray cat! you can't have any fish!' he shouts, waving his knife at you. \n frightened, you run back out to the entrance. there's still that path to the north...\n";
             }
             //go north
             if (inputKey == 2){
@@ -181,15 +181,15 @@ public class fishmarketA {
                 String case4 = "GO TO DOOR";
                 String case5 = "GO INSIDE";
 
-                String case6 = "TAKE PATH"; // go to back
+                String case6 = "TAKE PATH"; // go back to calm street dead end
                 String case7 = "GO TO PATH";
-                String case8 = "NORTH";
-                String case9 = "GO NORTH";
+                String case8 = "SOUTH";
+                String case9 = "GO SOUTH";
 
-                String case10 = "SOUTH"; // can't go this way
-                String case11 = "GO SOUTH";
+                String case10 = "NORTH"; // can't go this way
+                String case11 = "GO NORTH";
 
-                String case12 = "WEST"; // go back to calm street dead end
+                String case12 = "WEST"; // can't go this way
                 String case13 = "GO WEST";
 
 
@@ -199,18 +199,18 @@ public class fishmarketA {
                 }
                 if (userInput.equals(case6)|| userInput.equals(case7)|| userInput.equals(case8)|| userInput.equals(case9)){
                     change = 2;
-                    return change;//north
+                    return change;//south
                 }
                 if (userInput.equals(case10)|| userInput.equals(case11)){
                     change = 3;
-                    return change; //south
+                    return change; //north
                 }
                 if (userInput.equals(case12)|| userInput.equals(case13)){
                     change = 4;
                     return change; //west
                 }
                 else{
-                    System.out.println("\n why would you type that, i don't understand\n");
+                    System.out.println("\n i don't understand\n");
                 }
             
             }
@@ -218,24 +218,23 @@ public class fishmarketA {
         }
 
     public String negOneFourOutput(int inputKey){
-            //go east, enter fish market
+            //go east, enter back door of fish market
             if (inputKey == 1){
-                loc.setLocation(0, 3);
-                return "\n as you enter the small, rustic shop, you spot the fishmonger. \n he is distracted at the counter, chopping fish with a big, shiny knife and singing along happily to a song. \n 'seabird, seabird, fly home...' the fishmonger sings. \n 'like a lonely seabird, you've been away from land far too long..' \n";
+                loc.setLocation(0, 4);
+                return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room, but he has no idea you're there. \n";
             }
-            //go north, follow path
+            //go south, back to path
             if (inputKey == 2){
-                loc.setLocation(-1, 4);
-                return "\n you walk down a small, overgrown path that leads you to the back door of the fish market. \n the door is slightly ajar, and you smell the scent of freshly caught fish. \n";
+                loc.setLocation(-1, 3);
+                return "\n you walk back down the path. \n you are at the entrance to a small, weathered fish market. you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n";
             }
-            //go south
+            //go north
             if (inputKey == 3){
-                return "\n you can't walk that way.\n";
+                return "\n you can't walk this way. \n";
             }
             //go west
             if (inputKey == 4){
-                loc.setLocation(-2 ,3);
-                return "\n you return to the dead end at a dock populated with fishing boats. \n there is a small path to the east, with more fish leading the way.\n";
+                return "\n you can't walk this way. \n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
@@ -243,8 +242,60 @@ public class fishmarketA {
         }
 
     // (0, 4) inside back part of fish market
-    // previous output: you walk down a small, overgrown path that leads you to the back door of the fish market.
-    //                  the door is slightly ajar, and you smell the scent of freshly caught fish.
+    // previous output: you sneak in through the back door and find yourself in a small storage room filled with crates of supplies.
+    // there is a big fish on a small table right in front of you.
+    // you can hear the fishmonger milling around in the other room, but he has no idea you're there.
+
+    // public int zeroFourInput(){
+    //         while (true){
+    //             change = 0;
+    //             userIO userIO = new userIO();
+    //             String userInput = userIO.readInput();
+
+    //             String case1 = "ENTER FISH MARKET"; // go inside
+    //             String case2 = "GO INSIDE";
+    //             String case3 = "ENTER DOOR";
+
+    //             String case4 = "TAKE PATH"; // go back to path
+    //             String case5 = "GO TO PATH";
+    //             String case6 = "SOUTH";
+    //             String case7 = "GO SOUTH";
+
+    //             if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3)){
+    //                 change = 1;
+    //                 return change; // inside
+    //             }
+    //             if (userInput.equals(case4)|| userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)){
+    //                 change = 2;
+    //                 return change;// path
+    //             }
+    //             else{
+    //                 System.out.println("\n the back door to the fishmarket is slightly ajar. \n");
+    //             }
+            
+    //         }
+
+    //     }
+
+    // public String zeroFourOutput(int inputKey){
+    //         //enter back door
+    //         if (inputKey == 1){
+    //             return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room, but he has no idea you're there. \n";
+    //         }
+    //         // go back to path
+    //         if (inputKey == 2){
+    //             loc.setLocation(-1, 3);
+    //             return "\n you walk back down the path. \n you are at the entrance to a small, weathered fish market. you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n";
+    //         }
+    //         else{
+    //             return "\n why would you type that, i dont understand\n";
+    //         }
+    //     }
+
+    // (0, 4) inside back part of fish market
+    // previous output: you sneak in through the back door and find yourself in a small storage room filled with crates of supplies.
+    //              there is a big fish on a small table right in front of you.
+    //              you can hear the fishmonger milling around in the other room, but he has no idea you're there.
 
     public int zeroFourInput(){
             while (true){
@@ -252,25 +303,24 @@ public class fishmarketA {
                 userIO userIO = new userIO();
                 String userInput = userIO.readInput();
 
-                String case1 = "ENTER FISH MARKET"; // go inside
-                String case2 = "GO INSIDE";
-                String case3 = "ENTER DOOR";
+                String case1 = "EAT FISH"; 
 
-                String case4 = "TAKE PATH"; // go back to path
-                String case5 = "GO TO PATH";
-                String case6 = "SOUTH";
-                String case7 = "GO SOUTH";
+                String case2 = "LEAVE";
+                String case3 = "WEST";
+                String case4 = "GO WEST";
+                String case5 = "LEAVE FISH MARKET";
 
-                if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3)){
+
+                if (userInput.equals(case1)){
                     change = 1;
-                    return change; // inside
+                    return change; 
                 }
-                if (userInput.equals(case4)|| userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7)){
+                if (userInput.equals(case2) || userInput.equals(case3) || userInput.equals(case4) || userInput.equals(case5)){
                     change = 2;
-                    return change;// path
+                    return change; 
                 }
                 else{
-                    System.out.println("\n the back door to the fishmarket is slightly ajar. \n");
+                    System.out.println("\n you can't do that here. there is a fish right in front of you. \n");
                 }
             
             }
@@ -278,49 +328,14 @@ public class fishmarketA {
         }
 
     public String zeroFourOutput(int inputKey){
-            //enter back door
-            if (inputKey == 1){
-                return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room, but he has no idea you're there. \n";
-            }
-            // go back to path
-            if (inputKey == 2){
-                loc.setLocation(-1, 3);
-                return "\n you walk back down the path. \n you are at the entrance to a small, weathered fish market. you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n";
-            }
-            else{
-                return "\n why would you type that, i dont understand\n";
-            }
-        }
-
-    // (0, 4) already inside back part of fish market, here is the chance to eat the big fish and get the bone.
-    // previous output: you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. 
-    //                  there is a big fish on a small table right in front of you. 
-    //                  you can hear the fishmonger milling around in the other room, but he has no idea you're there.
-
-    public int fishInput(){
-            while (true){
-                change = 0;
-                userIO userIO = new userIO();
-                String userInput = userIO.readInput();
-
-                String case1 = "EAT FISH"; 
-
-                if (userInput.equals(case1)){
-                    change = 1;
-                    return change; 
-                }
-                else{
-                    System.out.println("\n i don't understand \n");
-                }
-            
-            }
-
-        }
-
-    public String fishOutput(int inputKey){
             //eat fish
             if (inputKey == 1){
-                return "\n you eat the fresh, juicy fish with delight. \n you are soon left with nothing but the bone. hmm, this might come in handy! \n";
+                loc.setLocation(-1, 4);
+                return "\n you eat the fresh, juicy fish with delight. \n you pick up the bone that is left behind. this might come in handy later... \n you walk back outside, just in case the fishmonger catches sight of you. \n";
+            }
+            if (inputKey == 2){
+                loc.setLocation(-1, 4);
+                return "\n you return to the small, overgrown path. the front entrance to the fishmarket is to the south. \n the back door to the north is slightly ajar, and you smell the scent of freshly caught fish. \n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
