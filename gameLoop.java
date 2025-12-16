@@ -179,20 +179,35 @@ public class gameLoop{
             }
 
             // fishmarket A
-            if (x == -1 && y == 3){
-                if (player.dogHasBone() == false){
-                inputKey = fishmarketA.negOneThreeInput();
-                outputString = fishmarketA.negOneThreeOutput(inputKey);
-                System.out.println(outputString);
+            if (player.dogHasBone() == false){
+                if (x == -1 && y == 3){
+                    inputKey = fishmarketA.negOneThreeInput();
+                    outputString = fishmarketA.negOneThreeOutput(inputKey);
+                    System.out.println(outputString);
                 }
-            }
-            if (x == 0 && y == 3){
-                if (player.dogHasBone() == false){
-                inputKey = fishmarketA.zeroThreeInput();
-                outputString = fishmarketA.zeroThreeOutput(inputKey);
-                System.out.println(outputString);
+                if (x == 0 && y == 3){
+                    inputKey = fishmarketA.zeroThreeInput();
+                    outputString = fishmarketA.zeroThreeOutput(inputKey);
+                    System.out.println(outputString);
                 }
-            }
+                if (x == -1 && y == 4){
+                    inputKey = fishmarketA.zeroThreeInput();
+                    outputString = fishmarketA.zeroThreeOutput(inputKey);
+                    System.out.println(outputString);
+                }
+                if (x == 0 && y == 4){
+                    inputKey = fishmarketA.zeroFourInput();
+                    outputString = fishmarketA.zeroFourOutput(inputKey);
+                    System.out.println(outputString);
+                    if (x == 0 && y == 4){
+                        inputKey = fishmarketA.fishInput();
+                        outputString = fishmarketA.fishOutput(inputKey);
+                        System.out.println(outputString);
+                    }
+
+                }
+                
+        }
             
 
         }
