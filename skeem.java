@@ -16,37 +16,37 @@ public class skeem {
 
 
     public boolean hasKey(){ 
-        return hasKey;
+        return this.hasKey;
     }
     public void setKey(boolean k){
-        hasKey = k;
+        this.hasKey = k;
     }
 
     public boolean hasBone(){ 
-        return hasBone;
+        return this.hasBone;
     }
     public void setBone(boolean b){
-        hasKey = b;
+        this.hasKey = b;
     }
 
     public boolean sharpenClaws(){ 
-        return sharpenClaws;
+        return this.sharpenClaws;
     }
     public void setClaw(boolean c){
-        sharpenClaws = c;
+        this.sharpenClaws = c;
     }
 
     public boolean eatFood(){
-        return eatFood;
+        return this.eatFood;
     }
     public void setFull(boolean f){
-        eatFood = f;
+        this.eatFood = f;
     }
 
      public boolean dogHasBone(){
-        return eatFood;
+        return this.eatFood;
     }
     public void setDogHasBone(boolean d){
-        eatFood = d;
+        this.eatFood = d;
     }
 }
