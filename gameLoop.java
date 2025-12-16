@@ -178,14 +178,22 @@ public class gameLoop{
                 System.out.println(outputString);
             }
 
-            // fish market
+            // fishmarket A
             if (x == -1 && y == 3){
-                if (player.hasBone() == false){
+                if (player.dogHasBone() == false){
                 inputKey = fishmarketA.negOneThreeInput();
                 outputString = fishmarketA.negOneThreeOutput(inputKey);
                 System.out.println(outputString);
                 }
             }
+            if (x == 0 && y == 3){
+                if (player.dogHasBone() == false){
+                inputKey = fishmarketA.zeroThreeInput();
+                outputString = fishmarketA.zeroThreeOutput(inputKey);
+                System.out.println(outputString);
+                }
+            }
+            
 
         }
 
