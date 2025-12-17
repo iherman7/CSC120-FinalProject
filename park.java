@@ -10,7 +10,7 @@ public class park {
     }
 
     //park is at loc (-2,-3) & (-1,-3) & (-2,-4) & (-1,-4)--tree clibimg
-    public int negTwoNegThreeInput(){
+    public int negTwoNegThreeInput(){ // might have to set a condition of what happens when dog has bone?
         while (true){
             change = 0;
             userIO userIO = new userIO();
@@ -41,7 +41,7 @@ public class park {
                 }
                 if (player.hasBone() == false){
                     change = 1;
-                    return change;
+                    return change; // east
                 }
             }
              if (userInput.equals(case3)|| userInput.equals(case4)){
