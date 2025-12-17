@@ -91,7 +91,7 @@ public class gate {
             return "\n you're where you woke up in the back alleyway between some rows of apartments. \n looks like you can only go east or west...\n";
         }
         if (inputKey == 5){
-            loc.setLocation(0, 2);
+            loc.setLocation(2, 0);
             return "\n you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!\n";
 
         }

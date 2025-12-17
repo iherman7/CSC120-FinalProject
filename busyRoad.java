@@ -5,7 +5,7 @@ public class busyRoad {
     private skeem player;
     private location loc;
     public int change = 0;
-    private static final String SUCCESS = " \n Skeem you dashed across the busy road safely and have finally reached your home! congragulations!\n ";
+    private static final String SUCCESS = " \n Skeem you dashed across the busy road safely and have finally reached your home! congragulations!\n hopefully this long odyssey will help you figure out why you became a cat...\n";
     private static final String[] RESPONSES = {
         "\n a car flies by too close, oh no! You jump back.\n",
         "\n you hesitate overcome with fear. it doesn't feel safe yet.\n",
@@ -65,6 +65,45 @@ public class busyRoad {
             else{
                 System.out.println("\n why would you type that, i don't understand\n");
             }
+        }
+    }
+
+    public String threeZeroOutput(int inputKey){
+        //go east
+        if (inputKey == 1){
+            loc.setLocation(-1,-3);
+            return "\n you stare at the road ahead...it's chaos. maybe you should CROSS instead.\n";
+        }
+        //go north
+        if (inputKey == 2){
+            return "\n you pace along the sidewalk looking looking for a safer spot to cross...looks like this is the only place.\n";
+        }
+        //go south
+        if (inputKey == 3){
+            loc.setLocation(-2, -4); 
+            return "\n you look around to grasp the reality of your situation...there's really nothing else to do but brave it.\n";
+        }
+        //go west
+        if (inputKey == 4){
+            loc.setLocation(2, 0);
+            return "\n you back away from the cross walk, you see that building in the distance...it's almost like it's taunting you.\n you could go, east, south, west, or north. the world is your oyster!\n";
+        }
+        //cross attempt
+        if (inputKey == 5){
+            Random cross = new Random();
+            String response = RESPONSES[cross.nextInt(RESPONSES.length)];
+
+            //sucess
+            if (response.equals(SUCCESS)){
+                loc.setLocation(4, 0);
+                return response;
+            }
+
+            // fail
+            return response + "\n maybe try CROSS again?\n";
+        }
+        else{
+            return "\n why would you type that, i dont understand\n";
         }
     }
 }

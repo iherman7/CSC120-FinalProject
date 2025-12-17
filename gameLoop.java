@@ -251,9 +251,20 @@ public class gameLoop{
                 outputString = fishmarketB.zeroFourOutput(inputKey);
                 System.out.println(outputString);
                 }
-            }          
+            }
             
-        
+            // busy road to cross
+            if (x == 3 && y == 0){
+                inputKey = busyRoad.threeZeroInput();
+                outputString = busyRoad.threeZeroOutput(inputKey);
+                System.out.println(outputString);
+            }
+            
+            //to win
+            if (x == 4 && y == 0){
+                System.out.println("\n YOU HAVE WON THE GAME\n");
+                break;
+            }
 
         }
     }
