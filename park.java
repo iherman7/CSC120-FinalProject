@@ -108,7 +108,7 @@ public class park {
         //throw bone
         if (inputKey == 7){
             player.setDogHasBone(true);
-            return "\n the dog chases after the bone with exuberant joy 'oh man i haven't felt such thrill like this in seven years' \n the leaning tree park is now free to roam to the east or south!\n";
+            return "\n the dog chases after the bone with exuberant joy 'OH MAN I HAVEN'T FELT SUCH THRILL LIKE THIS IN SEVEN YEARS' \n the leaning tree park is now free to roam to the east or south!\n";
         }
         else{
             return "\n why would you type that, i dont understand\n";
@@ -204,8 +204,14 @@ public class park {
             //string case for climb tree
 
             if (userInput.equals(case1)|| userInput.equals(case2)){
-                change = 1;
-                return change; //east
+                if (player.hasKey()==false){
+                    change = 1;
+                    return change; //east if no key
+                }
+                if (player.hasKey()==true){
+                    change = 7;
+                    return change; // east if key
+                }
             }
              if (userInput.equals(case3)|| userInput.equals(case4)){
                 change = 2;
@@ -227,6 +233,10 @@ public class park {
                 if (player.sharpenClaws()==true){
                     change = 6;
                     return change; //sharpen claws
+                }
+                if (player.hasKey()==true){
+                    change = 8;
+                    return change; // climb if already have key
                 }
             }
             else{
@@ -253,12 +263,22 @@ public class park {
         if (inputKey == 4){
             return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
         }
+        // climb tree but claws arent sharp
         if (inputKey == 5){
             return "\n you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...\n";
         }
+        // climbing the tree
         if (inputKey == 6){
             player.setKey(true);
             return "\n with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?\n";
+        }
+        //climbing tree if already have key
+        if (inputKey == 7){
+            return "\n you climbed the tree! that was fun i guess.";
+        }
+        // east if you already have key
+        if (inputKey == 8){
+            return " the large leaning tree block your path, you cannot continue east. you take a second to admire the beautiful yet odd tree.\n you've climbed it before, you could climb it again although, don't know why you would";
         }
         else{
             return "\n why would you type that, i dont understand\n";
@@ -290,15 +310,21 @@ public class park {
             change = 1;
             return change; //east
         }
-            if (userInput.equals(case3)|| userInput.equals(case4)){
+         if (userInput.equals(case3)|| userInput.equals(case4)){
             change = 2;
             return change; //north
         }
-            if (userInput.equals(case5)|| userInput.equals(case6)){
-            change = 3;
-            return change; //south
+        if (userInput.equals(case5)|| userInput.equals(case6)){
+            if (player.hasKey()==false){
+                change = 3;
+                return change; //south if player does not have key
+            }
+            if (player.hasKey()==true){
+                change = 8;
+                return change; // south if player does have key
+            }
         }
-            if (userInput.equals(case7)|| userInput.equals(case8)){
+        if (userInput.equals(case7)|| userInput.equals(case8)){
             change = 4;
             return change; //west
         }
@@ -310,6 +336,10 @@ public class park {
             if (player.sharpenClaws()==true){
                 change = 6;
                 return change; //sharpen claws
+            }
+            if (player.hasKey()==true){
+                change = 7;
+                return change; // climb if has key already
             }
         }
         else{
@@ -342,6 +372,12 @@ public class park {
         if (inputKey == 6){
             player.setKey(true);
             return "\n with your newly sharpened claws you climb up the tree and discover a key! \n you grab it with your cat mouth and climb back down. \n where to next?\n";
+        }
+        if (inputKey == 7){
+            return "\n you climbed the tree! that was fun i guess.";
+        }
+        if (inputKey == 8){
+            return " the large leaning tree block your path, you cannot continue south. you take a second to admire the beautiful yet odd tree.\n you've climbed it before, you could climb it again although, don't know why you would";
         }
         else {
             return "\n why would you type that, i dont understand\n";
