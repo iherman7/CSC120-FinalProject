@@ -21,13 +21,13 @@ public class apartment {
             String userInput = userIO.readInput();
 
             String case1 = "LEAVE";
-            String case2 = "JUMP";
-            String case3 = "JUMP UP";
+            String case2 = "JUMP"; // you should chnage this user wont say that to leave
+            String case3 = "JUMP DOWN";
 
             String case4 = "FORWARD";
             String case5 = "GO FORWARD"; // closer, get closer
             String case6 = "GO TO FOOD";
-            String case7 = "GET CLOSER";
+            String case7 = "MOVE CLOSER";
             String case8 = "GO CLOSER";
 
             String case9 = "EAT FOOD";
@@ -91,7 +91,7 @@ public String negOneOneOutput(int inputKey){
             String case4 = "WALK TO WINDOW";
             String case5 = "LEAVE";
 
-            String case6 = "YES";
+            String case6 = "YES"; // should you code a no
 
             // back to the window
             if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3) || userInput.equals(case4) || userInput.equals(case5)){ 
@@ -163,7 +163,7 @@ public String negOneOneOutput(int inputKey){
     // no
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; // in play through this bit is confusing
         } 
     else {
         return "\n i don't understand\n";
