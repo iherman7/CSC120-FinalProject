@@ -42,9 +42,9 @@ public class gameLoop{
             }
 
             // (1, 0) in front of gate
-            if (x == 1 && y == 0){
-                inputKey = gate.oneZeroInput();
-                outputString = gate.oneZeroOutput(inputKey);
+            if (x == 0 && y == 1){
+                inputKey = gate.zeroOneInput();
+                outputString = gate.zeroOneOutput(inputKey);
                 System.out.println(outputString);
             }
 
@@ -97,10 +97,30 @@ public class gameLoop{
                 }
             }
             
-            //harbor lane entrance 
-            if (x == 0 && y==2){
-                inputKey = harborlane.zeroTwoInput();
-                outputString = harborlane.zeroTwoOutput(inputKey);
+            //harbor lane  
+            if (x == 2 && y==0){
+                inputKey = harborlane.twoZeroInput();
+                outputString = harborlane.twoZeroOutput(inputKey);
+                System.out.println(outputString);
+            }
+            if ( x == 2 && y==1){
+                inputKey = harborlane.twoOneInput();
+                outputString = harborlane.twoOneOutput(inputKey);
+                System.out.println(outputString);
+            }
+            if ( x == 2 && y==2){
+                inputKey = harborlane.twoTwoInput();
+                outputString = harborlane.twoTwoOutput(inputKey);
+                System.out.println(outputString);
+            }
+            if ( x == 2 && y==-1){
+                inputKey = harborlane.twoNegOneInput();
+                outputString = harborlane.twoNegOneOutput(inputKey);
+                System.out.println(outputString);
+            }
+            if ( x == 2 && y==-2){
+                inputKey = harborlane.twoNegTwoInput();
+                outputString = harborlane.twoNegTwoOutput(inputKey);
                 System.out.println(outputString);
             }
 

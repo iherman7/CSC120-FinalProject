@@ -10,7 +10,7 @@ public class gate {
     }
         
 
-    public int oneZeroInput(){
+    public int zeroOneInput(){
         while (true){
             change = 0;
             userIO userIO = new userIO();
@@ -72,7 +72,7 @@ public class gate {
     //if boolean hasKey is true and they have said something along the lines of use key, open gate
     //then the rest of the game can continue
 
-    public String oneZeroOutput(int inputKey){
+    public String zeroOneOutput(int inputKey){
         // went east with no key
         if (inputKey == 1){
             return "\n the gate is locked. you might need a key to open it...\n";
