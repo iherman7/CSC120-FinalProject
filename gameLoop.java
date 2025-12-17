@@ -23,6 +23,7 @@ public class gameLoop{
         park park = new park(player, playerLocation);
         fishmarketA fishmarketA = new fishmarketA(player, playerLocation);
         fishmarketB fishmarketB = new fishmarketB(player, playerLocation);
+        busyRoad busyRoad = new busyRoad(player, playerLocation);
 
         inputKey = alleyway.openingInput();
         outputString = alleyway.openingOutput(inputKey);
@@ -42,9 +43,9 @@ public class gameLoop{
             }
 
             // (1, 0) in front of gate
-            if (x == 0 && y == 1){
-                inputKey = gate.zeroOneInput();
-                outputString = gate.zeroOneOutput(inputKey);
+            if (x == 1 && y == 0){
+                inputKey = gate.oneZeroInput();
+                outputString = gate.oneZeroOutput(inputKey);
                 System.out.println(outputString);
             }
 
