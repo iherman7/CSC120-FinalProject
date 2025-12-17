@@ -167,8 +167,8 @@ public class gameLoop{
                 System.out.println(outputString);
             }
             if (x == -1 && y == -3){
-                inputKey = park.negTwoNegThreeInput();
-                outputString = park.negTwoNegThreeOutput(inputKey);
+                inputKey = park.negOneNegThreeInput();
+                outputString = park.negOneNegThreeOutput(inputKey);
                 System.out.println(outputString);
             }
 

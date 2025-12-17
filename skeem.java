@@ -26,7 +26,7 @@ public class skeem {
         return this.hasBone;
     }
     public void setBone(boolean b){
-        this.hasKey = b;
+        this.hasBone = b;
     }
 
     public boolean sharpenClaws(){ 
@@ -44,9 +44,9 @@ public class skeem {
     }
 
      public boolean dogHasBone(){
-        return this.eatFood;
+        return this.dogHasBone;
     }
     public void setDogHasBone(boolean d){
-        this.eatFood = d;
+        this.dogHasBone = d;
     }
 }
