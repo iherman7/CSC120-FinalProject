@@ -71,7 +71,6 @@ public class busyRoad {
     public String threeZeroOutput(int inputKey){
         //go east
         if (inputKey == 1){
-            loc.setLocation(-1,-3);
             return "\n you stare at the road ahead...it's chaos. maybe you should CROSS instead.\n";
         }
         //go north
@@ -80,7 +79,6 @@ public class busyRoad {
         }
         //go south
         if (inputKey == 3){
-            loc.setLocation(-2, -4); 
             return "\n you look around to grasp the reality of your situation...there's really nothing else to do but brave it.\n";
         }
         //go west

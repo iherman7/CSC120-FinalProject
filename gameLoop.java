@@ -13,7 +13,7 @@ public class gameLoop{
 
     public void runGame(){
         
-        System.out.println(" \n \n ------- skeem the cat who was once human ------- \n");
+        System.out.println(" \n \n ------- SKEEM THE CAT WHO WAS ONCE HUMAN ------- \n");
         System.out.println("\n ... \n");
         System.out.println("\n wake up!! wake up!!\n");
         

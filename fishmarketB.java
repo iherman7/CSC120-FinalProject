@@ -226,7 +226,7 @@ public class fishmarketB {
             //go south, back to path
             if (inputKey == 2){
                 loc.setLocation(-1, 3);
-                return "\n you walk back down the path. \n you are at the entrance to the weathered fish market. \n seems empty without the music playing...what was that song about again? flying home? \n anyways the front door is wide open, and the smell makes your stomach grumbles...you really need some food \n";
+                return "\n you walk back down the path. \n you are at the entrance to the weathered fish market. \n looks like the music stopped...what was that song about again? flying home? \n anyways the front door is wide open, and the smell makes your stomach grumbles...you really need some food \n you can leave the fish market by going west. \n";
             }
             //go north
             if (inputKey == 3){
@@ -237,7 +237,7 @@ public class fishmarketB {
                 return "\n you can't walk this way. \n";
             }
             else{
-                return "\n why would you type that, i dont understand.\n";
+                return "\n why would you type that, i dont understand. \n";
             }
         }
 

@@ -70,12 +70,11 @@ public class harborlane {
         }
         //go east
         if (inputKey == 1){
-            loc.setLocation(3, 0);
-
             if (player.eatFood() == false){
                 return "\n you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that, skeem\n";
             }
             if (player.eatFood() == true){
+                loc.setLocation(3, 0);
                 return "\n you have reached the crosswalk of the busy street. now that you are no longer hungry you can see that the building in the distance is your home! \n but oh no! it looks the light for the cross walk is broken </3 \n are you courageous enough to try and get home anyways skeem?\n";
             }
             else {
