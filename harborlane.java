@@ -70,7 +70,7 @@ public class harborlane {
         }
         //go east
         if (inputKey == 1){
-            loc.setLocation(0, 3);
+            loc.setLocation(3, 0);
 
             if (player.eatFood() == false){
                 return "\n you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that skeem\n";

@@ -198,7 +198,7 @@ public class calmStreet {
             //go south
             if (inputKey == 3){
                 loc.setLocation(-2, 1);
-                return "\n you continue south on a quiet street. you notice small fish littering the ground.\n";
+                return "\n you continue south on the quiet street. you notice the small fish littering the ground.\n";
             }
             //go west
             if (inputKey == 4){
@@ -256,7 +256,12 @@ public class calmStreet {
             //go east
             if (inputKey == 1){
                 loc.setLocation(-1, 3);
-                return "\n the path leads you to a small, weathered fish market. \n you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n there is also a small path to the north that seems to lead to the back of the building.\n";
+                if (player.dogHasBone()==false){
+                return "\n the path leads you to a small, weathered fish market. \n you hear faint music from inside... \n the front door is wide open, and the smell of fish makes your stomach grumbles. \n there is also a small path to the north that seems to lead to the back of the building.\n";
+                }
+                if (player.dogHasBone()==true){
+                    return "\n the path leads you to the small, weathered fish market. \n the music has stopped and the door is wide open... \n looks like nobody is home...\n there is also a small path to the north that leads to the back of the building.\n";
+                }
             }
             //go north
             if (inputKey == 2){
@@ -265,7 +270,7 @@ public class calmStreet {
             //go south
             if (inputKey == 3){
                 loc.setLocation(-2, 2);
-                return "\n you continue south on a quiet street. you notice small fish littering the ground.\n";
+                return "\n you continue south on the quiet street. there really is alot of small fish littering the ground.\n maybe the fishmonger should figure that out. \n";
             }
             //go west
             if (inputKey == 4){

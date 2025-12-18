@@ -22,7 +22,7 @@ public class fishmarketA {
 
                 String case1 = "EAST"; // go inside
                 String case2 = "GO EAST"; 
-                String case3 = "ENTER FISH MARKET"; 
+                String case3 = "ENTER"; 
                 String case4 = "GO TO DOOR";
                 String case5 = "GO INSIDE";
 
@@ -66,12 +66,12 @@ public class fishmarketA {
             //go east, enter fish market
             if (inputKey == 1){
                 loc.setLocation(0, 3);
-                return "\n as you enter the small, rustic shop, you spot the fishmonger. \n he is distracted at the counter, chopping fish with a big, shiny knife and singing along happily to a song. \n 'seabird, seabird, fly home...' the fishmonger sings. \n 'like a lonely seabird, you've been away from land far too long..' \n";
+                return "\n as you enter the small, rustic shop, you spot the fish seller. \n he is distracted at the counter, chopping fish with a big, shiny sharp knife and singing along happily to a song. \n 'seabird, seabird, fly home...' the fishmonger sings. \n ";
             }
             //go north, follow path
             if (inputKey == 2){
                 loc.setLocation(-1, 4);
-                return "\n you walk down a small, overgrown path that leads you to the back door of the fish market. \n the door is slightly ajar, and you smell the scent of freshly caught fish. \n";
+                return "\n you walk down an overgrown path that leads you to the back door of the fish market. \n the door is slightly ajar to your east, and you smell the scent of freshly caught fish. \n";
             }
             //go south
             if (inputKey == 3){
@@ -80,7 +80,7 @@ public class fishmarketA {
             //go west
             if (inputKey == 4){
                 loc.setLocation(-2 ,3);
-                return "\n you return to the dead end of the calm street at a dock populated with fishing boats. \n there is a small path to the east, with more fish leading the way.\n";
+                return "\n you return to the dead end of the calm street at a dock populated with fishing boats. \n there is a path to the east, with more fish leading the way.\n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
@@ -145,7 +145,7 @@ public class fishmarketA {
             // go east, get chased away
             if (inputKey == 1){
                 loc.setLocation(-1, 3);
-                return "\n as you take another step into the shop, the fishmonger looks up and notices you. \n he abruptly stops singing and his smile turns into a frown. \n 'get out, you stray cat! you can't have any fish!' he shouts, waving his knife at you. \n frightened, you run back out to the entrance. there's still that path to the north...\n";
+                return "\n as you take another step into the shop, the fishmonger looks up and notices you. \n he abruptly stops singing and his smile turns into a frown. \n 'get out, you stray cat! you can't have any fish!' he shouts, waving his sharp knife at you. \n frightened, you run back out to the entrance...well there's still that path to the north...\n";
             }
             //go north
             if (inputKey == 2){
@@ -158,7 +158,7 @@ public class fishmarketA {
             // go west
             if (inputKey == 4){
                 loc.setLocation(-1 ,3);
-                return "\n you are at the entrance to a small, weathered fish market. \n you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n there is also a small path to the north that seems to lead to the back of the building..\n";
+                return "\n you are back at the entrance to the, weathered fish market. \n you hear faint music from inside...the same song on repeat \n the fish smell really makes your stomach grumbles. \n there is also the small path to the north that leads to the back of the building...\n";
             }
             else{
                 return "\n i dont understand\n";
@@ -177,7 +177,7 @@ public class fishmarketA {
 
                 String case1 = "EAST"; // go inside
                 String case2 = "GO EAST"; 
-                String case3 = "ENTER FISH MARKET"; 
+                String case3 = "ENTER"; 
                 String case4 = "GO TO DOOR";
                 String case5 = "GO INSIDE";
 
@@ -221,12 +221,17 @@ public class fishmarketA {
             //go east, enter back door of fish market
             if (inputKey == 1){
                 loc.setLocation(0, 4);
-                return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room, but he has no idea you're there. \n";
+                if (player.hasBone()==false){
+                return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room singing 'like a lonely seabird, you've been away from land far too long...' \n but he has no idea you're there. \n";
+                }
+                if (player.hasBone()==true){
+                    return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n the big fish on a small table is now gone, all there is are little ones.\n damn Skeem you really were hungry \n you can hear the fishmonger milling around in the other room singing 'like a lonely seabird, you've been away from land far too long...' \n but he has no idea you're there.\n";
+                }
             }
             //go south, back to path
             if (inputKey == 2){
                 loc.setLocation(-1, 3);
-                return "\n you walk back down the path. \n you are at the entrance to a small, weathered fish market. you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. \n";
+                return "\n you walk back down the path. \n you are at the entrance of the weathered fish market. the door is open and you can still hear faint music from inside... \n the overwhelming smell of fish makes your stomach grumbles. \n";
             }
             //go north
             if (inputKey == 3){
@@ -275,12 +280,17 @@ public class fishmarketA {
             //eat fish
             if (inputKey == 1){
                 loc.setLocation(-1, 4);
-                player.setBone(true);
-                return "\n you eat the fresh, juicy fish with delight, satisfying a bit of the hunger in your stomach. \n you pick up the bone that is left behind. this might come in handy later... \n you walk back outside, just in case the fishmonger catches sight of you. \n";
+                if (player.hasBone()==false){
+                    player.setBone(true);
+                    return "\n you eat the fresh, juicy fish with delight, satisfying a bit of the hunger in your stomach. \n you pick up the bone with your mouth that is left behind. this might come in handy later... \n you walk back outside, just in case the fishmonger catches sight of you. \n";
+                }
+                if (player.hasBone()==true){
+                    return "\n you already ate a big fish greedy \n";
+                }
             }
             if (inputKey == 2){
                 loc.setLocation(-1, 4);
-                return "\n you return to the small, overgrown path. the front entrance to the fishmarket is to the south. \n the back door to the north is slightly ajar, and you smell the scent of freshly caught fish. \n";
+                return "\n you return to the small, overgrown path. the front entrance to the fishmarket is to the south. \n the back door to the east is slightly ajar, and you smell the scent of freshly caught fish. \n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
