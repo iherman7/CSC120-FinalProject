@@ -1,6 +1,5 @@
 public class apartment {
     
-       
     public int change = 0;
     private skeem player;
     private location loc;
@@ -23,30 +22,31 @@ public class apartment {
             String case1 = "LEAVE";
             String case2 = "JUMP"; // you should chnage this user wont say that to leave
             String case3 = "JUMP DOWN";
+            String case4 = "JUMP DOWN";
 
-            String case4 = "FORWARD";
-            String case5 = "GO FORWARD"; // closer, get closer
-            String case6 = "GO TO FOOD";
-            String case7 = "MOVE CLOSER";
-            String case8 = "GO CLOSER";
+            String case5 = "FORWARD";
+            String case6 = "GO FORWARD"; // closer, get closer
+            String case7 = "GO TO FOOD";
+            String case8 = "MOVE CLOSER";
+            String case9 = "GO CLOSER";
 
-            String case9 = "EAT FOOD";
-            String case10 = "EAT";
+            String case10 = "EAT FOOD";
+            String case11 = "EAT";
 
 
             // leave apartment
-            if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3)){ 
+            if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3) || userInput.equals(case4)){ 
                 change = 1;
                 return change;
             }
 
             // go to food bowl
-            if (userInput.equals(case4)|| userInput.equals(case5)|| userInput.equals(case6) || userInput.equals(case7) || userInput.equals(case8)){
+            if (userInput.equals(case5)|| userInput.equals(case6)|| userInput.equals(case7) || userInput.equals(case8) || userInput.equals(case9)){
                 change = 2;
                 return change;
             }
             // tries to eat food
-            if (userInput.equals(case9) || userInput.equals(case10)){
+            if (userInput.equals(case10) || userInput.equals(case11)){
                 change = 3;
                 return change;
             }
@@ -114,11 +114,12 @@ public String negOneOneOutput(int inputKey){
     // went back to window
     if (inputKey == 1){
         loc.setLocation(-1, 1);
-        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...\n";
+        return "\n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west! \n";
         } 
     // went to food
     if (inputKey == 2){
-        housecatConvo = true;
+        // housecatConvo = true;
+        loc.setLocation(-1, 5);
         return "\n 'i haven't seen you around here before,' the housecat replies. \n 'you must be a long way from home. \n because i am so kind and generous, i'll let you have some of my food...but only if you answer my three riddles. \n do you want to hear the first one?'\n"; 
         } 
     else {
@@ -158,12 +159,14 @@ public String negOneOneOutput(int inputKey){
     public String riddle1Output(int inputKey){
     // yes
     if (inputKey == 1){
+        loc.setLocation(-1, 6);
         return "\n 'okay, your first riddle is: \n what is a fishmonger's favorite song?'\n";
         } 
     // no
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; // in play through this bit is confusing
+        // housecatConvo = false;
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment. \n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west! \n"; 
         } 
     else {
         return "\n i don't understand\n";
@@ -201,7 +204,7 @@ public String negOneOneOutput(int inputKey){
                 return change;
             }
             else {
-                System.out.println("\n 'no, that's not it... \n maybe visit the fish market in town to find out.'\n");
+                System.out.println("\n 'no, that's not it... \n either give up, or maybe visit the fish market in town to find out.' \n");
             }
         
         }
@@ -211,13 +214,15 @@ public String negOneOneOutput(int inputKey){
     public String riddle2Output(int inputKey){
     // correct
     if (inputKey == 1){
-        riddle1Answered = true;
+        // riddle1Answered = true;
+        loc.setLocation(-1, 7);
         return "\n 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
+        // housecatConvo = false;
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment. \n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west!\n"; 
         } 
     else {
         return "\n i don't understand\n";
@@ -266,13 +271,15 @@ public String negOneOneOutput(int inputKey){
     public String riddle3Output(int inputKey){
     // correct
     if (inputKey == 1){
-        riddle2Answered = true;
+        // riddle2Answered = true;
+        loc.setLocation(-1, 8);
         return "\n 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
+        // housecatConvo = false;
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment. \n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west!\n"; 
         } 
     else {
         return "\n i don't understand\n";
@@ -319,13 +326,14 @@ public String negOneOneOutput(int inputKey){
     // correct and eat food
     if (inputKey == 1){
         player.setFull(true);
-        riddle3Answered = true;
+        loc.setLocation(-1, 0);
         return "\n 'congratulations, you've earned it.' \n the housecat steps aside, allowing you to step forward and eat the food. \n it's delicious, and as you leave the apartment and jump back down to the alleyway you immediately feel more energetic and courageous...\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n"; 
+        // housecatConvo = false;
+        return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west!\n"; 
         } 
     else {
         return "\n i don't understand\n";

@@ -54,7 +54,7 @@ public class harborlane {
         //go west
         if (inputKey == 4){
             loc.setLocation(1,0);
-            return "\n you walk through the gate and are once again faced with an alleyway litterd with cardbord boxes. \n you can only go east or west\n";
+            return "\n you walk through the gate and are once again faced with an alleyway littered with cardbord boxes. \n you can only go east or west... \n";
         }
         //go north
         if (inputKey == 2){
@@ -73,7 +73,7 @@ public class harborlane {
             loc.setLocation(3, 0);
 
             if (player.eatFood() == false){
-                return "\n you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that skeem\n";
+                return "\n you have reached the crosswalk of the busy street. the thought of crossing the street makes your stomach grumble. \n i don't know if you have the energy for that, skeem\n";
             }
             if (player.eatFood() == true){
                 return "\n you have reached the crosswalk of the busy street. now that you are no longer hungry you can see that the building in the distance is your home! \n but oh no! it looks the light for the cross walk is broken </3 \n are you courageous enough to try and get home anyways skeem?\n";

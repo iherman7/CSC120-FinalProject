@@ -54,21 +54,21 @@ public class calmStreet {
         //go east
         if (inputKey == 1){
             loc.setLocation(-1, 0);
-            return "\n you're back in the alleyway \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...\n";
+            return "\n you're back in the alleyway. \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment...\n";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, 1);
-            return "\n you head north on a quiet street without a car in sight. \n you notice small fish littering the ground ahead.\n";
+            return "\n you head north on a quiet street without a car in sight. \n you notice small fish littering the ground. \n";
         }
         //go south
         if (inputKey == 3){
             loc.setLocation(-2, -1);
-            return "\n you continue south, the trees lining the street seem to lead to an even greener place up ahead\n";
+            return "\n you continue south. the trees lining the street seem to lead to an even greener place up ahead. \n";
         }
         //go west
         if (inputKey == 4){
-            return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
+            return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove. \n";
         }
         else{
             return "\n why would you type that, i dont understand\n";
@@ -126,7 +126,7 @@ public class calmStreet {
             //go north
             if (inputKey == 2){
                 loc.setLocation(-2, 2);
-                return "\n there are more and more fish littering the path. they might lead somewhere...\n";
+                return "\n there are lots of fish littering the path. \n";
             }
             //go south
             if (inputKey == 3){
@@ -135,7 +135,7 @@ public class calmStreet {
             }
             //go west
             if (inputKey == 4){
-                return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
+                return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove. \n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
@@ -202,7 +202,7 @@ public class calmStreet {
             }
             //go west
             if (inputKey == 4){
-                return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
+                return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove\n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
@@ -274,7 +274,7 @@ public class calmStreet {
             }
             //go west
             if (inputKey == 4){
-                return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
+                return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove\n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
@@ -335,11 +335,11 @@ public class calmStreet {
         //go south
         if (inputKey == 3){
             loc.setLocation(-2, -2);
-            return "\n the calm street has revealed leaning tree park right infront. what fun!\n";
+            return "\n the calm street has revealed leaning tree park right in front. what fun!\n";
         }
         //go west
         if (inputKey == 4){
-            return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
+            return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove\n";
         }
         else{
             return "\n why would you type that, i dont understand\n";
@@ -394,26 +394,26 @@ public class calmStreet {
     public String negTwoNegTwoOutput(int inputKey){
     //go east
     if (inputKey == 1){
-        return "\n the street doesn't have any turns here, maybe try north or south\n";
+        return "\n the street doesn't have any turns here, maybe try north or south... \n";
     }
     //go north
     if (inputKey == 2){
         loc.setLocation(-2, -1);
-        return "\n you walk back up the calm, street...it really is calm here\n";
+        return "\n you walk back up the calm street...it really is calm here! \n";
     }
     //go south
     if (inputKey == 3){
         loc.setLocation(-2, -3);
         if (player.dogHasBone()==false){
-            return "\n you have entered the park! \n the greenery sourounds you to the south and to the east, \n but you are intimidated by a scary and somber looking dog that is watching your every move\n";
+            return "\n you have entered the park! \n the greenery surrounds you to the south and to the east, \n but you are intimidated by a scary and somber looking dog that is watching your every move. \n";
         }
         if (player.dogHasBone()==true){
-            return "\n you have entered the park! \n the greenery sourounds you to the south and to the east, \n things are a lot more peaceful without fido growling in your ear.\n";                    
+            return "\n you have entered the park! \n the greenery surrounds you to the south and to the east, \n things are a lot more peaceful without fido growling in your ear.\n";                    
         }
     }
     //go west
     if (inputKey == 4){
-        return "\n there's nothing over here but a beautiful overview of the ocean glimmering back at fisher's cove\n";
+        return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove\n";
     }
     else{
         return "\n why would you type that, i dont understand\n";

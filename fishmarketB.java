@@ -71,7 +71,7 @@ public class fishmarketB {
             //go north, follow path
             if (inputKey == 2){
                 loc.setLocation(-1, 4);
-                return "\n you walk down a small, overgrown path that leads you to the back door of the fish market. \n the door is slightly ajar, and you smell the scent of freshly caught fish. \n";
+                return "\n you walk down a small, overgrown path that leads you to the back door of the fish market. \n the door is slightly ajar and to your east, and you smell the scent of freshly caught fish. \n";
             }
             //go south
             if (inputKey == 3){
@@ -323,7 +323,7 @@ public class fishmarketB {
     public String zeroFourOutput(int inputKey){
             if (inputKey == 1){
                 loc.setLocation(-1, 4);
-                return "\n you return to the small, overgrown path. the front entrance to the fishmarket is to the south. \n the back door to the north is slightly ajar, and you smell the scent of freshly caught fish. \n";
+                return "\n you return to the small, overgrown path. the front entrance to the fishmarket is to the south. \n the back door to the east is slightly ajar, and you smell the scent of freshly caught fish. \n";
             }
             else{
                 return "\n why would you type that, i dont understand\n";
