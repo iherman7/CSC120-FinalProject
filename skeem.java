@@ -5,6 +5,7 @@ public class skeem {
     private boolean hasKey;
     private boolean eatFood;
     private boolean dogHasBone;
+    private boolean gateOpen;
 
     public skeem(){
         this.hasBone = false;
@@ -48,5 +49,12 @@ public class skeem {
     }
     public void setDogHasBone(boolean d){
         this.dogHasBone = d;
+    }
+
+    public boolean gateOpen(){
+        return this.gateOpen;
+    }
+    public void setGate(boolean g){
+        this.gateOpen = g;
     }
 }

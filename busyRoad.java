@@ -29,6 +29,7 @@ public class busyRoad {
 
             String case1 = "EAST";
             String case2 = "GO EAST"; 
+            String case11 = "YES";
 
             String case3 = "NORTH";
             String case4 = "GO NORTH";
@@ -42,7 +43,7 @@ public class busyRoad {
             String case9 = "CROSS";
             String case10 = "CROSS STREET";
 
-            if (userInput.equals(case1)|| userInput.equals(case2)){
+            if (userInput.equals(case1)|| userInput.equals(case2)|| userInput.equals(case11)){
                 change = 1;
                 return change; //east
             }

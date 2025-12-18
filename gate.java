@@ -35,8 +35,12 @@ public class gate {
                         change = 1;
                         return change;
                     }
-                if (player.hasKey() == true){ //locked with key
+                if (player.hasKey() == true && player.gateOpen()==false){ //locked with key
                     change = 2;
+                    return change;
+                }
+                if (player.gateOpen() == true){
+                    change = 6;
                     return change;
                 }
             }
@@ -81,6 +85,10 @@ public class gate {
         if (inputKey == 2){
             return "\n the gate is locked but it looks like you have a key right there in you mouth. maybe give it a try or go west.\n";
             }
+        // east and gate open
+        if (inputKey == 6){
+            return "\n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster! \n";
+        }
         // tried to go north/south
         if (inputKey == 3){
             return "\n you can't go that way, silly\n";
@@ -92,6 +100,7 @@ public class gate {
         }
         if (inputKey == 5){
             loc.setLocation(2, 0);
+            player.setGate(true);
             return "\n you use your cat mouth to put the key into the gate and it swings open! \n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster!\n";
 
         }
