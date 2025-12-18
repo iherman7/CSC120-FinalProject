@@ -84,19 +84,6 @@ public class alleyway {
         }
     }
 
-    // public void setAlleywayLocA(int inputKey){
-    //     if (inputKey == 2){
-    //         loc.setLocation(-1, 0);
-    //         x = loc.getX();
-    //         y = loc.getY();
-    //     }
-    //     if (inputKey == 1){
-    //         loc.setLocation(1, 0);
-    //         x = loc.getX();
-    //         y = loc.getY();
-    //     }
-    // }
-
     public int negOneZeroInput(){
     // runs on the game loop if location = (-1,0) from going west
         while (true){
@@ -159,84 +146,5 @@ public class alleyway {
             return "\n i don't understand\n";
         }
     }
-
-
-    // public void setAlleywayLocB(int inputKey){
-    //     if (inputKey == 1){
-    //         loc.setLocation(0, 0);
-    //         x = loc.getX();
-    //         y = loc.getY();
-    //     }
-    //     if (inputKey == 2){
-    //         loc.setLocation(-2, 0);
-    //         x = loc.getX();
-    //         y = loc.getY();
-    //     }
-    //     if (inputKey == 3){
-    //         loc.setLocation(-1, 2);
-    //         x = loc.getX();
-    //         y = loc.getY();
-    //     }
-    // }
-
-    // public int getAlleywayX(){
-    //     return x;
-    // }
-
-    // public int getAlleywayY(){
-    //     return y;
-    // }
-
-    public Boolean isInAlleyway(location loc){
-        int x = loc.getX();
-        int y = loc.getY();
-
-        if (x >= -2){
-            if (x <= 1){
-                if (y == 0){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-
-    public Boolean isInAlleywayB(location loc){
-        int x = loc.getX();
-        int y = loc.getY();
-
-        if (x >= -2){
-            if (x <= 1){
-                if (y == 0){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-
-
-    // public static void main(String[] args) {
-    //     alleyway alleyway = new alleyway();
-    //     location location = new location();
-
-    //     //true
-    //     location.setLocation(0, 0);
-    //     System.out.println(alleyway.isInAlleyway(location));
-
-    //     //false
-    //     location.setLocation(-4, 1);
-    //     System.out.println(alleyway.isInAlleyway(location));
-
-    //     //true
-    //     location.setLocation(-2, 0);
-    //     System.out.println(alleyway.isInAlleyway(location));
-
-    //     //false
-    //     location.setLocation(2, 0);
-    //     System.out.println(alleyway.isInAlleyway(location));
-    // }
 
 }

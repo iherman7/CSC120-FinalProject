@@ -82,16 +82,16 @@ public class park {
     public String negTwoNegThreeOutput(int inputKey){
         //east
         if (inputKey == 1){
-        return "\n the dog approaches you 'you cats think you can just walk and around anywhere, well i used to run around when my owner would throw a bone in my prime days. this is still MY park stay out! \n if only there were a way to distract him. \n he barks you off.\n";
+        return "\n the dog approaches you. \n 'you cats think you can just walk around anywhere! well, i used to run around when my owner would throw a bone in my prime days. this is still MY park, stay out! \n if only there were a way to distract him. \n he barks you off.\n";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, -2);
-            return "\n you are now on the calm street infront of leaning tree park...to go north or south...what to do...\n";
+            return "\n you are now on the calm street in front of leaning tree park...to go north or south...what to do...\n";
         }
         //go south
         if (inputKey == 3){
-            return "\n the dog approaches you bearing it's canines, a growl ready to release \n 'this is MY park you can't enter.' the dog looks at you serverly. \n 'after my owner stopped playing with me to spend more time with his new cat,' he snarls \n 'you especially aren't welcomed here.' \n if only there was a way to distract him \n he barks you off\n";
+            return "\n the dog approaches you bearing its canines, a growl ready to release. \n 'this is MY park you can't enter.' the dog looks at you serverly. \n 'after my owner stopped playing with me to spend more time with his new cat,' he snarls, \n 'you especially aren't welcomed here.' \n if only there was a way to distract him... \n he barks you off. \n";
         }
         //go west
         if (inputKey == 4){
@@ -99,16 +99,16 @@ public class park {
         }
         //go east if have fish bone
         if (inputKey == 5){
-            return "\n the dog approaches you again and blocks your path 'didn't i tell you to stay away from my--' he is suddenly distracted by the bone you have in your mouth. \n he seems to be enammored by it...\n";
+            return "\n the dog approaches you again and blocks your path. \n 'didn't i tell you to stay away from my--' he is suddenly distracted by the bone you have in your mouth. \n he seems to be enamored by it...\n";
         }
         //go south if fish bone
         if (inputKey == 6){
-            return "\n the dog approaches you again and blocks your path 'you cats just don't listen, this is my--' he is lost in lust by the bone you have in your mouth. \n he seems to be enammored by it...\n";
+            return "\n the dog approaches you again and blocks your path. \n 'you cats just don't listen, this is my--' he is lost in lust by the bone you have in your mouth. \n he seems to be enamored by it...\n";
         }
         //throw bone
         if (inputKey == 7){
             player.setDogHasBone(true);
-            return "\n the dog chases after the bone with exuberant joy 'OH MAN I HAVEN'T FELT SUCH THRILL LIKE THIS IN SEVEN YEARS' \n the leaning tree park is now free to roam to the east or south!\n";
+            return "\n the dog chases after the bone with exuberant joy. \n 'OH MAN, I HAVEN'T FELT SUCH THRILL LIKE THIS IN SEVEN YEARS!' \n you are now free to roam the leaning tree park to the east or south!\n";
         }
         else{
             return "\n why would you type that, i dont understand\n";
@@ -248,16 +248,16 @@ public class park {
     public String negTwoNegFourOutput(int inputKey){
         //go east - you cant go east there is the tree that blocks ur path u see somtheting shiny
         if (inputKey == 1){
-            return "\n the large leaning tree block your path, you cannot continue east. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches \n it intrigues you.\n";
+            return "\n the large leaning tree block your path, you cannot continue east. \n you take a second to admire the beautiful yet odd tree and notice something shiny up high in the leaves of the branches. \n it intrigues you.\n";
         }
         //go north
         if (inputKey == 2){
             loc.setLocation(-2, -3);
-            return "\n the scenery of the park has really impressed you, the gate to leave is in front of you if you choose to return to the calm street.\n";
+            return "\n the scenery of the park has really impressed you. \n the gate to leave is in front of you if you choose to return to the calm street.\n";
         }
         //go south
         if (inputKey == 3){
-            return "\n you have reached the end of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean\n";
+            return "\n you have reached the end of the park. \n all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean\n";
         }
         //go west
         if (inputKey == 4){
@@ -265,7 +265,7 @@ public class park {
         }
         // climb tree but claws arent sharp
         if (inputKey == 5){
-            return "\n you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...\n";
+            return "\n you try to climb the tree but no success! you're claws just aren't sharp enough, skeem. \n i wonder if there's anything sharp around to sharpen them with...\n";
         }
         // climbing the tree
         if (inputKey == 6){
@@ -278,7 +278,7 @@ public class park {
         }
         // east if you already have key
         if (inputKey == 8){
-            return " the large leaning tree block your path, you cannot continue east. you take a second to admire the beautiful yet odd tree.\n you've climbed it before, you could climb it again although, don't know why you would";
+            return " the large leaning tree block your path, you cannot continue east. \n you take a second to admire the beautiful yet odd tree.\n you've climbed it before, you could climb it again although, don't know why you would";
         }
         else{
             return "\n why would you type that, i dont understand\n";
@@ -351,11 +351,11 @@ public class park {
     public String negOneNegThreeOutput(int inputKey){
         //go east - you cant go east end of park
         if (inputKey == 1){
-            return "\n you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean\n";
+            return "\n you have reached the edge of the park. \n all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean\n";
         }
         //go north -- cant go north, edge of park
         if (inputKey == 2){
-            return "\n you have reached the edge of the park, all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean\n";
+            return "\n you have reached the edge of the park. \n all there is from here are bushes that you are sure will only reveal another beautiful view of the ocean\n";
         }
         //go south // cant go south tree block ur path
         if (inputKey == 3){
@@ -364,10 +364,10 @@ public class park {
         //go west // palces u back
         if (inputKey == 4){
             loc.setLocation(-2, -3);
-            return "\n the scenery of the park has really impressed you, the gate to leave is north of you if you choose to return to the calm street.\n";
+            return "\n the scenery of the park has really impressed you. \n the gate to leave is north of you if you choose to return to the calm street.\n";
         }
          if (inputKey == 5){
-            return "\n you try to climb the tree but no success! you're claws just aren't sharp enough Skeem. i wonder if there's anything sharp around to sharpen them with...\n";
+            return "\n you try to climb the tree but no success! \n your claws just aren't sharp enough, skeem. i wonder if there's anything sharp around to sharpen them with...\n";
         }
         if (inputKey == 6){
             player.setKey(true);
