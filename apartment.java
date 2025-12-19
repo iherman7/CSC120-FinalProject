@@ -20,9 +20,8 @@ public class apartment {
             String userInput = userIO.readInput();
 
             String case1 = "LEAVE";
-            String case2 = "JUMP"; // you should chnage this user wont say that to leave
+            String case2 = "JUMP"; 
             String case3 = "JUMP DOWN";
-            String case4 = "JUMP DOWN";
 
             String case5 = "FORWARD";
             String case6 = "GO FORWARD"; // closer, get closer
@@ -35,7 +34,7 @@ public class apartment {
 
 
             // leave apartment
-            if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3) || userInput.equals(case4)){ 
+            if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3)){ 
                 change = 1;
                 return change;
             }
@@ -88,7 +87,7 @@ public String negOneOneOutput(int inputKey){
             String case1 = "WALK OUT";
             String case2 = "WALK AWAY";
             String case3 = "LEAVE APARTMENT";
-            String case4 = "WALK TO WINDOW";
+            String case4 = "GO TO WINDOW";
             String case5 = "LEAVE";
 
             String case6 = "YES"; // should you code a no
@@ -187,7 +186,7 @@ public String negOneOneOutput(int inputKey){
             String case3 = "WALK OUT";
             String case4 = "WALK AWAY";
             String case5 = "LEAVE APARTMENT";
-            String case6 = "WALK TO WINDOW";
+            String case6 = "GO TO WINDOW";
             String case7 = "LEAVE";
             String case8 = "I GIVE UP";
             String case9 = "GIVE UP";
@@ -244,7 +243,7 @@ public String negOneOneOutput(int inputKey){
             String case5 = "WALK OUT";
             String case6 = "WALK AWAY";
             String case7 = "LEAVE APARTMENT";
-            String case8 = "WALK TO WINDOW";
+            String case8 = "GO TO WINDOW";
             String case9 = "LEAVE";
             String case10 = "I GIVE UP";
             String case11 = "GIVE UP";
@@ -299,7 +298,7 @@ public String negOneOneOutput(int inputKey){
             String case3 = "WALK OUT";
             String case4 = "WALK AWAY";
             String case5 = "LEAVE APARTMENT";
-            String case6 = "WALK TO WINDOW";
+            String case6 = "GO TO WINDOW";
             String case7 = "LEAVE";
             String case8 = "I GIVE UP";
             String case9 = "GIVE UP";

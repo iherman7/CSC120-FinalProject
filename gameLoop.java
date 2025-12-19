@@ -11,7 +11,7 @@ public class gameLoop{
         this.playerLocation = new location();
     }
 
-    public void runGame(){
+    public void runGame(){ // should write a help and q for quit function
         
         System.out.println(" \n \n ------- SKEEM THE CAT WHO WAS ONCE HUMAN ------- \n");
         System.out.println("\n ... \n");
