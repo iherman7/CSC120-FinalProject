@@ -13,7 +13,7 @@ public class gameLoop{
 
     public void runGame(){ // should write a help and q for quit function
         
-        System.out.println(" \n \n ------- SKEEM THE CAT WHO WAS ONCE HUMAN ------- \n");
+        System.out.println(" \n \n ------- SKEEM THE CAT WHO WAS ONCE HUMAN ------- \n \n press Q to quit the game \n");
         System.out.println("\n ... \n");
         System.out.println("\n wake up!! wake up!!\n");
         

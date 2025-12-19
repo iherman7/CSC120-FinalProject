@@ -4,6 +4,8 @@ public class main1 {
         gameLoop game = new gameLoop();
         game.runGame();
 
+        userIO.closeScanner();
+
     }
 
 }

@@ -5,6 +5,8 @@ Note:  It's a good idea to also make this list available inside the game, in res
 the goal of the game is to get skeem home
 
 COMMANDS: (not all commands work in every spot)
+Q - to quit
+
 wake up
 
 (go) north
