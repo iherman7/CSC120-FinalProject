@@ -1,15 +1,27 @@
 public class gate {
     
+    /**
+     * attributes
+     */
     public int change = 0;
     private skeem player;
     private location loc;
 
+    /**
+     * gate construtor
+     * @param player same passed through each location
+     * @param loc same passed through each location
+     */
     public gate(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
         
 
+    /**
+     * runs through possibilities at location (1,0) in front of the gate
+     * @return the change based on the user's input
+     */
     public int oneZeroInput(){
         while (true){
             change = 0;
@@ -76,6 +88,12 @@ public class gate {
     //if boolean hasKey is true and they have said something along the lines of use key, open gate
     //then the rest of the game can continue
 
+    /**
+     * takes the input of method above and read it to give an output. changes location if needed 
+     * opens gates if key is used
+     * @param inputKey the input that was just passed from (1,0)
+     * @return a string telling user a response to their input
+     */
     public String oneZeroOutput(int inputKey){
         // went east with no key
         if (inputKey == 1){
