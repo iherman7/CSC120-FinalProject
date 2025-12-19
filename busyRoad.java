@@ -5,7 +5,7 @@ public class busyRoad {
     private skeem player;
     private location loc;
     public int change = 0;
-    private static final String SUCCESS = " \n Skeem you dashed across the busy road safely and have finally reached your home! congragulations!\n hopefully this long odyssey will help you figure out why you became a cat...\n";
+    private static final String SUCCESS = " \n Skeem you dashed across the busy road safely and have finally reached your home! congratulations!\n hopefully this long odyssey will help you figure out why you became a cat...\n";
     private static final String[] RESPONSES = {
         "\n a car flies by too close, oh no! You jump back.\n",
         "\n you hesitate overcome with fear. it doesn't feel safe yet.\n",

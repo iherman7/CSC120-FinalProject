@@ -222,7 +222,7 @@ public class fishmarketA {
             if (inputKey == 1){
                 loc.setLocation(0, 4);
                 if (player.hasBone()==false){
-                return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room singing 'like a lonely seabird, you've been away from land far too long...' \n but he has no idea you're there. \n";
+                return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n there is a big fish on a small table right in front of you. \n you can hear the fishmonger milling around in the other room singing: \n 'like a lonely seabird, you've been away from land far too long...' \n but he has no idea you're there. \n";
                 }
                 if (player.hasBone()==true){
                     return "\n you sneak in through the back door and find yourself in a small storage room filled with crates of supplies. \n the big fish on a small table is now gone, all there is are little ones.\n damn Skeem you really were hungry \n you can hear the fishmonger milling around in the other room singing 'like a lonely seabird, you've been away from land far too long...' \n but he has no idea you're there.\n";
