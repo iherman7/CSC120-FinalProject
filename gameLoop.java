@@ -1,17 +1,30 @@
+/**
+ * This class holds all the functionality of the game from front to finish within the runGame() method.
+ */
 public class gameLoop{
 
+    /**
+     * Attributes
+     */
     int inputKey;
     String outputString;
-
     private skeem player;
     private location playerLocation;
 
+    /**
+     * Constructor
+     */
     public gameLoop(){
         this.player = new skeem();
         this.playerLocation = new location();
     }
-
-    public void runGame(){ // should write a help and q for quit function
+    /**
+     * Runs full game from start to finish
+     * Prints introduction banner
+     * Creates new instances of each location
+     * Runs methods from other classes based on player's current location
+     */
+    public void runGame(){ 
         
         System.out.println(" \n \n ------- SKEEM THE CAT WHO WAS ONCE HUMAN ------- \n \n press Q to quit the game \n");
         System.out.println("\n ... \n");

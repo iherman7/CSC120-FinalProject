@@ -1,18 +1,29 @@
+/**
+ * This class operates the game in the "apartment" location.
+ */
 public class apartment {
     
+    /**
+     * Attributes
+     */
     public int change = 0;
     private skeem player;
     private location loc;
-    public boolean housecatConvo = false;
-    public boolean riddle1Answered = false;
-    public boolean riddle2Answered = false;
-    public boolean riddle3Answered = false;
 
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public apartment(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negOneOneInput(){
         while (true){
             change = 0;
@@ -24,7 +35,7 @@ public class apartment {
             String case3 = "JUMP DOWN";
 
             String case5 = "FORWARD";
-            String case6 = "GO FORWARD"; // closer, get closer
+            String case6 = "GO FORWARD"; 
             String case7 = "GO TO FOOD";
             String case8 = "MOVE CLOSER";
             String case9 = "GO CLOSER";
@@ -57,27 +68,36 @@ public class apartment {
 
     }
 
-public String negOneOneOutput(int inputKey){
-    // left apartment
-    if (inputKey == 1){
-        loc.setLocation(-1, 0);
-        return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment... \n";
-        } 
-    // went to food
-    if (inputKey == 2){
-        loc.setLocation(-1, 2);
-        return "\n 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity. \n 'but i do say, you look hungry... are you?' \n";
-        } 
-    // tried to eat food
-    if (inputKey == 3){
-        return "\n you're too far away! \n";
-        } 
-    else {
-        return "\n i don't understand \n";
-    }
-    }
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
+    public String negOneOneOutput(int inputKey){
+        // left apartment
+        if (inputKey == 1){
+            loc.setLocation(-1, 0);
+            return "\n the alleyway opens into a street ahead! \n there's also a ledge above, leading to an ajar window. \n if you jumped high enough, maybe you could sneak into that apartment... \n";
+            } 
+        // went to food
+        if (inputKey == 2){
+            loc.setLocation(-1, 2);
+            return "\n 'meowwwww!' a fat housecat jumps out from behind the couch and blocks your path. \n 'that's my food!' the fat housecat hisses at you, but softens with pity. \n 'but i do say, you look hungry... are you?' \n";
+            } 
+        // tried to eat food
+        if (inputKey == 3){
+            return "\n you're too far away! \n";
+            } 
+        else {
+            return "\n i don't understand \n";
+        }
+        }
 
     // interaction with housecat in front of food bowl
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negOneTwoInput(){
         while (true){
             change = 0;
@@ -90,7 +110,7 @@ public String negOneOneOutput(int inputKey){
             String case4 = "GO TO WINDOW";
             String case5 = "LEAVE";
 
-            String case6 = "YES"; // should you code a no
+            String case6 = "YES"; 
 
             // back to the window
             if (userInput.equals(case1)|| userInput.equals(case2) || userInput.equals(case3) || userInput.equals(case4) || userInput.equals(case5)){ 
@@ -109,6 +129,11 @@ public String negOneOneOutput(int inputKey){
 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negOneTwoOutput(int inputKey){
     // went back to window
     if (inputKey == 1){
@@ -127,6 +152,10 @@ public String negOneOneOutput(int inputKey){
     }
 
     // riddle 1
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int riddle1Input(){
         while (true){
             change = 0;
@@ -155,6 +184,11 @@ public String negOneOneOutput(int inputKey){
 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String riddle1Output(int inputKey){
     // yes
     if (inputKey == 1){
@@ -164,7 +198,6 @@ public String negOneOneOutput(int inputKey){
     // no
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        // housecatConvo = false;
         return "\n 'okay, starve then...' \n the housecat walks away in disappointment. \n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west! \n"; 
         } 
     else {
@@ -174,6 +207,10 @@ public String negOneOneOutput(int inputKey){
 
 
     // riddle 2
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int riddle2Input(){
         while (true){
             change = 0;
@@ -210,17 +247,20 @@ public String negOneOneOutput(int inputKey){
 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String riddle2Output(int inputKey){
     // correct
     if (inputKey == 1){
-        // riddle1Answered = true;
         loc.setLocation(-1, 7);
         return "\n 'correct! i'm impressed, but i don't think you'll get my next one... \n how long has fido been blue?'\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        // housecatConvo = false;
         return "\n 'okay, starve then...' \n the housecat walks away in disappointment. \n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west!\n"; 
         } 
     else {
@@ -229,6 +269,10 @@ public String negOneOneOutput(int inputKey){
     }
 
     // riddle 3
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int riddle3Input(){
         while (true){
             change = 0;
@@ -267,17 +311,20 @@ public String negOneOneOutput(int inputKey){
 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String riddle3Output(int inputKey){
     // correct
     if (inputKey == 1){
-        // riddle2Answered = true;
         loc.setLocation(-1, 8);
         return "\n 'correct again! wow, you must have been around this town awhile. \n ok, here's your final riddle: \n what's the street that leads a lost cat back home?'\n";
         } 
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        // housecatConvo = false;
         return "\n 'okay, starve then...' \n the housecat walks away in disappointment. \n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west!\n"; 
         } 
     else {
@@ -286,6 +333,10 @@ public String negOneOneOutput(int inputKey){
     }
 
     // final interaction with housecat
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int finalHousecatInput(){
         while (true){
             change = 0;
@@ -321,6 +372,11 @@ public String negOneOneOutput(int inputKey){
 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String finalHousecatOutput(int inputKey){
     // correct and eat food
     if (inputKey == 1){
@@ -331,7 +387,6 @@ public String negOneOneOutput(int inputKey){
     // give up
     if (inputKey == 2){
         loc.setLocation(-1, 1);
-        // housecatConvo = false;
         return "\n 'okay, starve then...' \n the housecat walks away in disappointment.\n you are back at the apartment window. you can jump down to the alleyway, which opens into a street to the west!\n"; 
         } 
     else {

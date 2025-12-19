@@ -1,16 +1,29 @@
+/**
+ * This class operates the game in the "alleyway" location.
+ */
 public class alleyway {
 
+    /**
+     * Attributes
+     */
     public int change = 0;
     private skeem player;
     private location loc;
-    private int x;
-    private int y;
-        
+    
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public alleyway(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int openingInput(){
         while (true){
             change = 0;
@@ -28,7 +41,11 @@ public class alleyway {
         }
     }
 
-
+    /**
+     * Returns a string output that depends on the inputKey
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String openingOutput(int inputKey){
         if (inputKey == 1){
             return "\n oh good! you've finally woken up, sleepy head. \n it seems you shed the remains of your human body and have woken up as a cat? \n skeem, you must have had something weird to eat last night... \n you're in the back alleyway between some rows of apartments...oh no, you're far from home! \n looks like you can only go east or west...\n";
@@ -37,6 +54,10 @@ public class alleyway {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int zeroZeroInput(){
         while (true){
             change = 0;
@@ -69,7 +90,11 @@ public class alleyway {
         }
     }
 
-
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String zeroZeroOutput(int inputKey){
         if (inputKey == 2){
             loc.setLocation(-1, 0);
@@ -84,8 +109,11 @@ public class alleyway {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negOneZeroInput(){
-    // runs on the game loop if location = (-1,0) from going west
         while (true){
             change = 0;
             userIO userIO = new userIO();
@@ -126,6 +154,11 @@ public class alleyway {
         }
     }
     
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negOneZeroOutput(int inputKey){
         // going east 
         if (inputKey == 1){

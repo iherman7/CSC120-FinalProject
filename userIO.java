@@ -1,15 +1,26 @@
 import java.util.Scanner;
-
+/**
+ * This class allows the program to take in and read user input.
+ */
 public class userIO {
-
+    /**
+     * Attributes
+     */
     public int inputKey;
     public String output;
     private static final Scanner mainScanner = new Scanner(System.in);
 
+    /**
+     * Empty constructor
+     */
     public userIO(){
     }
 
-    // method for reading user input 
+    /**
+     * Takes user input using Scanner, changes it to all caps, and returns it.
+     * Also takes care of quit function if user input is "Q"
+     * @return fixeduserInput the user's input set to all caps
+     */
     public String readInput(){
         String userInput = mainScanner.nextLine();
         String fixeduserInput = userInput.toUpperCase();
@@ -23,6 +34,9 @@ public class userIO {
         return fixeduserInput;
     }
 
+    /**
+     * Closes Scanner
+     */
     public static void closeScanner(){
         mainScanner.close();
     }
