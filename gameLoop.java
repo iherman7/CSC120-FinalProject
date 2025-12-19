@@ -108,31 +108,6 @@ public class gameLoop{
                 outputString = apartment.finalHousecatOutput(inputKey);
                 System.out.println(outputString);
             }
-
-                // // riddles
-                // if (apartment.housecatConvo == true){
-                //     inputKey = apartment.riddle1Input();
-                //     outputString = apartment.riddle1Output(inputKey);
-                //     System.out.println(outputString);
-
-                //     if (apartment.riddle1Answered == true){
-                //         inputKey = apartment.riddle2Input();
-                //         outputString = apartment.riddle2Output(inputKey);
-                //         System.out.println(outputString);
-                            
-                //         if (apartment.riddle2Answered == true){
-                //             inputKey = apartment.riddle3Input();
-                //             outputString = apartment.riddle3Output(inputKey);
-                //             System.out.println(outputString);
-                                
-                //             if (apartment.riddle3Answered == true){
-                //                 inputKey = apartment.finalHousecatInput();
-                //                 outputString = apartment.finalHousecatOutput(inputKey);
-                //                 System.out.println(outputString);
-                //             }
-                //         }
-                //     }
-                // }
         
             //harbor lane  
             if (x == 2 && y==0){
@@ -298,10 +273,9 @@ public class gameLoop{
             
             //to win
             if (x == 4 && y == 0){
-                System.out.println("\n YOU HAVE WON THE GAME\n");
+                System.out.println("\n YOU HAVE WON THE GAME! \n");
                 break;
             }
-
         }
     }
 }

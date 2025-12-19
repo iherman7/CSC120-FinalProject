@@ -1,15 +1,29 @@
+/**
+ * This class operates the game in the "calm street" location.
+ */
 public class calmStreet {
 
+    /**
+     * Attributes
+     */
     private skeem player;
     private location loc;
     public int change = 0;
 
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public calmStreet(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
 
-    //im making pathway on calm street to the park
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoZeroInput(){
          while (true){
             change = 0;
@@ -50,6 +64,11 @@ public class calmStreet {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoZeroOutput(int inputKey){
         //go east
         if (inputKey == 1){
@@ -75,6 +94,10 @@ public class calmStreet {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoOneInput(){
         while (true){
             change = 0;
@@ -118,6 +141,11 @@ public class calmStreet {
 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoOneOutput(int inputKey){
             //go east
             if (inputKey == 1){
@@ -142,6 +170,10 @@ public class calmStreet {
             }
         }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoTwoInput(){
             while (true){
                 change = 0;
@@ -185,6 +217,11 @@ public class calmStreet {
 
         }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoTwoOutput(int inputKey){
             //go east
             if (inputKey == 1){
@@ -209,6 +246,10 @@ public class calmStreet {
             }
         }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoThreeInput(){
             while (true){
                 change = 0;
@@ -252,6 +293,11 @@ public class calmStreet {
 
         }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoThreeOutput(int inputKey){
             //go east
             if (inputKey == 1){
@@ -282,6 +328,10 @@ public class calmStreet {
         }
 
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoNegOneInput(){
         while (true){
             change = 0;
@@ -322,6 +372,11 @@ public class calmStreet {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoNegOneOutput(int inputKey){
         //go east
         if (inputKey == 1){
@@ -346,78 +401,87 @@ public class calmStreet {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoNegTwoInput(){
         while (true){
-        change = 0;
-        userIO userIO = new userIO();
-        String userInput = userIO.readInput();
+            change = 0;
+            userIO userIO = new userIO();
+            String userInput = userIO.readInput();
 
-        String case1 = "EAST";
-        String case2 = "GO EAST"; 
+            String case1 = "EAST";
+            String case2 = "GO EAST"; 
 
-        String case3 = "NORTH";
-        String case4 = "GO NORTH";
+            String case3 = "NORTH";
+            String case4 = "GO NORTH";
 
-        String case5 = "SOUTH";
-        String case6 = "GO SOUTH";
+            String case5 = "SOUTH";
+            String case6 = "GO SOUTH";
 
-        String case7 = "WEST";
-        String case8 = "GO WEST";
+            String case7 = "WEST";
+            String case8 = "GO WEST";
 
-        String case9 = "ENTER PARK";
-        String case10 = "GO TO PARK";
-        String case11 = "GO FORWARD";
-        String case12 = "FORWARD";
+            String case9 = "ENTER PARK";
+            String case10 = "GO TO PARK";
+            String case11 = "GO FORWARD";
+            String case12 = "FORWARD";
 
-        if (userInput.equals(case1)|| userInput.equals(case2)){
-            change = 1;
-            return change; //east
-        }
-            if (userInput.equals(case3)|| userInput.equals(case4)){
-            change = 2;
-            return change;//north
-        }
-            if (userInput.equals(case5)|| userInput.equals(case6)||userInput.equals(case9)|| userInput.equals(case10)||userInput.equals(case11)|| userInput.equals(case12)){
-            change = 3;
-            return change; //south
-        }
-            if (userInput.equals(case7)|| userInput.equals(case8)){
-            change = 4;
-            return change; //west
-        }
-        else{
-            System.out.println("\n why would you type that, i don't understand\n");
-        }
+            if (userInput.equals(case1)|| userInput.equals(case2)){
+                change = 1;
+                return change; //east
+            }
+                if (userInput.equals(case3)|| userInput.equals(case4)){
+                change = 2;
+                return change;//north
+            }
+                if (userInput.equals(case5)|| userInput.equals(case6)||userInput.equals(case9)|| userInput.equals(case10)||userInput.equals(case11)|| userInput.equals(case12)){
+                change = 3;
+                return change; //south
+            }
+                if (userInput.equals(case7)|| userInput.equals(case8)){
+                change = 4;
+                return change; //west
+            }
+            else{
+                System.out.println("\n why would you type that, i don't understand\n");
+            }
         }
     } 
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoNegTwoOutput(int inputKey){
-    //go east
-    if (inputKey == 1){
-        return "\n the street doesn't have any turns here, maybe try north or south... \n";
-    }
-    //go north
-    if (inputKey == 2){
-        loc.setLocation(-2, -1);
-        return "\n you walk back up the calm street...it really is calm here! \n";
-    }
-    //go south
-    if (inputKey == 3){
-        loc.setLocation(-2, -3);
-        if (player.dogHasBone()==false){
-            return "\n you have entered the park! \n the greenery surrounds you to the south and to the east, \n but you are intimidated by a scary and somber looking dog that is watching your every move. \n";
+        //go east
+        if (inputKey == 1){
+            return "\n the street doesn't have any turns here, maybe try north or south... \n";
         }
-        if (player.dogHasBone()==true){
-            return "\n you have entered the park! \n the greenery surrounds you to the south and to the east, \n things are a lot more peaceful without fido growling in your ear.\n";                    
+        //go north
+        if (inputKey == 2){
+            loc.setLocation(-2, -1);
+            return "\n you walk back up the calm street...it really is calm here! \n";
         }
-    }
-    //go west
-    if (inputKey == 4){
-        return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove\n";
-    }
-    else{
-        return "\n why would you type that, i dont understand\n";
-    }
+        //go south
+        if (inputKey == 3){
+            loc.setLocation(-2, -3);
+            if (player.dogHasBone()==false){
+                return "\n you have entered the park! \n the greenery surrounds you to the south and to the east, \n but you are intimidated by a scary and somber looking dog that is watching your every move. \n";
+            }
+            if (player.dogHasBone()==true){
+                return "\n you have entered the park! \n the greenery surrounds you to the south and to the east, \n things are a lot more peaceful without fido growling in your ear.\n";                    
+            }
+        }
+        //go west
+        if (inputKey == 4){
+            return "\n there's nothing over here but a beautiful view of the ocean glimmering back at fisher's cove\n";
+        }
+        else{
+            return "\n why would you type that, i dont understand\n";
+        }
     }
 
 }  

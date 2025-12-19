@@ -1,19 +1,30 @@
+/**
+ * This class operates the game in the "fishmarketA" location, which is the first time the player visits the fishmarket.
+ */
 public class fishmarketA {
 
+    /**
+     * Attributes
+     */
     private skeem player;
     private location loc;
     public int change = 0;
 
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public fishmarketA(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
 
     // (-1, 3) right in front of fish market
-    // previous output: the path leads you to a small, weathered fish market. \n 
-    //                  you hear faint music from inside... \n the front door is wide open, and your stomach grumbles. 
-    //                  there is also a small path to the north that seems to lead to the back of the building.\n
-
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negOneThreeInput(){
             while (true){
                 change = 0;
@@ -62,6 +73,11 @@ public class fishmarketA {
 
         }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negOneThreeOutput(int inputKey){
             //go east, enter fish market
             if (inputKey == 1){
@@ -88,11 +104,10 @@ public class fishmarketA {
         }
 
     // (0, 3) inside front area of fish market
-    // previous output: as you enter the small, rustic shop, you spot the fishmonger.
-    // he is distracted at the counter, chopping fish with a big, shiny knife and singing along happily to a song.
-    //  'seabird, seabird, fly home...' the fishmonger sings.
-    // 'like a lonely seabird, you've been away from land far too long..'
-
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int zeroThreeInput(){
             while (true){
                 change = 0;
@@ -141,6 +156,11 @@ public class fishmarketA {
 
         }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String zeroThreeOutput(int inputKey){
             // go east, get chased away
             if (inputKey == 1){
@@ -166,9 +186,10 @@ public class fishmarketA {
         }
 
     // (-1, 4) back path to back entrance of fishmarket
-    // previous output: you walk down a small, overgrown path that leads you to the back door of the fish market.
-    //  the door is slightly ajar, and you smell the scent of freshly caught fish. 
-
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negOneFourInput(){
             while (true){
                 change = 0;
@@ -217,6 +238,11 @@ public class fishmarketA {
 
         }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negOneFourOutput(int inputKey){
             //go east, enter back door of fish market
             if (inputKey == 1){
@@ -246,6 +272,10 @@ public class fishmarketA {
             }
         }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int zeroFourInput(){
             while (true){
                 change = 0;
@@ -276,6 +306,11 @@ public class fishmarketA {
 
         }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String zeroFourOutput(int inputKey){
             //eat fish
             if (inputKey == 1){

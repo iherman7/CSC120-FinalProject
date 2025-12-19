@@ -1,3 +1,6 @@
+/**
+ * This class operates the game in the "gate" location.
+ */
 public class gate {
     
     /**
@@ -83,16 +86,10 @@ public class gate {
 
     }
 
-    // set location
-    //say you cannot do anything if boolean hasKey is false
-    //if boolean hasKey is true and they have said something along the lines of use key, open gate
-    //then the rest of the game can continue
-
     /**
      * takes the input of method above and read it to give an output. changes location if needed 
      * opens gates if key is used
      * @param inputKey the input that was just passed from (1,0)
-     * @return a string telling user a response to their input
      */
     public String oneZeroOutput(int inputKey){
         // went east with no key
@@ -126,9 +123,4 @@ public class gate {
             return "\n i don't understand\n";
         }
     }
-
-   
-
-   
-
 }
