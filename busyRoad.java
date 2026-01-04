@@ -1,11 +1,16 @@
 import java.util.Random;
-
+/**
+ * This class operates the game in the "busy road" location.
+ */
 public class busyRoad {
 
+    /**
+     * Attributes
+     */
     private skeem player;
     private location loc;
     public int change = 0;
-    private static final String SUCCESS = " \n Skeem you dashed across the busy road safely and have finally reached your home! congragulations!\n hopefully this long odyssey will help you figure out why you became a cat...\n";
+    private static final String SUCCESS = " \n Skeem you dashed across the busy road safely and have finally reached your home! congratulations!\n hopefully this long odyssey will help you figure out why you became a cat...\n";
     private static final String[] RESPONSES = {
         "\n a car flies by too close, oh no! You jump back.\n",
         "\n you hesitate overcome with fear. it doesn't feel safe yet.\n",
@@ -16,11 +21,19 @@ public class busyRoad {
         SUCCESS 
     };
 
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public busyRoad(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
-    
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int threeZeroInput(){
         while (true){
             change = 0;
@@ -69,6 +82,11 @@ public class busyRoad {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String threeZeroOutput(int inputKey){
         //go east
         if (inputKey == 1){

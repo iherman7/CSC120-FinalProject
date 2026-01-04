@@ -1,16 +1,30 @@
+/**
+ * This class operates the game in the "park" location.
+ */
 public class park {
 
+    /**
+     * Attributes
+     */
     private skeem player;
     private location loc;
     public int change = 0;
 
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public park (skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
 
-    //park is at loc (-2,-3) & (-1,-3) & (-2,-4) & (-1,-4)--tree clibimg
-    public int negTwoNegThreeInput(){ // might have to set a condition of what happens when dog has bone?
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
+    public int negTwoNegThreeInput(){ 
         while (true){
             change = 0;
             userIO userIO = new userIO();
@@ -31,7 +45,7 @@ public class park {
             String case9 = "THROW BONE";
             String case10 = "THROW FISH BONE";
             String case11 = "GIVE BONE";
-            String case12 = "GIVE A DOG A BONE"; // could make a special output for this one
+            String case12 = "GIVE A DOG A BONE"; 
 
 
             if (userInput.equals(case1)|| userInput.equals(case2)){
@@ -57,7 +71,6 @@ public class park {
                     change = 3;
                     return change; //does not
                 }
-                 //south - changes with dog
             }
              if (userInput.equals(case7)|| userInput.equals(case8)){
                 change = 4;
@@ -79,6 +92,11 @@ public class park {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoNegThreeOutput(int inputKey){
         //east
         if (inputKey == 1){
@@ -115,6 +133,10 @@ public class park {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int nextMoveInput(){
         while (true){
             change = 0;
@@ -155,6 +177,11 @@ public class park {
         }
     } 
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String nextMoveOutput(int inputKey){
         //go east
         if (inputKey == 1){
@@ -180,6 +207,10 @@ public class park {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negTwoNegFourInput(){
             while (true){
             change = 0;
@@ -245,6 +276,11 @@ public class park {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negTwoNegFourOutput(int inputKey){
         //go east - you cant go east there is the tree that blocks ur path u see somtheting shiny
         if (inputKey == 1){
@@ -285,6 +321,10 @@ public class park {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int negOneNegThreeInput(){
         while (true){
         change = 0;
@@ -348,6 +388,11 @@ public class park {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String negOneNegThreeOutput(int inputKey){
         //go east - you cant go east end of park
         if (inputKey == 1){

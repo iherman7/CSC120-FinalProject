@@ -1,17 +1,30 @@
+/**
+ * This class holds all the functionality of the game from front to finish within the runGame() method.
+ */
 public class gameLoop{
 
+    /**
+     * Attributes
+     */
     int inputKey;
     String outputString;
-
     private skeem player;
     private location playerLocation;
 
+    /**
+     * Constructor
+     */
     public gameLoop(){
         this.player = new skeem();
         this.playerLocation = new location();
     }
-
-    public void runGame(){ // should write a help and q for quit function
+    /**
+     * Runs full game from start to finish
+     * Prints introduction banner
+     * Creates new instances of each location
+     * Runs methods from other classes based on player's current location
+     */
+    public void runGame(){ 
         
         System.out.println(" \n \n ------- SKEEM THE CAT WHO WAS ONCE HUMAN ------- \n \n press Q to quit the game \n");
         System.out.println("\n ... \n");
@@ -95,31 +108,6 @@ public class gameLoop{
                 outputString = apartment.finalHousecatOutput(inputKey);
                 System.out.println(outputString);
             }
-
-                // // riddles
-                // if (apartment.housecatConvo == true){
-                //     inputKey = apartment.riddle1Input();
-                //     outputString = apartment.riddle1Output(inputKey);
-                //     System.out.println(outputString);
-
-                //     if (apartment.riddle1Answered == true){
-                //         inputKey = apartment.riddle2Input();
-                //         outputString = apartment.riddle2Output(inputKey);
-                //         System.out.println(outputString);
-                            
-                //         if (apartment.riddle2Answered == true){
-                //             inputKey = apartment.riddle3Input();
-                //             outputString = apartment.riddle3Output(inputKey);
-                //             System.out.println(outputString);
-                                
-                //             if (apartment.riddle3Answered == true){
-                //                 inputKey = apartment.finalHousecatInput();
-                //                 outputString = apartment.finalHousecatOutput(inputKey);
-                //                 System.out.println(outputString);
-                //             }
-                //         }
-                //     }
-                // }
         
             //harbor lane  
             if (x == 2 && y==0){
@@ -285,10 +273,9 @@ public class gameLoop{
             
             //to win
             if (x == 4 && y == 0){
-                System.out.println("\n YOU HAVE WON THE GAME\n");
+                System.out.println("\n YOU HAVE WON THE GAME! \n");
                 break;
             }
-
         }
     }
 }

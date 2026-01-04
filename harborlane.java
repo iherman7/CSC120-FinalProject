@@ -1,15 +1,30 @@
+/**
+ * This class operates the game in the "harbor lane" location.
+ */
 public class harborlane {
 
+    /**
+     * Attributes
+     */
     public int change = 0;
     private skeem player;
     private location loc;
 
+    /**
+     * Constructor
+     * @param player instance of player
+     * @param loc instance of player's location
+     */
     public harborlane(skeem player, location loc){
         this.player = player;
         this.loc = loc;
     }
 
     //just walking through the gate
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int twoZeroInput(){
         while (true){
             change = 0;
@@ -50,6 +65,11 @@ public class harborlane {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String twoZeroOutput(int inputKey){
         //go west
         if (inputKey == 4){
@@ -86,6 +106,10 @@ public class harborlane {
         }  
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int twoOneInput(){
         while (true){
             change = 0;
@@ -126,6 +150,11 @@ public class harborlane {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String twoOneOutput(int inputKey){
         //go west
         if (inputKey == 4){
@@ -152,6 +181,10 @@ public class harborlane {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int twoTwoInput(){
         while (true){
             change = 0;
@@ -192,6 +225,11 @@ public class harborlane {
         } 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String twoTwoOutput(int inputKey){
         // go east
         if (inputKey == 1){
@@ -215,6 +253,10 @@ public class harborlane {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int twoNegOneInput(){
         while (true){
             change = 0;
@@ -255,6 +297,11 @@ public class harborlane {
         } 
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String twoNegOneOutput(int inputKey){
        // go east
         if (inputKey == 1){
@@ -279,6 +326,10 @@ public class harborlane {
         }
     }
 
+    /**
+     * Takes in user input and assigns it an integer
+     * @return change, integer indicating user's desired action
+     */
     public int twoNegTwoInput(){
         while (true){
             change = 0;
@@ -319,6 +370,11 @@ public class harborlane {
         }
     }
 
+    /**
+     * Returns a string output that depends on the inputKey; changes player's location if applicable
+     * @param inputKey integer indicating user's desired action
+     * @return string to be printed by the game
+     */
     public String twoNegTwoOutput(int inputKey){
        // go east
         if (inputKey == 1){
