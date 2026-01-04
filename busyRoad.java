@@ -76,7 +76,7 @@ public class busyRoad {
         }
         //go north
         if (inputKey == 2){
-            return "\n you pace along the sidewalk looking looking for a safer spot to cross...looks like this is the only place.\n";
+            return "\n you pace along the sidewalk looking, looking for a safer spot to cross...looks like this is the only place.\n";
         }
         //go south
         if (inputKey == 3){

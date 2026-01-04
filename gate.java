@@ -105,6 +105,7 @@ public class gate {
             }
         // east and gate open
         if (inputKey == 6){
+            loc.setLocation(2, 0);
             return "\n you walk onto a sidewalk infront of a busy street \n in the distance you see a building vaguely familiar but too far for your cat eyes to make out. \n looks like you could finally go, east, south, west, or north. the world is your oyster! \n";
         }
         // tried to go north/south

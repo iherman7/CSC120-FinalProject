@@ -140,7 +140,15 @@ public class alleyway {
         // going into the apartment 
         if (inputKey == 3){
             loc.setLocation(-1, 1);
-            return "\n you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n there's no one around, but there's a bowl of cat food sitting a few steps in front of you. \n your stomach grumbles...\n";
+            if (player.eatFood()==true){
+                return "\n you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n the fat house cat appraoces you 'you really are fat and greedy huh, you already ate all my food...i think you should leave'\n";
+            }
+            if (player.eatFood()==false){
+                return "\n you jump onto the ledge and squeeze through the window. \n you jump down onto the carpeted floor and look around at the apartment. \n there's no one around, but there's a bowl of cat food sitting a few steps in front of you. \n your stomach grumbles...\n";
+            }
+            else {
+            return "\n i don't understand\n";
+            }
         }
         else {
             return "\n i don't understand\n";
